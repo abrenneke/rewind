@@ -52,6 +52,14 @@
    <properties>
     <property name="From" value=""/>
    </properties>
+   <objectgroup draworder="index">
+    <object id="1" x="0" y="0" width="128" height="128"/>
+   </objectgroup>
+  </tile>
+  <tile id="1">
+   <objectgroup draworder="index">
+    <object id="1" x="0" y="0" width="128" height="128"/>
+   </objectgroup>
   </tile>
  </tileset>
  <layer name="Tile Layer 1" width="100" height="100">
@@ -262,7 +270,7 @@
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 </data>
  </layer>
- <layer name="Exit" width="100" height="100" visible="0">
+ <layer name="Exit" width="100" height="100">
   <properties>
    <property name="To" value=""/>
   </properties>
