@@ -108,6 +108,9 @@ namespace Tiled2Unity
 
         private void Update()
         {
+            if (AttachedMap == null)
+                return;
+
             var orientation = this.AttachedMap.Orientation;
             bool isStaggered = this.AttachedMap.AreTilesStaggered();
             float tileHeight = this.AttachedMap.TileHeight;

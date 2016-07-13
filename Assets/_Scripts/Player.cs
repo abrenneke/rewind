@@ -1,10 +1,13 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 namespace Assets._Scripts
 {
     [UnityComponent, RequireComponent(typeof(Rigidbody2D))]
     public class Player : MonoBehaviour
     {
+        public static Player Instance { get; private set; }
+
         [AssignedInUnity, Range(0, 1)]
         public float MoveSpeed = 5;
 
@@ -14,6 +17,7 @@ namespace Assets._Scripts
         [UnityMessage]
         public void Awake()
         {
+            Instance = this;
             rigidbody = GetComponent<Rigidbody2D>();
         }
 
@@ -41,6 +45,30 @@ namespace Assets._Scripts
             var newPosition = transform.position + (Vector3)fixedMovement;
 
             rigidbody.MovePosition(newPosition);
+        }
+
+        [UnityMessage]
+        public void OnTriggerEnter2D(Collider2D collider)
+        {
+            if (collider.gameObject.CompareTag("Transition"))
+            {
+                EnterTransition(collider.gameObject.GetComponentInParent<MapTransition>());
+            }
+        }
+
+        private void EnterTransition(MapTransition transitionObject)
+        {
+            if (transitionObject == null)
+                throw new InvalidOperationException("Missing transition object.");
+
+            MapController.Instance.ChangeMap(transitionObject.ToMap);
+
+            var destination = MapController.Instance.GetTransitionDestination(transitionObject.ToName);
+
+            if (destination == null)
+                throw new InvalidOperationException("Couldn't find transition point " + transitionObject.ToName);
+
+            transform.position = destination.transform.position;
         }
     }
 }
