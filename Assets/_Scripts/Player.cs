@@ -8,7 +8,7 @@ namespace Assets._Scripts
     {
         public static Player Instance { get; private set; }
 
-        [AssignedInUnity, Range(0, 1)]
+        [AssignedInUnity, Range(0, 10)]
         public float MoveSpeed = 5;
 
         private Vector2 desiredMovement;

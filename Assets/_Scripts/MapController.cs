@@ -40,6 +40,12 @@ namespace Assets._Scripts
         public void Start()
         {
             ChangeMap(StartingMapName);
+
+            var startPosition = CurrentMap.GetComponentInChildren<StartPosition>();
+            if (startPosition == null)
+                throw new InvalidOperationException("Missing starting position.");
+
+            Player.Instance.transform.position = startPosition.gameObject.transform.position;
         }
 
         public void RegisterTransitionPoint(TransitionDestination destination)
