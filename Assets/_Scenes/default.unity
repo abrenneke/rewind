@@ -229,7 +229,7 @@ Prefab:
     - target: {fileID: 11411570, guid: 26fa4395b11fb4c458756d54ea12fac8, type: 2}
       propertyPath: AllMaps.Array.data[0].MapPrefab
       value: 
-      objectReference: {fileID: 104254, guid: 3d8f5690f0bbadc4c924712b98101e6b, type: 2}
+      objectReference: {fileID: 156608, guid: 3d8f5690f0bbadc4c924712b98101e6b, type: 2}
     - target: {fileID: 11411570, guid: 26fa4395b11fb4c458756d54ea12fac8, type: 2}
       propertyPath: AllMaps.Array.data[1].MapPrefab
       value: 
