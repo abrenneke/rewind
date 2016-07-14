@@ -28,8 +28,7 @@ namespace Assets._Scripts
                 return;
 
             currentInteractableObject = interactable;
-
-            //TODO highlight object
+            currentInteractableObject.ShowCanInteract();
         }
 
         [UnityMessage]
@@ -38,9 +37,10 @@ namespace Assets._Scripts
             var interactable = other.gameObject.GetComponentInParent<InteractableObject>();
             if (interactable == null)
                 return;
-
+            
             if (interactable == currentInteractableObject)
             {
+                currentInteractableObject.HideCanInteract();
                 currentInteractableObject = null;
             }
         }

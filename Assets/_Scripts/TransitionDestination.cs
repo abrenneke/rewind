@@ -9,7 +9,7 @@ namespace Assets._Scripts
         public string Name;
 
         [UnityMessage]
-        public void Awake()
+        public void Start()
         {
             MapController.Instance.RegisterTransitionPoint(this);
         }
