@@ -16,7 +16,7 @@ namespace Assets._Scripts
         [AssignedInUnity]
         public Canvas Canvas;
 
-        private GameObject currentInteraction;
+        private InteractionOverlay currentInteraction;
 
         private bool canClose;
 
@@ -44,8 +44,9 @@ namespace Assets._Scripts
 
             overlay.Text.text = interactionInfo.InteractionText;
 
-            currentInteraction = interactionInstance;
+            currentInteraction = overlay;
 
+            currentInteraction.Show();
             StartCoroutine(CantCloseForShortTime());
 
             //TODO image
@@ -59,13 +60,16 @@ namespace Assets._Scripts
 
             if (Input.GetButtonDown("Submit"))
             {
-                Destroy(currentInteraction);
-                currentInteraction = null;
-
+                StartCoroutine(HideInteraction());
                 StartCoroutine(CantInteractForShortTime());
-
-                GameStateController.Instance.SetState(GameState.InGame);
             }
+        }
+
+        private IEnumerator HideInteraction()
+        {
+            yield return currentInteraction.Hide();
+            currentInteraction = null;
+            GameStateController.Instance.SetState(GameState.InGame);
         }
 
         private IEnumerator CantInteractForShortTime()
