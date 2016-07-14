@@ -1,0 +1,8 @@
+{6fccd43d-7439-407a-90e9-344024a0da02} event:/footsteps_carpet
+{6fe7bdf7-69c4-489e-8b9a-ad9d28320004} event:/music_lvl1
+{b93aabb5-4d62-49e7-99b0-64b91b13639d} event:/door_open
+{7453cf30-b951-4f35-bdc9-6bf6ba5540a8} event:/door_close
+{cd8a10fd-700f-4ee8-9577-edf6513e941f} event:/door_unlock
+{898d02de-e77d-471b-93ee-0f0dd2fa7a6e} bus:/
+{c298527c-8eb4-4efe-a51f-f2c6eb7fb33a} bus:/Reverb
+{2dc88fde-82aa-49dd-997c-a1b0b512f5aa} bank:/Master Bank

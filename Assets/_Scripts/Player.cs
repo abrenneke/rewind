@@ -1,12 +1,24 @@
 ﻿using System;
 using UnityEngine;
+using FMOD.Studio;
+using FMODUnity;
 
 namespace Assets._Scripts
 {
     [UnityComponent, RequireComponent(typeof(Rigidbody2D))]
     public class Player : MonoBehaviour
     {
-        public static Player Instance { get; private set; }
+		[FMODUnity.EventRef]
+		public string SoundWalkEventName = "event:/footsteps_carpet";
+		private EventInstance walkSound;
+		walkSound = RuntimeManager.CreateInstance(SoundWalkEventName);
+
+		public string SoundDoorOpenEventName = "event:/Door_Open";
+		private EventInstance doorOpenSound;
+		doorOpenSound = RuntimeManager.CreateInstance(SoundDoorOpenEventName);
+
+
+		public static Player Instance { get; private set; }
 
         [AssignedInUnity, Range(0, 10)]
         public float MoveSpeed = 5;
@@ -38,8 +50,16 @@ namespace Assets._Scripts
         [UnityMessage]
         public void FixedUpdate()
         {
-            if (desiredMovement.IsZero())
-                return;
+			if (desiredMovement.IsZero ()) 
+			{
+				walkSound.stop (STOP_MODE.ALLOWFADEOUT);
+				return;
+			}
+
+			PLAYBACK_STATE walkSoundState;
+			walkSound.getPlaybackState(out walkSoundState);
+			if (walkSoundState != PLAYBACK_STATE.PLAYING)
+				walkSound.start();
 
             var fixedMovement = desiredMovement * Time.fixedDeltaTime;
             var newPosition = transform.position + (Vector3)fixedMovement;
@@ -52,7 +72,8 @@ namespace Assets._Scripts
         {
             if (collider.gameObject.CompareTag("Transition"))
             {
-                EnterTransition(collider.gameObject.GetComponentInParent<MapTransition>());
+				FMODUnity.RuntimeManager.PlayOneShot(doorOpenSound, transform.position);
+				EnterTransition(collider.gameObject.GetComponentInParent<MapTransition>());
             }
         }
 

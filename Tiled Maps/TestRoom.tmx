@@ -181,12 +181,12 @@
     <property name="to" value="TestRoom:left"/>
    </properties>
   </object>
-  <object id="5" gid="13" x="512" y="1408" width="128" height="128">
+  <object id="5" gid="13" x="651.762" y="1408" width="128" height="128">
    <properties>
     <property name="from" value="left"/>
    </properties>
   </object>
-  <object id="6" gid="13" x="1792" y="1408" width="128" height="128">
+  <object id="6" gid="13" x="1673.2" y="1408" width="128" height="128">
    <properties>
     <property name="from" value="right"/>
    </properties>
