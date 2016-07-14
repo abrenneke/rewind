@@ -5,7 +5,7 @@
             <value>footsteps_carpet</value>
         </property>
         <property name="outputFormat">
-            <value>2</value>
+            <value>0</value>
         </property>
         <relationship name="mixer">
             <destination>{995814a4-7a02-490f-a411-987a9436ef0e}</destination>
@@ -120,7 +120,6 @@
     <object class="MixerBusEffectChain" id="{1b6f8527-35de-49e4-9d77-f60cadab418a}">
         <relationship name="effects">
             <destination>{fd20532d-0a95-4c14-94b0-b6c0c45655ba}</destination>
-            <destination>{9392f8d3-037e-4ff3-a94a-450250ef8906}</destination>
             <destination>{488744fa-f434-488f-9eff-f3169bcc5067}</destination>
         </relationship>
     </object>
@@ -158,10 +157,9 @@
     </object>
     <object class="MixerBusPanner" id="{848472cd-f6cd-4d18-a013-c23b7dbd42ae}"/>
     <object class="MixerBusFader" id="{fd20532d-0a95-4c14-94b0-b6c0c45655ba}"/>
-    <object class="SpatialiserEffect" id="{9392f8d3-037e-4ff3-a94a-450250ef8906}"/>
     <object class="MixerSend" id="{488744fa-f434-488f-9eff-f3169bcc5067}">
         <property name="inputFormat">
-            <value>2</value>
+            <value>0</value>
         </property>
         <relationship name="mixerReturn">
             <destination>{c298527c-8eb4-4efe-a51f-f2c6eb7fb33a}</destination>

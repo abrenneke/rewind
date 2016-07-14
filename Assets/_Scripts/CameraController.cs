@@ -9,7 +9,7 @@ namespace Assets._Scripts
         public void Start()
         {
             transform.position = new Vector3(0, 0, -10);
-            transform.SetParent(Player.Instance.transform, false);
+            transform.SetParent(Player.Instance.Center.transform, false);
         } 
     }
 }

@@ -5,7 +5,7 @@
             <value>door_unlock</value>
         </property>
         <property name="outputFormat">
-            <value>2</value>
+            <value>0</value>
         </property>
         <relationship name="mixer">
             <destination>{3a2be797-5171-4304-9228-6fcd4137c1e8}</destination>
@@ -119,7 +119,6 @@
     <object class="MixerBusEffectChain" id="{81135acf-633b-4d24-b893-94eb397bbff6}">
         <relationship name="effects">
             <destination>{862e1c6b-66ac-493e-9db1-c39bc9a48881}</destination>
-            <destination>{bca738fa-781f-4188-8312-35596ee1cda0}</destination>
             <destination>{b927b529-d4fd-478f-b398-a051a438f5c7}</destination>
         </relationship>
     </object>
@@ -132,10 +131,9 @@
     </object>
     <object class="MixerBusPanner" id="{5f77ad4b-0c69-45d9-9397-731118ad4e2f}"/>
     <object class="MixerBusFader" id="{862e1c6b-66ac-493e-9db1-c39bc9a48881}"/>
-    <object class="SpatialiserEffect" id="{bca738fa-781f-4188-8312-35596ee1cda0}"/>
     <object class="MixerSend" id="{b927b529-d4fd-478f-b398-a051a438f5c7}">
         <property name="inputFormat">
-            <value>2</value>
+            <value>0</value>
         </property>
         <relationship name="mixerReturn">
             <destination>{c298527c-8eb4-4efe-a51f-f2c6eb7fb33a}</destination>

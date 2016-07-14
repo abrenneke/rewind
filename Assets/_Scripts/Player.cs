@@ -8,20 +8,21 @@ namespace Assets._Scripts
     [UnityComponent, RequireComponent(typeof(Rigidbody2D))]
     public class Player : MonoBehaviour
     {
-		[FMODUnity.EventRef]
+		[EventRef]
 		public string SoundWalkEventName = "event:/footsteps_carpet";
-		private EventInstance walkSound;
-		walkSound = RuntimeManager.CreateInstance(SoundWalkEventName);
+        private EventInstance walkSound;
 
+        [EventRef]
 		public string SoundDoorOpenEventName = "event:/Door_Open";
-		private EventInstance doorOpenSound;
-		doorOpenSound = RuntimeManager.CreateInstance(SoundDoorOpenEventName);
 
 
 		public static Player Instance { get; private set; }
 
         [AssignedInUnity]
         public Transform Center;
+
+        [AssignedInUnity]
+        public Transform Rotation;
 
         [AssignedInUnity, Range(0, 10)]
         public float MoveSpeed = 5;
@@ -34,6 +35,8 @@ namespace Assets._Scripts
         {
             Instance = this;
             rigidbody = GetComponent<Rigidbody2D>();
+
+            walkSound = RuntimeManager.CreateInstance(SoundWalkEventName);
         }
 
         [UnityMessage]
@@ -50,7 +53,7 @@ namespace Assets._Scripts
                 rigidbody.velocity = new Vector2();
 
             if(desiredMovement.IsZero() == false)
-                Center.transform.rotation = Quaternion.AngleAxis(new Vector3().DirectionToDegrees(desiredMovement), Vector3.forward);
+                Rotation.transform.rotation = Quaternion.AngleAxis(new Vector3().DirectionToDegrees(desiredMovement), Vector3.forward);
         }
 
         [UnityMessage]
@@ -78,7 +81,7 @@ namespace Assets._Scripts
         {
             if (collider.gameObject.CompareTag("Transition"))
             {
-				FMODUnity.RuntimeManager.PlayOneShot(doorOpenSound, transform.position);
+				RuntimeManager.PlayOneShot(SoundDoorOpenEventName, transform.position);
 				EnterTransition(collider.gameObject.GetComponentInParent<MapTransition>());
             }
         }
