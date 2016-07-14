@@ -1,5 +1,7 @@
-﻿using System.Linq;
+﻿using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
+using YamlDotNet.RepresentationModel;
 
 namespace Assets._Scripts
 {
@@ -66,5 +68,26 @@ namespace Assets._Scripts
         {
             return vector.sqrMagnitude < 0.001f;
         }
+
+        public static bool ContainsKey(this IDictionary<YamlNode, YamlNode> dict, string key)
+        {
+            return dict.ContainsKey((YamlScalarNode)key);
+        }
+
+        public static string GetScalarValue(this IDictionary<YamlNode, YamlNode> dict, string key)
+        {
+            return ((YamlScalarNode)dict[(YamlScalarNode)key]).Value;
+        }
+
+        public static YamlMappingNode GetMappingValue(this IDictionary<YamlNode, YamlNode> dict, string key)
+        {
+            return (YamlMappingNode)dict[(YamlScalarNode)key];
+        }
+
+        public static string TryGetScalarValue(this IDictionary<YamlNode, YamlNode> dict, string key)
+        {
+            YamlNode value;
+            return !dict.TryGetValue((YamlScalarNode)key, out value) ? null : ((YamlScalarNode)value).Value;
+        } 
     }
 }

@@ -1,0 +1,15 @@
+test-table:
+  interaction-text: |
+    here is some text
+    and on another line
+  image: test.png
+
+test-table-2_1:
+  interaction-text: |
+    this is the first interaction
+  image: text.png
+
+test-table-2_2:
+  interaction-text: |
+    this is the second interaction
+  image: test.png

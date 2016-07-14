@@ -73,7 +73,7 @@ namespace Assets._Scripts
 
             CurrentMap = mapInstance;
 
-            Player.Instance.GetComponent<SpriteDepthInMap>().AttachedMap = CurrentMap.GetComponent<TiledMap>();
+            Player.Instance.GetComponentInChildren<SpriteDepthInMap>().AttachedMap = CurrentMap.GetComponent<TiledMap>();
         }
 
         private void UnloadMap()

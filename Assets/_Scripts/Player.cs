@@ -14,12 +14,8 @@ namespace Assets._Scripts
 
         [EventRef]
 		public string SoundDoorOpenEventName = "event:/Door_Open";
-
-
+        
 		public static Player Instance { get; private set; }
-
-        [AssignedInUnity]
-        public Transform Center;
 
         [AssignedInUnity]
         public Transform Rotation;
@@ -42,34 +38,49 @@ namespace Assets._Scripts
         [UnityMessage]
         public void Update()
         {
-            var rawMovement = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
+            if (GameStateController.Instance.CurrentState != GameState.InGame)
+            {
+                desiredMovement = new Vector2();
+            }
+            else
+            {
+                var rawMovement = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
 
-            if (rawMovement.sqrMagnitude > 1)
-                rawMovement.Normalize();
+                if (rawMovement.sqrMagnitude > 1)
+                    rawMovement.Normalize();
 
-            desiredMovement = rawMovement * MoveSpeed;
+                desiredMovement = rawMovement * MoveSpeed;
+            }
 
             if (rigidbody.velocity.sqrMagnitude > 0)
                 rigidbody.velocity = new Vector2();
 
-            if(desiredMovement.IsZero() == false)
+            CheckAudio();
+        }
+
+        private void CheckAudio()
+        {
+            if (desiredMovement.IsZero())
+            {
+                walkSound.stop(STOP_MODE.ALLOWFADEOUT);
+            }
+            else
+            {
+                PLAYBACK_STATE walkSoundState;
+                walkSound.getPlaybackState(out walkSoundState);
+                if (walkSoundState != PLAYBACK_STATE.PLAYING)
+                    walkSound.start();
+
                 Rotation.transform.rotation = Quaternion.AngleAxis(new Vector3().DirectionToDegrees(desiredMovement), Vector3.forward);
+            }
         }
 
         [UnityMessage]
         public void FixedUpdate()
         {
-			if (desiredMovement.IsZero ()) 
-			{
-				walkSound.stop (STOP_MODE.ALLOWFADEOUT);
+			if (desiredMovement.IsZero())
 				return;
-			}
-
-			PLAYBACK_STATE walkSoundState;
-			walkSound.getPlaybackState(out walkSoundState);
-			if (walkSoundState != PLAYBACK_STATE.PLAYING)
-				walkSound.start();
-
+            
             var fixedMovement = desiredMovement * Time.fixedDeltaTime;
             var newPosition = transform.position + (Vector3)fixedMovement;
 

@@ -38,7 +38,7 @@ namespace Tiled2Unity
         {
             if (this.AttachedMap == null)
             {
-                Debug.LogError(String.Format("Sprite must be attached to a TiledMap instance in order to calucluate the 'z-depth' on that map. Check the SpriteDepthInMap component in the Inspector."));
+                //Debug.LogError(String.Format("Sprite must be attached to a TiledMap instance in order to calucluate the 'z-depth' on that map. Check the SpriteDepthInMap component in the Inspector."));
                 return;
             }
 
