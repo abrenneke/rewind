@@ -122,17 +122,8 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 487070, guid: 4ac19fae7c2713940a804ee829bc6f07, type: 2}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 11412030, guid: 4ac19fae7c2713940a804ee829bc6f07, type: 2}
-      propertyPath: _AttachedMap
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 21256318, guid: 4ac19fae7c2713940a804ee829bc6f07, type: 2}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 1b769aaca0b8ad24f9b82ce3c87b5294,
-        type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4ac19fae7c2713940a804ee829bc6f07, type: 2}
   m_IsPrefabParent: 0
@@ -245,7 +236,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 407866, guid: 26fa4395b11fb4c458756d54ea12fac8, type: 2}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 11411570, guid: 26fa4395b11fb4c458756d54ea12fac8, type: 2}
       propertyPath: AllMaps.Array.data[0].MapPrefab

@@ -20,6 +20,9 @@ namespace Assets._Scripts
 
 		public static Player Instance { get; private set; }
 
+        [AssignedInUnity]
+        public Transform Center;
+
         [AssignedInUnity, Range(0, 10)]
         public float MoveSpeed = 5;
 
@@ -45,6 +48,9 @@ namespace Assets._Scripts
 
             if (rigidbody.velocity.sqrMagnitude > 0)
                 rigidbody.velocity = new Vector2();
+
+            if(desiredMovement.IsZero() == false)
+                Center.transform.rotation = Quaternion.AngleAxis(new Vector3().DirectionToDegrees(desiredMovement), Vector3.forward);
         }
 
         [UnityMessage]
