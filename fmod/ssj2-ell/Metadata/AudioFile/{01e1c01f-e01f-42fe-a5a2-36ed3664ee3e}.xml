@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.01.08.00">
+    <object class="AudioFile" id="{01e1c01f-e01f-42fe-a5a2-36ed3664ee3e}">
+        <property name="assetPath">
+            <value>Elle_Title_Theme.wav</value>
+        </property>
+        <property name="isStreaming">
+            <value>true</value>
+        </property>
+        <property name="frequencyInKHz">
+            <value>44.0999985</value>
+        </property>
+        <property name="channelCount">
+            <value>2</value>
+        </property>
+        <property name="length">
+            <value>121.86537414965986</value>
+        </property>
+        <relationship name="masterAssetFolder">
+            <destination>{d63b773c-23b0-4aae-9853-a4946651d686}</destination>
+        </relationship>
+    </object>
+</objects>
