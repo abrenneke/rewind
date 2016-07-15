@@ -77,6 +77,8 @@ GameObject:
   - 50: {fileID: 5061558}
   - 58: {fileID: 5891752}
   - 114: {fileID: 11414498}
+  - 114: {fileID: 11497294}
+  - 114: {fileID: 11471164}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -245,6 +247,10 @@ MonoBehaviour:
   SoundDoorOpenEventName: event:/Door_Open
   Rotation: {fileID: 412758}
   MoveSpeed: 1.5
+  MaxHealth: 6
+  Health: 6
+  RecoilFrames: 0
+  RecoilSpeed: 20
 --- !u!114 &11468428
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -257,6 +263,44 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Player: {fileID: 11444886}
+--- !u!114 &11471164
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 190974}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: event:/swing_broom
+  PlayEvent: 0
+  StopEvent: 0
+  CollisionTag: 
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+--- !u!114 &11497294
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 190974}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: event:/hit
+  PlayEvent: 0
+  StopEvent: 0
+  CollisionTag: 
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
 --- !u!212 &21244440
 SpriteRenderer:
   m_ObjectHideFlags: 1
