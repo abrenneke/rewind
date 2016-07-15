@@ -44,6 +44,8 @@ namespace Assets._Scripts
         private Vector2 recoilDirection;
         private int recoilFrameCounter;
 
+        private bool canTransition = true;
+
         [UnityMessage]
         public void Awake()
         {
@@ -130,9 +132,19 @@ namespace Assets._Scripts
         {
             if (collider.gameObject.CompareTag("Transition"))
             {
-				RuntimeManager.PlayOneShot(SoundDoorOpenEventName, transform.position);
-				EnterTransition(collider.gameObject.GetComponentInParent<MapTransition>());
+                TransitionToAnotherMap(collider);
             }
+        }
+
+        private void TransitionToAnotherMap(Collider2D collider)
+        {
+            if (canTransition == false)
+                return;
+
+            RuntimeManager.PlayOneShot(SoundDoorOpenEventName, transform.position);
+            EnterTransition(collider.gameObject.GetComponentInParent<MapTransition>());
+
+            Delay.TemporarilySetBool(x => canTransition = x, 1, false);
         }
 
         private void EnterTransition(MapTransition transitionObject)
@@ -142,12 +154,15 @@ namespace Assets._Scripts
 
             MapController.Instance.ChangeMap(transitionObject.ToMap);
 
-            var destination = MapController.Instance.GetTransitionDestination(transitionObject.ToName);
+            Delay.Frame(() =>
+            {
+                var destination = MapController.Instance.GetTransitionDestination(transitionObject.ToName);
 
-            if (destination == null)
-                throw new InvalidOperationException("Couldn't find transition point " + transitionObject.ToName);
+                if (destination == null)
+                    throw new InvalidOperationException("Couldn't find transition point " + transitionObject.ToName);
 
-            transform.position = destination.transform.position;
+                transform.position = destination.transform.position;
+            });
         }
 
         public void TakeDamage(int damageAmount)
