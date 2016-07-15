@@ -9,6 +9,8 @@
 {6fe7bdf7-69c4-489e-8b9a-ad9d28320004} event:/music_lvl1
 {53aedd38-7b6e-4f9a-8b2d-ba7b03affe2e} event:/music_title
 {6ba56711-1d2e-490d-bdf1-fe5742fdcd9a} event:/swing_broom
+{4bb61313-eab7-403c-9756-3b17c6ecd77f} event:/open_interaction
+{0d8b8ab0-9050-4857-8e05-cdd68ea46b41} event:/close_interaction
 {898d02de-e77d-471b-93ee-0f0dd2fa7a6e} bus:/
 {c298527c-8eb4-4efe-a51f-f2c6eb7fb33a} bus:/Reverb
 {2dc88fde-82aa-49dd-997c-a1b0b512f5aa} bank:/Master Bank
