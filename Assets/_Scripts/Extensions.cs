@@ -35,12 +35,13 @@ namespace Assets._Scripts
 
         public static float DistanceTo(this Vector3 a, Vector3 b)
         {
-            return Vector3.Distance(a, b);
+            // Ignore z
+            return Vector2.Distance(a, b);
         }
 
         public static Vector3 UnitVectorTo(this Vector3 from, Vector3 to)
         {
-            var diff = (to - from);
+            var diff = ((Vector2)to - (Vector2)from);
 
             if (diff.IsZero())
                 return Vector3.zero;

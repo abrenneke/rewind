@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="19" height="19" tilewidth="128" tileheight="128" nextobjectid="9">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="19" height="19" tilewidth="128" tileheight="128" nextobjectid="14">
  <tileset firstgid="1" name="testtilemap" tilewidth="128" tileheight="128" tilecount="12" columns="6">
   <image source="TestRoom/testtilemap.png" width="768" height="256"/>
   <tile id="0">
@@ -71,21 +71,7 @@
   </tile>
   <tile id="1">
    <objectgroup draworder="index">
-    <object id="1" x="18.0522" y="6.31826" width="84.3939" height="115.985">
-     <ellipse/>
-    </object>
-    <object id="2" x="57.7669" y="60.4748" width="42.8739" height="56.413">
-     <ellipse/>
-    </object>
-    <object id="3" x="64.0852" y="4.51304" width="33.3965" height="48.7409">
-     <ellipse/>
-    </object>
-    <object id="6" x="23.0165" y="7.67217" width="38.8122" height="59.5722">
-     <ellipse/>
-    </object>
-    <object id="7" x="18.9548" y="74.0139" width="39.7148" height="40.6174">
-     <ellipse/>
-    </object>
+    <object id="9" x="20" y="9.66667" width="78.6667" height="106"/>
    </objectgroup>
   </tile>
   <tile id="3">
@@ -198,5 +184,8 @@
     <property name="interaction" value="test-table"/>
    </properties>
   </object>
+ </objectgroup>
+ <objectgroup name="Cats">
+  <object id="9" gid="16" x="1024" y="1024" width="128" height="128"/>
  </objectgroup>
 </map>

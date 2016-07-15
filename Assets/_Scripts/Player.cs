@@ -8,6 +8,8 @@ namespace Assets._Scripts
     [UnityComponent, RequireComponent(typeof(Rigidbody2D))]
     public class Player : MonoBehaviour
     {
+        public event Action<int> HealthChanged;
+
 		[EventRef]
 		public string SoundWalkEventName = "event:/footsteps_carpet";
         private EventInstance walkSound;
@@ -23,8 +25,24 @@ namespace Assets._Scripts
         [AssignedInUnity, Range(0, 10)]
         public float MoveSpeed = 5;
 
+        [AssignedInUnity]
+        public int MaxHealth = 6;
+
+        [AssignedInUnity]
+        public int Health = 6;
+
+        [AssignedInUnity]
+        public int RecoilFrames;
+
+        [AssignedInUnity]
+        public float RecoilSpeed = 20;
+
         private Vector2 desiredMovement;
         private new Rigidbody2D rigidbody;
+
+        private bool isRecoiling;
+        private Vector2 recoilDirection;
+        private int recoilFrameCounter;
 
         [UnityMessage]
         public void Awake()
@@ -42,20 +60,37 @@ namespace Assets._Scripts
             {
                 desiredMovement = new Vector2();
             }
+            else if (isRecoiling)
+            {
+                Recoil();
+            }
             else
             {
-                var rawMovement = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
-
-                if (rawMovement.sqrMagnitude > 1)
-                    rawMovement.Normalize();
-
-                desiredMovement = rawMovement * MoveSpeed;
+                MoveFromPlayerMovement();
             }
 
-            if (rigidbody.velocity.sqrMagnitude > 0)
-                rigidbody.velocity = new Vector2();
-
             CheckAudio();
+        }
+
+        private void Recoil()
+        {
+            if (recoilFrameCounter >= RecoilFrames)
+            {
+                isRecoiling = false;
+                return;
+            }
+
+            desiredMovement = recoilDirection * RecoilSpeed;
+        }
+
+        private void MoveFromPlayerMovement()
+        {
+            var rawMovement = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
+
+            if (rawMovement.sqrMagnitude > 1)
+                rawMovement.Normalize();
+
+            desiredMovement = rawMovement * MoveSpeed;
         }
 
         private void CheckAudio()
@@ -85,6 +120,9 @@ namespace Assets._Scripts
             var newPosition = transform.position + (Vector3)fixedMovement;
 
             rigidbody.MovePosition(newPosition);
+
+            if (isRecoiling)
+                recoilFrameCounter++;
         }
 
         [UnityMessage]
@@ -110,6 +148,23 @@ namespace Assets._Scripts
                 throw new InvalidOperationException("Couldn't find transition point " + transitionObject.ToName);
 
             transform.position = destination.transform.position;
+        }
+
+        public void TakeDamage(int damageAmount)
+        {
+            Health -= damageAmount;
+
+            if (HealthChanged != null)
+                HealthChanged(Health);
+        }
+
+        public void TakeDamageAndPush(int damageAmount, Vector2 vectorToPush)
+        {
+            recoilDirection = vectorToPush.normalized;
+            isRecoiling = true;
+            recoilFrameCounter = 0;
+
+            TakeDamage(damageAmount);
         }
     }
 }
