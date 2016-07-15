@@ -658,7 +658,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   AllMaps:
-  - MapPrefab: {fileID: 107896, guid: 3d8f5690f0bbadc4c924712b98101e6b, type: 2}
+  - MapPrefab: {fileID: 116348, guid: 3d8f5690f0bbadc4c924712b98101e6b, type: 2}
   - MapPrefab: {fileID: 176506, guid: eea705d7b06d72740bcf9d592c3a931d, type: 2}
   StartingMapName: TestRoom
 --- !u!4 &2143708285
