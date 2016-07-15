@@ -1,3 +1,6 @@
+{f7226ed4-3ff6-4e15-857f-653bb011d9ad} event:/cat_angry
+{b21d48c9-781b-49b6-9fa2-b8ff310331a5} event:/cat_dying
+{d212e315-5fb8-4a8c-930a-d30b36ec5d46} event:/cat_hit
 {7453cf30-b951-4f35-bdc9-6bf6ba5540a8} event:/door_close
 {b93aabb5-4d62-49e7-99b0-64b91b13639d} event:/door_open
 {cd8a10fd-700f-4ee8-9577-edf6513e941f} event:/door_unlock

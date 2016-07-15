@@ -13,6 +13,9 @@ GameObject:
   - 58: {fileID: 5808242}
   - 114: {fileID: 11479970}
   - 114: {fileID: 11455314}
+  - 114: {fileID: 11421280}
+  - 114: {fileID: 11444568}
+  - 114: {fileID: 11463014}
   m_Layer: 0
   m_Name: Cat
   m_TagString: Untagged
@@ -64,6 +67,44 @@ CircleCollider2D:
   m_Offset: {x: 0.64, y: 0.64}
   serializedVersion: 2
   m_Radius: 0.64
+--- !u!114 &11421280
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 115816}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: event:/cat_hit
+  PlayEvent: 0
+  StopEvent: 0
+  CollisionTag: 
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+--- !u!114 &11444568
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 115816}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: event:/cat_angry
+  PlayEvent: 0
+  StopEvent: 0
+  CollisionTag: 
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
 --- !u!114 &11455314
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -77,6 +118,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _AttachedMap: {fileID: 0}
   PlacedOnLayerIndex: 1
+--- !u!114 &11463014
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 115816}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: event:/cat_dying
+  PlayEvent: 0
+  StopEvent: 0
+  CollisionTag: 
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
 --- !u!114 &11479970
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -92,6 +152,7 @@ MonoBehaviour:
   MaxPounceDistance: 5
   PounceSpeed: 3
   ReturnSpeed: 1
+  DamageDealt: 1
 --- !u!212 &21295030
 SpriteRenderer:
   m_ObjectHideFlags: 1
