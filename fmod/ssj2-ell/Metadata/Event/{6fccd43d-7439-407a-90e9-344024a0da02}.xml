@@ -100,12 +100,21 @@
     </object>
     <object class="MixerBusPanner" id="{6e47a6f1-0549-46f0-8107-bfe32852f058}"/>
     <object class="MultiSound" id="{c3947bde-a10d-4332-9fec-1288a0ec3e7f}">
+        <property name="triggerProbabilityEnabled">
+            <value>true</value>
+        </property>
         <property name="start">
             <value>0</value>
         </property>
         <property name="length">
             <value>0.65000000000000002</value>
         </property>
+        <property name="pitch">
+            <value>-0.600000024</value>
+        </property>
+        <relationship name="modulators">
+            <destination>{8e48aaba-00b5-4e38-9ff7-1003d0bcbde5}</destination>
+        </relationship>
         <relationship name="sounds">
             <destination>{597c7b36-83b1-4b95-b97c-079825330e6e}</destination>
             <destination>{2f2ce15c-b300-4332-a3d1-a8279847c067}</destination>
@@ -153,6 +162,41 @@
     </object>
     <object class="MixerBusPanner" id="{5ea5ae6d-2bda-47e6-be6b-17f1ced8a4f2}"/>
     <object class="MixerBusFader" id="{315d72fc-ea93-4e4c-b54d-546cacd932c4}"/>
+    <object class="ADSRModulator" id="{8e48aaba-00b5-4e38-9ff7-1003d0bcbde5}">
+        <property name="nameOfPropertyBeingModulated">
+            <value>pitch</value>
+        </property>
+        <property name="initialValue">
+            <value>0</value>
+        </property>
+        <property name="attackTime">
+            <value>1000</value>
+        </property>
+        <property name="attackShape">
+            <value>0</value>
+        </property>
+        <property name="peakValue">
+            <value>0</value>
+        </property>
+        <property name="holdTime">
+            <value>1000</value>
+        </property>
+        <property name="decayTime">
+            <value>1000</value>
+        </property>
+        <property name="decayShape">
+            <value>0</value>
+        </property>
+        <property name="sustainValue">
+            <value>0</value>
+        </property>
+        <property name="releaseTime">
+            <value>1000</value>
+        </property>
+        <property name="releaseShape">
+            <value>0</value>
+        </property>
+    </object>
     <object class="SingleSound" id="{597c7b36-83b1-4b95-b97c-079825330e6e}">
         <relationship name="audioFile">
             <destination>{7fd08b63-bcd7-4deb-9173-2396f8362765}</destination>
