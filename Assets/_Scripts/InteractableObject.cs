@@ -13,11 +13,13 @@ namespace Assets._Scripts
         public void ShowCanInteract()
         {
             overlayChild.SetActive(true);
+            InteractionsDisplay.Instance.SetHighlightInteract(true);
         }
 
         public void HideCanInteract()
         {
             overlayChild.SetActive(false);
+            InteractionsDisplay.Instance.SetHighlightInteract(false);
         }
 
         [UnityMessage]
