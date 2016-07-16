@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.01.08.00">
+    <object class="EncodableAsset" id="{acecf07c-7e63-487a-91eb-95d241aeeda9}">
+        <property name="assetPath">
+            <value>Mice Sounds/Individual_mouse_steps/</value>
+        </property>
+        <relationship name="masterAssetFolder">
+            <destination>{d63b773c-23b0-4aae-9853-a4946651d686}</destination>
+        </relationship>
+    </object>
+</objects>
