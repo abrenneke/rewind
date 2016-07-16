@@ -79,6 +79,9 @@ GameObject:
   - 114: {fileID: 11414498}
   - 114: {fileID: 11497294}
   - 114: {fileID: 11471164}
+  - 114: {fileID: 11411442}
+  - 114: {fileID: 11448292}
+  - 114: {fileID: 11464094}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -213,6 +216,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _AttachedMap: {fileID: 0}
   PlacedOnLayerIndex: 1
+--- !u!114 &11411442
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 190974}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a669163c1423fb4e93039f103601593, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &11414498
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -245,12 +259,53 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SoundWalkEventName: event:/footsteps_carpet
   SoundDoorOpenEventName: event:/Door_Open
+  SoundBroomSweep: event:/swing_broom
   Rotation: {fileID: 412758}
   MoveSpeed: 1.5
   MaxHealth: 6
   Health: 6
-  RecoilFrames: 0
+  RecoilFrames: 6
   RecoilSpeed: 20
+  AttackDelayTime: 1
+  AttackRange: 1
+--- !u!114 &11448292
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 190974}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: event:/swing_broom
+  PlayEvent: 0
+  StopEvent: 0
+  CollisionTag: 
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+--- !u!114 &11464094
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 190974}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: event:/hit
+  PlayEvent: 0
+  StopEvent: 0
+  CollisionTag: 
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
 --- !u!114 &11468428
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -341,7 +396,7 @@ SpriteRenderer:
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000e000000000000000, type: 0}
+  - {fileID: 2100000, guid: 5fb236e4a6e29234a99c31ae6d9e7f6b, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0

@@ -1,9 +1,10 @@
-﻿using UnityEngine;
+﻿using FMODUnity;
+using UnityEngine;
 
 namespace Assets._Scripts.AI.Cat
 {
     [UnityComponent]
-    public class CatAI : AIBase
+    public class CatAI : AIBase, ICanBeHitWithBroom
     {
         [AssignedInUnity, Range(0, 50)]
         public float DetectionRadius = 5;
@@ -19,6 +20,15 @@ namespace Assets._Scripts.AI.Cat
 
         [AssignedInUnity]
         public int DamageDealt = 1;
+
+        [EventRef]
+        public string CatAngry;
+
+        [EventRef]
+        public string CatDying;
+
+        [EventRef]
+        public string CatHit;
 
         public Vector2 StartPosition { get; set; }
 
@@ -43,6 +53,13 @@ namespace Assets._Scripts.AI.Cat
             var unitVectorToPlayer = transform.position.UnitVectorTo(collision.gameObject.transform.position);
 
             Player.Instance.TakeDamageAndPush(DamageDealt, unitVectorToPlayer);
+        }
+
+        public void IsHitWithBroom()
+        {
+            RuntimeManager.PlayOneShot(CatDying);
+
+            Destroy(gameObject);
         }
     }
 }

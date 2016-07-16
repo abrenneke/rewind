@@ -1,11 +1,12 @@
 ﻿using System;
+using System.Linq;
 using UnityEngine;
 using FMOD.Studio;
 using FMODUnity;
 
 namespace Assets._Scripts
 {
-    [UnityComponent, RequireComponent(typeof(Rigidbody2D))]
+    [UnityComponent, RequireComponent(typeof(Rigidbody2D)), RequireComponent(typeof(NoVelocity))]
     public class Player : MonoBehaviour
     {
         public event Action<int> HealthChanged;
@@ -16,6 +17,9 @@ namespace Assets._Scripts
 
         [EventRef]
 		public string SoundDoorOpenEventName = "event:/Door_Open";
+
+        [EventRef]
+        public string SoundBroomSweep;
         
 		public static Player Instance { get; private set; }
 
@@ -37,6 +41,12 @@ namespace Assets._Scripts
         [AssignedInUnity]
         public float RecoilSpeed = 20;
 
+        [AssignedInUnity, Range(0, 2)]
+        public float AttackDelayTime = 1;
+
+        [AssignedInUnity, Range(0, 5)]
+        public float AttackRange = 1;
+
         private Vector2 desiredMovement;
         private new Rigidbody2D rigidbody;
 
@@ -45,6 +55,9 @@ namespace Assets._Scripts
         private int recoilFrameCounter;
 
         private bool canTransition = true;
+        private bool canAttack = true;
+
+        private Vector2 lastMovement;
 
         [UnityMessage]
         public void Awake()
@@ -58,21 +71,73 @@ namespace Assets._Scripts
         [UnityMessage]
         public void Update()
         {
-            if (GameStateController.Instance.CurrentState != GameState.InGame)
+            if (IsPaused)
             {
                 desiredMovement = new Vector2();
+                CheckAudio();
+                return;
             }
-            else if (isRecoiling)
+
+
+            if (isRecoiling)
             {
                 Recoil();
             }
             else
             {
                 MoveFromPlayerMovement();
+                CheckAttack();
             }
 
             CheckAudio();
         }
+
+        private void CheckAttack()
+        {
+            if (canAttack == false || Input.GetButtonDown("Action1") == false)
+                return;
+
+            Delay.TemporarilySetBool(x => canAttack = x, AttackDelayTime, false);
+
+            // TODO play animation
+
+            SweepAttack();
+
+            RuntimeManager.PlayOneShot(SoundBroomSweep);
+        }
+
+        private void SweepAttack()
+        {
+            const float degrees = 90;
+            const int count = 10;
+            const float increment = degrees / count;
+
+            var facingDirection = transform.position.DirectionToDegrees(lastMovement);
+
+            var angle = -(degrees / 2.0f);
+            for(var i = 0; i < count; angle += increment, i++)
+            {
+                var raycastAngle = facingDirection + angle;
+                var raycastVector = new Vector2(Mathf.Cos(raycastAngle), Mathf.Sin(raycastAngle));
+
+                var raycastResults = Physics2D.RaycastAll(transform.position, raycastVector.normalized, AttackRange);
+
+                raycastResults = raycastResults.Where(x => x.collider.gameObject != gameObject && x.collider.GetComponentInParent<Player>() == null).ToArray();
+                
+                if (raycastResults.Any())
+                {
+                    var result = raycastResults.First();
+                    var canBeHit = result.collider.gameObject.GetInterfaceComponent<ICanBeHitWithBroom>();
+                    if (canBeHit != null)
+                    {
+                        canBeHit.IsHitWithBroom();
+                        break;
+                    }
+                }
+            }
+        }
+
+        private bool IsPaused {get { return GameStateController.Instance.CurrentState != GameState.InGame; } }
 
         private void Recoil()
         {
@@ -99,14 +164,17 @@ namespace Assets._Scripts
         {
             if (desiredMovement.IsZero())
             {
-                walkSound.stop(STOP_MODE.ALLOWFADEOUT);
+                walkSound.setParameterValue("Loop", 0.0f);
             }
             else
             {
                 PLAYBACK_STATE walkSoundState;
                 walkSound.getPlaybackState(out walkSoundState);
                 if (walkSoundState != PLAYBACK_STATE.PLAYING)
+                {
+                    walkSound.setParameterValue("Loop", 1.0f);
                     walkSound.start();
+                }
 
                 Rotation.transform.rotation = Quaternion.AngleAxis(new Vector3().DirectionToDegrees(desiredMovement), Vector3.forward);
             }
@@ -115,8 +183,10 @@ namespace Assets._Scripts
         [UnityMessage]
         public void FixedUpdate()
         {
-			if (desiredMovement.IsZero())
+			if (desiredMovement.IsZero() || IsPaused)
 				return;
+
+            lastMovement = desiredMovement;
             
             var fixedMovement = desiredMovement * Time.fixedDeltaTime;
             var newPosition = transform.position + (Vector3)fixedMovement;

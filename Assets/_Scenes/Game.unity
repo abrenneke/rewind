@@ -89,55 +89,20 @@ NavMeshSettings:
 GameObject:
   m_PrefabParentObject: {fileID: 190974, guid: 4ac19fae7c2713940a804ee829bc6f07, type: 2}
   m_PrefabInternal: {fileID: 1909893610}
---- !u!114 &43400405
-MonoBehaviour:
+--- !u!58 &43400415
+CircleCollider2D:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 43400404}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a669163c1423fb4e93039f103601593, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &43400406
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 43400404}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Event: event:/swing_broom
-  PlayEvent: 0
-  StopEvent: 0
-  CollisionTag: 
-  AllowFadeout: 1
-  TriggerOnce: 0
-  Preload: 0
-  Params: []
---- !u!114 &43400407
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 43400404}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Event: event:/hit
-  PlayEvent: 0
-  StopEvent: 0
-  CollisionTag: 
-  AllowFadeout: 1
-  TriggerOnce: 0
-  Preload: 0
-  Params: []
+  m_Enabled: 0
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 1
 --- !u!1001 &1002904254
 Prefab:
   m_ObjectHideFlags: 0
@@ -264,17 +229,9 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 21252692, guid: 4ac19fae7c2713940a804ee829bc6f07, type: 2}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 5fb236e4a6e29234a99c31ae6d9e7f6b, type: 2}
-    - target: {fileID: 11408116, guid: 4ac19fae7c2713940a804ee829bc6f07, type: 2}
-      propertyPath: _AttachedMap
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 11444886, guid: 4ac19fae7c2713940a804ee829bc6f07, type: 2}
-      propertyPath: RecoilFrames
-      value: 6
+      propertyPath: AttackRange
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4ac19fae7c2713940a804ee829bc6f07, type: 2}

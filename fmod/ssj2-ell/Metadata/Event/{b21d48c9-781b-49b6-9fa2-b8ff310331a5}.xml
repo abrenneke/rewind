@@ -5,7 +5,7 @@
             <value>cat_dying</value>
         </property>
         <property name="outputFormat">
-            <value>2</value>
+            <value>0</value>
         </property>
         <relationship name="mixer">
             <destination>{573fbb8b-47df-43c6-9582-6e6917446972}</destination>
@@ -72,6 +72,9 @@
         </relationship>
     </object>
     <object class="EventMixerMaster" id="{e58a03d7-d532-4916-b588-28f4afeeff3a}">
+        <property name="volume">
+            <value>-13.5</value>
+        </property>
         <relationship name="effectChain">
             <destination>{f38e68db-ea31-468a-aff3-85a19ce06c54}</destination>
         </relationship>
@@ -116,7 +119,6 @@
     <object class="MixerBusEffectChain" id="{f38e68db-ea31-468a-aff3-85a19ce06c54}">
         <relationship name="effects">
             <destination>{b421c3e2-5806-4f44-81fe-7a78f10163bc}</destination>
-            <destination>{59eb3154-cfda-413a-9fe3-5f1d9d5261b8}</destination>
             <destination>{15ad6647-9824-4ecf-87e6-1ec8de859560}</destination>
         </relationship>
     </object>
@@ -129,10 +131,9 @@
     </object>
     <object class="MixerBusPanner" id="{1cc28284-2b1d-4db4-b235-2597c23ee5db}"/>
     <object class="MixerBusFader" id="{b421c3e2-5806-4f44-81fe-7a78f10163bc}"/>
-    <object class="SpatialiserEffect" id="{59eb3154-cfda-413a-9fe3-5f1d9d5261b8}"/>
     <object class="MixerSend" id="{15ad6647-9824-4ecf-87e6-1ec8de859560}">
         <property name="inputFormat">
-            <value>2</value>
+            <value>0</value>
         </property>
         <relationship name="mixerReturn">
             <destination>{c298527c-8eb4-4efe-a51f-f2c6eb7fb33a}</destination>

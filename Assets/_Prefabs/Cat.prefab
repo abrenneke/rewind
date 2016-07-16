@@ -153,6 +153,9 @@ MonoBehaviour:
   PounceSpeed: 3
   ReturnSpeed: 1
   DamageDealt: 1
+  CatAngry: event:/cat_angry
+  CatDying: event:/cat_dying
+  CatHit: event:/cat_hit
 --- !u!212 &21295030
 SpriteRenderer:
   m_ObjectHideFlags: 1

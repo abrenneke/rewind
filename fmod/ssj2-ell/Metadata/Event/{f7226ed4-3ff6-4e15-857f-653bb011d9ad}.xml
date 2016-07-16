@@ -5,7 +5,7 @@
             <value>cat_angry</value>
         </property>
         <property name="outputFormat">
-            <value>2</value>
+            <value>0</value>
         </property>
         <relationship name="mixer">
             <destination>{cf938351-827b-4354-aec6-7d8b2dd97d42}</destination>
@@ -120,7 +120,6 @@
     <object class="MixerBusEffectChain" id="{526a101d-a9eb-47cf-83da-9529dc19fbfb}">
         <relationship name="effects">
             <destination>{db9b83c7-acbb-4147-8eb5-1abcb6327dcd}</destination>
-            <destination>{5f065c66-ee25-473a-b3f2-3242ba44655d}</destination>
             <destination>{f765d480-e87b-4146-977f-7876cdfbda4f}</destination>
         </relationship>
     </object>
@@ -143,10 +142,9 @@
     </object>
     <object class="MixerBusPanner" id="{5c8b387a-d55b-4b31-8942-2f5d8905330f}"/>
     <object class="MixerBusFader" id="{db9b83c7-acbb-4147-8eb5-1abcb6327dcd}"/>
-    <object class="SpatialiserEffect" id="{5f065c66-ee25-473a-b3f2-3242ba44655d}"/>
     <object class="MixerSend" id="{f765d480-e87b-4146-977f-7876cdfbda4f}">
         <property name="inputFormat">
-            <value>2</value>
+            <value>0</value>
         </property>
         <relationship name="mixerReturn">
             <destination>{c298527c-8eb4-4efe-a51f-f2c6eb7fb33a}</destination>
