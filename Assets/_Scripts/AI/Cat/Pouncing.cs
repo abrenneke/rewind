@@ -1,11 +1,17 @@
-﻿using UnityEngine;
+﻿using FMODUnity;
+using UnityEngine;
 
 namespace Assets._Scripts.AI.Cat
 {
     public class Pouncing : AIState
     {
         private CatAI CatAI {get { return (CatAI)AIBase; } }
-      
+
+        public override void Enter()
+        {
+            RuntimeManager.PlayOneShot(CatAI.CatAngry);
+        }
+
         public override void Update()
         {
             var distanceToStart = CatAI.transform.position.DistanceTo(CatAI.StartPosition);

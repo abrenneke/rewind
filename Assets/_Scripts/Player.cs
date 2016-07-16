@@ -3,6 +3,7 @@ using System.Linq;
 using UnityEngine;
 using FMOD.Studio;
 using FMODUnity;
+using JetBrains.Annotations;
 
 namespace Assets._Scripts
 {
@@ -18,8 +19,11 @@ namespace Assets._Scripts
         [EventRef]
 		public string SoundDoorOpenEventName = "event:/Door_Open";
 
-        [EventRef]
+        [EventRef, UsedImplicitly]
         public string SoundBroomSweep;
+
+        [EventRef, UsedImplicitly]
+        public string Hit;
         
 		public static Player Instance { get; private set; }
 
@@ -238,6 +242,8 @@ namespace Assets._Scripts
         public void TakeDamage(int damageAmount)
         {
             Health -= damageAmount;
+
+            RuntimeManager.PlayOneShot(Hit);
 
             if (HealthChanged != null)
                 HealthChanged(Health);

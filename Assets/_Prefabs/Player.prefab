@@ -251,6 +251,7 @@ MonoBehaviour:
   SoundWalkEventName: event:/footsteps_carpet
   SoundDoorOpenEventName: event:/Door_Open
   SoundBroomSweep: event:/swing_broom
+  Hit: event:/hit
   Rotation: {fileID: 412758}
   MoveSpeed: 1.5
   MaxHealth: 6

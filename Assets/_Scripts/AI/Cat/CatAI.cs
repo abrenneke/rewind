@@ -53,6 +53,9 @@ namespace Assets._Scripts.AI.Cat
             var unitVectorToPlayer = transform.position.UnitVectorTo(collision.gameObject.transform.position);
 
             Player.Instance.TakeDamageAndPush(DamageDealt, unitVectorToPlayer);
+
+            if (CurrentState is Pouncing)
+                SetState<Returning>();
         }
 
         public void IsHitWithBroom()
