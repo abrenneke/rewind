@@ -816,6 +816,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CatPrefab: {fileID: 115816, guid: 3cb6e2ee7ea99bd428bb1d1b595e7b6b, type: 2}
+  MousePrefab: {fileID: 152220, guid: 6155fe28e452b2d458edf2dd67473b48, type: 2}
 --- !u!114 &2143708288
 MonoBehaviour:
   m_ObjectHideFlags: 0

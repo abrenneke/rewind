@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <!--Tiled2Unity generated xml data-->
 <!--Do not modify by hand-->
-<!--Last exported: 7/15/2016 3:28:50 AM-->
+<!--Last exported: 7/15/2016 7:48:30 PM-->
 <Tiled2Unity version="1.0.7.5">
   <AssignMaterial mesh="mesh_0001" material="testtilemap" />
   <AssignMaterial mesh="mesh_0002" material="furnituremap" />
@@ -101,6 +101,16 @@
             <Path>0,0 0.7866797,0 0.7866797,-1.06 0,-1.06</Path>
           </PolygonCollider2D>
           <GameObject name="tile_obj" copy="mesh_tile_0016" sortingLayerName="" sortingOrder="4" x="0" y="1.28" />
+        </GameObject>
+      </GameObject>
+    </GameObject>
+    <GameObject name="Mice" x="0" y="0" z="-0.2631579">
+      <GameObject name="TileObject" x="14.0199995" y="-18.22" rotation="0" layer="" z="-0.6965461" scaleX="1" scaleY="1">
+        <GameObject name="TileObject">
+          <PolygonCollider2D offsetX="0.199999988" offsetY="1.18332028">
+            <Path>0,0 0.7866797,0 0.7866797,-1.06 0,-1.06</Path>
+          </PolygonCollider2D>
+          <GameObject name="tile_obj" copy="mesh_tile_0016" sortingLayerName="" sortingOrder="5" x="0" y="1.28" />
         </GameObject>
       </GameObject>
     </GameObject>

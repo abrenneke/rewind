@@ -7,23 +7,22 @@ using UnityEngine;
 namespace Assets._Scripts.Editor.Importers
 {
     [CustomTiledImporter, UsedImplicitly]
-    public class Cats : ICustomTiledImporter
+    public class Mice : ICustomTiledImporter
     {
         public void HandleCustomProperties(GameObject gameObject, IDictionary<string, string> customProperties)
         {
-            
         }
 
         public void CustomizePrefab(GameObject prefab)
         {
-            var catLayer = prefab.transform.FindChild("Cats");
+            var miceLayer = prefab.transform.FindChild("Mice");
 
-            foreach (Transform catObject in catLayer)
+            foreach (Transform mouseObject in miceLayer)
             {
-                var spawner = catObject.gameObject.AddComponent<CatSpawner>();
-                spawner.Map = prefab.GetComponent<TiledMap>();
+                var spawner = mouseObject.gameObject.AddComponent<MouseSpawner>();
 
-                catObject.name = "Cat Spawner";
+                spawner.Map = prefab.GetComponent<TiledMap>();
+                spawner.name = "Mouse Spawner";
             }
         }
     }

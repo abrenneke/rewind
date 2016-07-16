@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="19" height="19" tilewidth="128" tileheight="128" nextobjectid="14">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="19" height="19" tilewidth="128" tileheight="128" nextobjectid="15">
  <tileset firstgid="1" name="testtilemap" tilewidth="128" tileheight="128" tilecount="12" columns="6">
   <image source="TestRoom/testtilemap.png" width="768" height="256"/>
   <tile id="0">
@@ -187,5 +187,8 @@
  </objectgroup>
  <objectgroup name="Cats">
   <object id="9" gid="16" x="1024" y="1024" width="128" height="128"/>
+ </objectgroup>
+ <objectgroup name="Mice">
+  <object id="14" gid="16" x="1402" y="1822" width="128" height="128"/>
  </objectgroup>
 </map>

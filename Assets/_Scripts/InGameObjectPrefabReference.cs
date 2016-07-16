@@ -10,6 +10,9 @@ namespace Assets._Scripts
         [AssignedInUnity]
         public GameObject CatPrefab;
 
+        [AssignedInUnity]
+        public GameObject MousePrefab;
+
         [UnityMessage]
         public void Awake()
         {
