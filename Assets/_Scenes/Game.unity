@@ -85,24 +85,6 @@ NavMeshSettings:
     cellSize: 0.16666667
     manualCellSize: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &43400404 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 190974, guid: 4ac19fae7c2713940a804ee829bc6f07, type: 2}
-  m_PrefabInternal: {fileID: 1909893610}
---- !u!58 &43400415
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 43400404}
-  m_Enabled: 0
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 1
 --- !u!224 &628470369 stripped
 RectTransform:
   m_PrefabParentObject: {fileID: 22446868, guid: b9a48fb791857984ab7bcd82bdf15f9c,
@@ -315,10 +297,6 @@ Prefab:
     - target: {fileID: 487070, guid: 4ac19fae7c2713940a804ee829bc6f07, type: 2}
       propertyPath: m_RootOrder
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 11444886, guid: 4ac19fae7c2713940a804ee829bc6f07, type: 2}
-      propertyPath: AttackRange
-      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4ac19fae7c2713940a804ee829bc6f07, type: 2}
