@@ -1,6 +1,7 @@
 {f7226ed4-3ff6-4e15-857f-653bb011d9ad} event:/cat_angry
 {b21d48c9-781b-49b6-9fa2-b8ff310331a5} event:/cat_dying
 {d212e315-5fb8-4a8c-930a-d30b36ec5d46} event:/cat_hit
+{0d8b8ab0-9050-4857-8e05-cdd68ea46b41} event:/close_interaction
 {7453cf30-b951-4f35-bdc9-6bf6ba5540a8} event:/door_close
 {b93aabb5-4d62-49e7-99b0-64b91b13639d} event:/door_open
 {cd8a10fd-700f-4ee8-9577-edf6513e941f} event:/door_unlock
@@ -8,9 +9,8 @@
 {8b5a97cf-a123-4ac9-9557-a1c1964c9675} event:/hit
 {6fe7bdf7-69c4-489e-8b9a-ad9d28320004} event:/music_lvl1
 {53aedd38-7b6e-4f9a-8b2d-ba7b03affe2e} event:/music_title
-{6ba56711-1d2e-490d-bdf1-fe5742fdcd9a} event:/swing_broom
 {4bb61313-eab7-403c-9756-3b17c6ecd77f} event:/open_interaction
-{0d8b8ab0-9050-4857-8e05-cdd68ea46b41} event:/close_interaction
+{6ba56711-1d2e-490d-bdf1-fe5742fdcd9a} event:/swing_broom
 {898d02de-e77d-471b-93ee-0f0dd2fa7a6e} bus:/
 {c298527c-8eb4-4efe-a51f-f2c6eb7fb33a} bus:/Reverb
 {2dc88fde-82aa-49dd-997c-a1b0b512f5aa} bank:/Master Bank
