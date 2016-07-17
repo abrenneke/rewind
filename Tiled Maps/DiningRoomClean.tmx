@@ -1,0 +1,543 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="20" height="20" tilewidth="100" tileheight="100" nextobjectid="43">
+ <tileset firstgid="1" name="floor_sheet" tilewidth="100" tileheight="100" tilecount="225" columns="15">
+  <image source="../Documents/GitKraken Projects/rewind/Tiled Maps/Sprite Sheets/floor_sheet.png" width="1536" height="1536"/>
+ </tileset>
+ <tileset firstgid="226" name="closed_door_sheet" tilewidth="100" tileheight="100" tilecount="225" columns="15">
+  <image source="../Documents/GitKraken Projects/rewind/Tiled Maps/Sprite Sheets/closed_door_sheet.png" width="1536" height="1536"/>
+  <tile id="37">
+   <objectgroup draworder="index">
+    <object id="1" x="0" y="0" width="100" height="100"/>
+   </objectgroup>
+  </tile>
+  <tile id="38">
+   <objectgroup draworder="index">
+    <object id="1" x="0" y="0" width="65" height="100"/>
+   </objectgroup>
+  </tile>
+  <tile id="106">
+   <objectgroup draworder="index">
+    <object id="1" x="-8" y="1"/>
+    <object id="2" x="0" y="0" width="100" height="100"/>
+   </objectgroup>
+  </tile>
+  <tile id="118">
+   <objectgroup draworder="index" offsetx="35" offsety="0">
+    <object id="1" x="2" y="0" width="63" height="100"/>
+   </objectgroup>
+  </tile>
+  <tile id="121">
+   <objectgroup draworder="index">
+    <object id="1" x="0" y="0" width="100" height="65"/>
+   </objectgroup>
+  </tile>
+  <tile id="133">
+   <objectgroup draworder="index" offsetx="35" offsety="0">
+    <object id="1" x="0" y="0" width="64" height="84"/>
+   </objectgroup>
+  </tile>
+  <tile id="202">
+   <objectgroup draworder="index">
+    <object id="1" x="0" y="25" width="100" height="75"/>
+   </objectgroup>
+  </tile>
+  <tile id="203">
+   <objectgroup draworder="index">
+    <object id="1" x="0" y="25" width="65" height="75"/>
+   </objectgroup>
+  </tile>
+ </tileset>
+ <tileset firstgid="451" name="piano_wall_sheet" tilewidth="100" tileheight="100" tilecount="225" columns="15">
+  <image source="../Documents/GitKraken Projects/rewind/Tiled Maps/Sprite Sheets/piano_wall_sheet.png" width="1536" height="1536"/>
+  <tile id="31">
+   <objectgroup draworder="index">
+    <object id="1" x="-47" y="-33" width="157" height="121"/>
+    <object id="2" x="-54" y="-66" width="143" height="209"/>
+   </objectgroup>
+  </tile>
+  <tile id="32">
+   <objectgroup draworder="index">
+    <object id="1" x="-24" y="-16" width="139" height="104"/>
+   </objectgroup>
+  </tile>
+  <tile id="33">
+   <objectgroup draworder="index">
+    <object id="1" x="-18" y="-6" width="137" height="96"/>
+   </objectgroup>
+  </tile>
+  <tile id="34">
+   <objectgroup draworder="index">
+    <object id="1" x="-39" y="-29" width="165" height="119"/>
+   </objectgroup>
+  </tile>
+  <tile id="35">
+   <objectgroup draworder="index">
+    <object id="1" x="-20" y="-17" width="144" height="106"/>
+   </objectgroup>
+  </tile>
+  <tile id="36">
+   <objectgroup draworder="index">
+    <object id="1" x="-15" y="-22" width="142" height="113"/>
+   </objectgroup>
+  </tile>
+  <tile id="37">
+   <objectgroup draworder="index">
+    <object id="1" x="-45" y="-39" width="176" height="128"/>
+   </objectgroup>
+  </tile>
+  <tile id="38">
+   <objectgroup draworder="index">
+    <object id="1" x="-27" y="-17" width="152" height="106"/>
+   </objectgroup>
+  </tile>
+  <tile id="39">
+   <objectgroup draworder="index">
+    <object id="1" x="-9" y="-14" width="126" height="103"/>
+   </objectgroup>
+  </tile>
+  <tile id="40">
+   <objectgroup draworder="index">
+    <object id="1" x="-19" y="-16" width="140" height="106"/>
+   </objectgroup>
+  </tile>
+  <tile id="41">
+   <objectgroup draworder="index">
+    <object id="1" x="-22" y="-36" width="151" height="126"/>
+   </objectgroup>
+  </tile>
+  <tile id="42">
+   <objectgroup draworder="index">
+    <object id="1" x="-51" y="-25" width="184" height="116"/>
+   </objectgroup>
+  </tile>
+  <tile id="43">
+   <objectgroup draworder="index">
+    <object id="2" x="-15" y="-5" width="127" height="93"/>
+    <object id="3" x="35" y="-29" width="66" height="133"/>
+   </objectgroup>
+  </tile>
+  <tile id="46">
+   <objectgroup draworder="index">
+    <object id="1" x="0" y="0" width="89" height="100"/>
+   </objectgroup>
+  </tile>
+  <tile id="58">
+   <objectgroup draworder="index">
+    <object id="1" x="38" y="-7" width="70" height="121"/>
+   </objectgroup>
+  </tile>
+  <tile id="61">
+   <objectgroup draworder="index">
+    <object id="1" x="-2" y="-1" width="92" height="102"/>
+   </objectgroup>
+  </tile>
+  <tile id="73">
+   <objectgroup draworder="index">
+    <object id="1" x="37" y="-16" width="79" height="139"/>
+   </objectgroup>
+  </tile>
+  <tile id="76">
+   <objectgroup draworder="index">
+    <object id="1" x="-6" y="-4" width="96" height="104"/>
+   </objectgroup>
+  </tile>
+  <tile id="88">
+   <objectgroup draworder="index">
+    <object id="1" x="39" y="-12" width="74" height="131"/>
+   </objectgroup>
+  </tile>
+  <tile id="91">
+   <objectgroup draworder="index">
+    <object id="1" x="-16" y="-14" width="107" height="126"/>
+   </objectgroup>
+  </tile>
+  <tile id="103">
+   <objectgroup draworder="index">
+    <object id="1" x="36" y="-6" width="69" height="110"/>
+   </objectgroup>
+  </tile>
+  <tile id="106">
+   <objectgroup draworder="index">
+    <object id="1" x="-29" y="-19" width="120" height="136"/>
+   </objectgroup>
+  </tile>
+  <tile id="118">
+   <objectgroup draworder="index">
+    <object id="1" x="37" y="-10" width="83" height="138"/>
+   </objectgroup>
+  </tile>
+  <tile id="121">
+   <objectgroup draworder="index">
+    <object id="1" x="-30" y="-21" width="121" height="136"/>
+   </objectgroup>
+  </tile>
+  <tile id="133">
+   <objectgroup draworder="index">
+    <object id="1" x="36" y="-10" width="71" height="118"/>
+   </objectgroup>
+  </tile>
+  <tile id="136">
+   <objectgroup draworder="index">
+    <object id="1" x="-13" y="-12" width="103" height="126"/>
+   </objectgroup>
+  </tile>
+  <tile id="148">
+   <objectgroup draworder="index">
+    <object id="1" x="38" y="-13" width="90" height="142"/>
+   </objectgroup>
+  </tile>
+  <tile id="151">
+   <objectgroup draworder="index">
+    <object id="1" x="-49" y="-34" width="139" height="159"/>
+   </objectgroup>
+  </tile>
+  <tile id="163">
+   <objectgroup draworder="index">
+    <object id="1" x="38" y="-8" width="76" height="123"/>
+   </objectgroup>
+  </tile>
+  <tile id="166">
+   <objectgroup draworder="index">
+    <object id="1" x="-25" y="-25" width="116" height="150"/>
+   </objectgroup>
+  </tile>
+  <tile id="178">
+   <objectgroup draworder="index">
+    <object id="1" x="36" y="-12" width="65" height="131"/>
+   </objectgroup>
+  </tile>
+  <tile id="181">
+   <objectgroup draworder="index">
+    <object id="1" x="-35" y="-15" width="125" height="135"/>
+   </objectgroup>
+  </tile>
+  <tile id="193">
+   <objectgroup draworder="index">
+    <object id="2" x="36" y="-7" width="75" height="120"/>
+   </objectgroup>
+  </tile>
+  <tile id="196">
+   <objectgroup draworder="index">
+    <object id="1" x="-19" y="-27" width="110" height="175"/>
+    <object id="3" x="46" y="21" width="54" height="112"/>
+   </objectgroup>
+  </tile>
+  <tile id="197">
+   <objectgroup draworder="index">
+    <object id="1" x="-4" y="19" width="110" height="91"/>
+   </objectgroup>
+  </tile>
+  <tile id="198">
+   <objectgroup draworder="index">
+    <object id="1" x="-6" y="24" width="110" height="98"/>
+   </objectgroup>
+  </tile>
+  <tile id="199">
+   <objectgroup draworder="index">
+    <object id="1" x="-12" y="24" width="117" height="120"/>
+   </objectgroup>
+  </tile>
+  <tile id="200">
+   <objectgroup draworder="index">
+    <object id="1" x="-20" y="24" width="135" height="104"/>
+   </objectgroup>
+  </tile>
+  <tile id="201">
+   <objectgroup draworder="index">
+    <object id="1" x="-15" y="21" width="122" height="102"/>
+   </objectgroup>
+  </tile>
+  <tile id="202">
+   <objectgroup draworder="index">
+    <object id="1" x="-11" y="22" width="121" height="133"/>
+   </objectgroup>
+  </tile>
+  <tile id="203">
+   <objectgroup draworder="index">
+    <object id="1" x="-12" y="22" width="119" height="128"/>
+   </objectgroup>
+  </tile>
+  <tile id="204">
+   <objectgroup draworder="index">
+    <object id="1" x="-15" y="20" width="123" height="142"/>
+   </objectgroup>
+  </tile>
+  <tile id="205">
+   <objectgroup draworder="index">
+    <object id="1" x="-10" y="19" width="122" height="99"/>
+   </objectgroup>
+  </tile>
+  <tile id="206">
+   <objectgroup draworder="index">
+    <object id="1" x="-14" y="23" width="126" height="116"/>
+   </objectgroup>
+  </tile>
+  <tile id="207">
+   <objectgroup draworder="index">
+    <object id="1" x="-7" y="22" width="112" height="100"/>
+   </objectgroup>
+  </tile>
+  <tile id="208">
+   <objectgroup draworder="index">
+    <object id="1" x="-13" y="25" width="49" height="91"/>
+    <object id="3" x="35" y="-12" width="70" height="129"/>
+   </objectgroup>
+  </tile>
+ </tileset>
+ <tileset firstgid="676" name="bookshelf_sheet" tilewidth="128" tileheight="128" tilecount="8" columns="4">
+  <image source="../Documents/GitKraken Projects/rewind/Tiled Maps/Sprite Sheets/bookshelf_sheet.png" width="512" height="256"/>
+  <tile id="0">
+   <objectgroup draworder="index">
+    <object id="1" x="22" y="30" width="105" height="101"/>
+   </objectgroup>
+  </tile>
+  <tile id="1">
+   <objectgroup draworder="index">
+    <object id="2" x="-9" y="32" width="114" height="104"/>
+   </objectgroup>
+  </tile>
+  <tile id="2">
+   <objectgroup draworder="index">
+    <object id="1" x="22" y="32" width="110" height="104"/>
+   </objectgroup>
+  </tile>
+  <tile id="3">
+   <objectgroup draworder="index">
+    <object id="1" x="-6" y="34" width="112" height="95"/>
+   </objectgroup>
+  </tile>
+  <tile id="4">
+   <objectgroup draworder="index">
+    <object id="1" x="25" y="-14" width="107" height="98"/>
+   </objectgroup>
+  </tile>
+  <tile id="5">
+   <objectgroup draworder="index">
+    <object id="1" x="-28" y="-17" width="110" height="101"/>
+   </objectgroup>
+  </tile>
+  <tile id="6">
+   <objectgroup draworder="index">
+    <object id="1" x="28" y="-13" width="104" height="95"/>
+   </objectgroup>
+  </tile>
+  <tile id="7">
+   <objectgroup draworder="index">
+    <object id="1" x="-25" y="-20" width="106" height="103"/>
+   </objectgroup>
+  </tile>
+ </tileset>
+ <tileset firstgid="684" name="piano" tilewidth="128" tileheight="128" tilecount="4" columns="2">
+  <image source="../Documents/GitKraken Projects/rewind/Tiled Maps/Sprite Sheets/piano.png" width="256" height="256"/>
+ </tileset>
+ <tileset firstgid="688" name="enemy_sheet_100x100tiles" tilewidth="100" tileheight="100" tilecount="4" columns="2">
+  <image source="../Documents/GitKraken Projects/rewind/Tiled Maps/Sprite Sheets/enemy_sheet_100x100tiles.png" width="200" height="200"/>
+ </tileset>
+ <tileset firstgid="692" name="Enter_Exit" tilewidth="100" tileheight="100" tilecount="2" columns="2">
+  <image source="../Documents/GitKraken Projects/rewind/Tiled Maps/Sprite Sheets/Enter_Exit.png" width="200" height="100"/>
+  <tile id="0">
+   <objectgroup draworder="index">
+    <object id="1" x="-3" y="-6" width="104" height="104">
+     <properties>
+      <property name="from" value="foyer"/>
+     </properties>
+    </object>
+   </objectgroup>
+  </tile>
+  <tile id="1">
+   <properties>
+    <property name="to" value=""/>
+   </properties>
+   <objectgroup draworder="index">
+    <object id="1" x="0" y="0" width="97" height="102"/>
+   </objectgroup>
+  </tile>
+ </tileset>
+ <tileset firstgid="694" name="ExitObject" tilewidth="200" tileheight="200" tilecount="1" columns="1">
+  <image source="../Documents/GitKraken Projects/rewind/Tiled Maps/Sprite Sheets/ExitObject.png" width="200" height="200"/>
+ </tileset>
+ <tileset firstgid="695" name="first floor semi final (1)" tilewidth="100" tileheight="100" tilecount="225" columns="15">
+  <image source="../Downloads/first floor semi final (1).png" width="1536" height="1536"/>
+ </tileset>
+ <tileset firstgid="920" name="DiningRoomTable" tilewidth="100" tileheight="100" tilecount="12" columns="2">
+  <image source="DiningRoomTable.png" width="200" height="600"/>
+ </tileset>
+ <tileset firstgid="932" name="DiningTable" tilewidth="100" tileheight="100" tilecount="48" columns="4">
+  <image source="DiningTable.png" width="400" height="1200"/>
+ </tileset>
+ <layer name="Floor" width="20" height="20">
+  <data encoding="csv">
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,68,69,70,71,72,65,66,67,68,69,70,71,72,0,0,
+0,0,0,0,0,83,742,743,744,745,746,747,748,749,750,751,752,87,0,0,
+0,0,0,0,0,98,757,758,759,760,761,762,763,764,765,766,767,102,0,0,
+0,0,0,0,0,113,772,773,774,775,776,777,778,779,780,781,782,117,0,0,
+0,0,0,0,0,128,787,788,789,790,791,792,793,794,795,796,797,132,0,0,
+0,0,0,0,0,143,742,743,744,745,746,747,748,749,750,751,752,147,0,0,
+0,0,0,0,0,158,757,758,759,760,761,762,763,764,765,766,767,162,0,0,
+0,0,0,0,0,173,772,773,774,775,776,777,778,779,780,781,782,177,0,0,
+0,0,0,0,0,68,787,788,789,790,791,792,793,794,795,796,797,72,0,0,
+0,0,0,0,0,83,802,803,804,805,806,807,808,809,810,811,812,87,0,0,
+0,0,0,0,0,98,817,818,819,820,821,822,823,824,825,826,827,102,0,0,
+0,0,0,0,0,113,832,833,834,835,836,837,838,839,840,841,842,117,0,0,
+0,0,0,0,0,128,847,848,849,850,851,852,853,854,855,856,857,132,0,0,
+0,0,0,0,0,143,862,863,864,865,866,867,868,869,870,871,872,147,0,0,
+0,0,0,0,0,158,877,878,879,880,881,882,883,884,885,886,887,162,0,0,
+0,0,0,0,0,173,174,175,176,169,170,171,172,173,174,175,176,177,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+</data>
+ </layer>
+ <layer name="Walls" width="20" height="20">
+  <data encoding="csv">
+0,0,0,0,695,696,697,698,699,700,701,702,703,704,705,706,707,708,709,0,
+0,0,0,0,710,711,712,713,714,715,716,717,718,719,720,721,722,723,724,0,
+0,0,0,0,725,726,727,728,729,730,731,732,733,734,735,736,737,738,739,0,
+0,0,0,0,875,876,0,0,0,0,0,0,0,0,0,0,508,753,754,0,
+0,0,0,0,875,876,0,0,0,0,0,0,0,0,0,0,523,768,769,0,
+0,0,0,0,875,876,0,0,0,0,0,0,0,0,0,0,538,753,754,0,
+0,0,0,0,875,876,0,0,0,0,0,0,0,0,0,0,553,768,769,0,
+0,0,0,0,875,876,0,0,0,0,0,0,0,0,0,0,508,753,754,0,
+0,0,0,0,875,876,0,0,0,0,0,0,0,0,0,0,523,768,769,0,
+0,0,0,0,875,876,0,0,0,0,0,0,0,0,0,0,538,753,754,0,
+0,0,0,0,875,876,0,0,0,0,0,0,0,0,0,0,553,753,754,0,
+0,0,0,0,875,876,0,0,0,0,0,0,0,0,0,0,568,753,754,0,
+0,0,0,0,875,876,0,0,0,0,0,0,0,0,0,0,583,753,754,0,
+0,0,0,0,875,876,0,0,0,0,0,0,0,0,0,0,598,753,754,0,
+0,0,0,0,875,876,0,0,0,0,0,0,0,0,0,0,613,753,754,0,
+0,0,0,0,875,876,0,0,0,0,0,0,0,0,0,0,628,873,874,0,
+0,0,0,0,875,876,0,0,0,0,0,0,0,0,0,0,643,888,889,0,
+0,0,0,0,890,891,892,893,894,895,896,897,898,899,900,901,902,903,904,0,
+0,0,0,0,905,906,907,908,909,910,911,912,913,914,915,916,917,918,919,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+</data>
+ </layer>
+ <layer name="Doors" width="20" height="20">
+  <data encoding="csv">
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,247,248,249,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,262,263,264,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,328,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,343,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,358,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,373,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,388,389,390,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,427,428,429,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,442,443,444,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+</data>
+ </layer>
+ <layer name="Decor" width="20" height="20">
+  <data encoding="csv">
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,932,933,934,935,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,936,937,938,939,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,940,941,942,943,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,944,945,946,947,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,948,949,950,951,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,952,953,954,955,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,956,957,958,959,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,960,961,962,963,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,964,965,966,967,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,968,969,970,971,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,972,973,974,975,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,976,977,978,979,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+</data>
+ </layer>
+ <layer name="Cats" width="20" height="20">
+  <data encoding="csv">
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+</data>
+ </layer>
+ <layer name="Mice" width="20" height="20">
+  <data encoding="csv">
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+</data>
+ </layer>
+ <layer name="Trash" width="20" height="20">
+  <data encoding="csv">
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+</data>
+ </layer>
+ <objectgroup name="Entrance_Exits">
+  <object id="22" name="ToLibrary" gid="694" x="1084" y="1912" width="156" height="192" visible="0"/>
+  <object id="23" name="ToKitchen" gid="694" x="1084" y="301.64" width="192" height="200" visible="0"/>
+ </objectgroup>
+ <objectgroup name="Cats"/>
+ <objectgroup name="Mice"/>
+ <objectgroup name="Trash"/>
+</map>
