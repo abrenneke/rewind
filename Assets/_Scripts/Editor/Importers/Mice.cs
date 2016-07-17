@@ -17,12 +17,13 @@ namespace Assets._Scripts.Editor.Importers
         {
             var miceLayer = prefab.transform.FindChild("Mice");
 
+            if (miceLayer == null)
+                return;
+
             foreach (Transform mouseObject in miceLayer)
             {
-                var spawner = mouseObject.gameObject.AddComponent<MouseSpawner>();
-
-                spawner.Map = prefab.GetComponent<TiledMap>();
-                spawner.name = "Mouse Spawner";
+                mouseObject.gameObject.AddComponent<MouseSpawner>();
+                mouseObject.name = "Mouse Spawner";
             }
         }
     }

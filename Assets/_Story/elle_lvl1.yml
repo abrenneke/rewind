@@ -51,6 +51,11 @@ bed_3:
 	interaction-text: >
 		Oh I can’t sleep all day… can I?
 
+broom_1:
+	interaction-text: >
+		I really should clean this house out. The mice
+		are starting to think they own the place!
+
 
 
 
@@ -371,6 +376,28 @@ diningTable_3:
 	interaction-text: >
 		I bet the trees that were used to make the table and the 
 		trees that were used to make the walls were neighbors.
+
+
+# End Game
+
+wakeup_1:
+	interaction-text: >
+		What happened...? Was that... a dream?
+
+wakeup_2:
+	interaction-text: >
+		Oof. Everything aches. My hips, my back. My head...
+
+wakeup_3:
+	interaction-text: >
+		I am definitely getting too old for this.
+
+cleanhouse_1:
+	interaction-text: >
+		Well I think that does it! Everything spic-and-span. Now,
+		I've been cooped up long enough in here. Perhaps it's time
+		to go out on the town? And here are the house keys too, in 
+		my pocket this whole time!
 
 
 ...

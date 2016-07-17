@@ -30,6 +30,9 @@ namespace Assets._Scripts.AI
         [UnityMessage]
         public void Update()
         {
+            if (GameStateController.NoSimulate)
+                return;
+
             if (CurrentState != null)
                 CurrentState.Update();
 
@@ -44,6 +47,9 @@ namespace Assets._Scripts.AI
         [UnityMessage]
         public void FixedUpdate()
         {
+            if (GameStateController.NoSimulate)
+                return;
+
             if (CurrentState != null)
                 CurrentState.FixedUpdate();
 

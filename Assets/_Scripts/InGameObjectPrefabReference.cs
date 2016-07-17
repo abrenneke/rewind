@@ -8,6 +8,9 @@ namespace Assets._Scripts
         public static InGameObjectPrefabReference Instance { get; private set; }
 
         [AssignedInUnity]
+        public GameObject TrashPrefab;
+
+        [AssignedInUnity]
         public GameObject CatPrefab;
 
         [AssignedInUnity]

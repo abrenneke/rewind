@@ -18,10 +18,12 @@ namespace Assets._Scripts.Editor.Importers
         {
             var catLayer = prefab.transform.FindChild("Cats");
 
+            if (catLayer == null)
+                return;
+
             foreach (Transform catObject in catLayer)
             {
-                var spawner = catObject.gameObject.AddComponent<CatSpawner>();
-                spawner.Map = prefab.GetComponent<TiledMap>();
+                catObject.gameObject.AddComponent<CatSpawner>();
 
                 catObject.name = "Cat Spawner";
             }

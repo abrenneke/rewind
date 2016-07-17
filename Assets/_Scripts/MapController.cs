@@ -11,7 +11,13 @@ namespace Assets._Scripts
     public struct MapInfo
     {
         [AssignedInUnity]
-        public GameObject MapPrefab;
+        public string Name;
+
+        [AssignedInUnity]
+        public GameObject DirtyMapPrefab;
+
+        [AssignedInUnity]
+        public GameObject CleanMapPrefab;
     }
 
     [UnityComponent]
@@ -27,12 +33,17 @@ namespace Assets._Scripts
         [AssignedInUnity]
         public string StartingMapName;
 
-        private IDictionary<string, TransitionDestination> destinations; 
+        private MapInfo lastMap;
+
+        private IDictionary<string, TransitionDestination> destinations;
+
+        private IList<string> cleanedMaps;
 
         [UnityMessage]
         public void Awake()
         {
             destinations = new Dictionary<string, TransitionDestination>();
+            cleanedMaps = new List<string>();
             Instance = this;
         }
 
@@ -65,11 +76,20 @@ namespace Assets._Scripts
             if (CurrentMap != null)
                 UnloadMap();
 
-            var newMap = AllMaps.FirstOrDefault(x => x.MapPrefab.name == mapName);
-            if (newMap.MapPrefab == null)
+            var mapInfo = AllMaps.FirstOrDefault(x => x.Name == mapName);
+
+            if (mapInfo.Name == null)
                 throw new InvalidOperationException("Couldn't find map " + mapName);
 
-            var mapInstance = (GameObject)Instantiate(newMap.MapPrefab, Vector3.zero, Quaternion.identity);
+            lastMap = mapInfo;
+
+            var targetMap = mapInfo.DirtyMapPrefab;
+            if (cleanedMaps.Contains(mapInfo.Name) && mapInfo.CleanMapPrefab != null)
+            {
+                targetMap = mapInfo.CleanMapPrefab;
+            }
+            
+            var mapInstance = (GameObject)Instantiate(targetMap, Vector3.zero, Quaternion.identity);
 
             CurrentMap = mapInstance;
 
@@ -83,6 +103,14 @@ namespace Assets._Scripts
             destinations.Clear();
 
             CurrentMap = null;
+        }
+
+        public void SetCleaned()
+        {
+            cleanedMaps.Add(lastMap.Name);
+            ChangeMap(lastMap.Name);
+
+            //TODO spawn location
         }
     }
 }

@@ -6,11 +6,11 @@ Material:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: elleSidWalk
-  m_Shader: {fileID: 4800000, guid: 80e88302364f3fb4fafd9a4e53c54c51, type: 3}
-  m_ShaderKeywords: GAF_VERTICES_TRANSFORM_ON
+  m_Name: coat_rack
+  m_Shader: {fileID: 4800000, guid: 99fd33029232b8444a60a01e27b081ee, type: 3}
+  m_ShaderKeywords: PIXELSNAP_ON
   m_LightmapFlags: 5
-  m_CustomRenderQueue: 3000
+  m_CustomRenderQueue: -1
   stringTagMap: {}
   m_SavedProperties:
     serializedVersion: 2
@@ -19,20 +19,16 @@ Material:
         first:
           name: _MainTex
         second:
-          m_Texture: {fileID: 2800000, guid: 582fe6093af272d4f959b4b4926ed3d7, type: 3}
+          m_Texture: {fileID: 2800000, guid: 5977c136b3d15b041990804a82f1b5f0, type: 3}
           m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
     m_Floats:
       data:
         first:
-          name: _StencilID
-        second: 0
+          name: PixelSnap
+        second: 1
     m_Colors:
       data:
         first:
-          name: _CustomColorMultiplier
+          name: _Color
         second: {r: 1, g: 1, b: 1, a: 1}
-      data:
-        first:
-          name: _CustomColorOffset
-        second: {r: 0, g: 0, b: 0, a: 0}
