@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 using UnityEngine.UI;
 
 namespace Assets._Scripts
@@ -10,6 +11,9 @@ namespace Assets._Scripts
 
         [AssignedInUnity]
         public GameObject PillsArea;
+
+        [AssignedInUnity]
+        public Text PillsCounter;
 
         [AssignedInUnity]
         public GameObject BroomArea;
@@ -26,6 +30,21 @@ namespace Assets._Scripts
             SetPillsEnabled(false);
         }
 
+        [UnityMessage]
+        public void Start()
+        {
+            Player.Instance.PillsChanged += PillsChanged;
+
+            PillsChanged(0);
+        }
+
+        private void PillsChanged(int numPills)
+        {
+            PillsCounter.text = numPills.ToString();
+
+            SetPillsEnabled(numPills > 0);
+        }
+
         public void SetPillsEnabled(bool enabled)
         {
             PillsArea.SetActive(enabled);
@@ -38,6 +57,10 @@ namespace Assets._Scripts
 
         public void SetHighlightInteract(bool highlight)
         {
+            // Dunno
+            if (this == null || InteractArea == null)
+                return;
+
             var image = InteractArea.GetComponent<Image>();
             if (highlight)
             {

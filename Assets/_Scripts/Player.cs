@@ -12,6 +12,8 @@ namespace Assets._Scripts
     {
         public event Action<int> HealthChanged;
 
+        public event Action<int> PillsChanged;
+
 		[EventRef]
 		public string SoundWalkEventName = "event:/footsteps_carpet";
         private EventInstance walkSound;
@@ -24,6 +26,9 @@ namespace Assets._Scripts
 
         [EventRef, UsedImplicitly]
         public string Hit;
+
+        [EventRef, UsedImplicitly]
+        public string Heal;
         
 		public static Player Instance { get; private set; }
 
@@ -50,6 +55,8 @@ namespace Assets._Scripts
 
         [AssignedInUnity, Range(0, 5)]
         public float AttackRange = 1;
+
+        public int NumPills;
 
         private Vector2 desiredMovement;
         private new Rigidbody2D rigidbody;
@@ -91,9 +98,21 @@ namespace Assets._Scripts
             {
                 MoveFromPlayerMovement();
                 CheckAttack();
+                CheckUsePill();
             }
 
             CheckAudio();
+        }
+
+        private void CheckUsePill()
+        {
+            if (Input.GetButtonDown("Action2") == false)
+                return;
+
+            if (NumPills <= 0)
+                return;
+
+            UsePill();
         }
 
         private void CheckAttack()
@@ -256,6 +275,30 @@ namespace Assets._Scripts
             recoilFrameCounter = 0;
 
             TakeDamage(damageAmount);
+        }
+
+        public void AddPill()
+        {
+            NumPills++;
+
+            if (PillsChanged != null)
+                PillsChanged(NumPills);
+        }
+
+        public void UsePill()
+        {
+            NumPills--;
+            if (PillsChanged != null)
+                PillsChanged(NumPills);
+
+            Health = Mathf.Min(MaxHealth, Health + 3);
+            
+            if (HealthChanged != null)
+                HealthChanged(Health);
+
+            HealOverlay.Instance.Show();
+
+            RuntimeManager.PlayOneShot(Heal);
         }
     }
 }

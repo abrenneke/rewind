@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="19" height="19" tilewidth="128" tileheight="128" nextobjectid="15">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="19" height="19" tilewidth="128" tileheight="128" nextobjectid="18">
  <tileset firstgid="1" name="testtilemap" tilewidth="128" tileheight="128" tilecount="12" columns="6">
   <image source="TestRoom/testtilemap.png" width="768" height="256"/>
   <tile id="0">
@@ -182,6 +182,24 @@
   <object id="8" gid="15" x="1152" y="384" width="128" height="128">
    <properties>
     <property name="after-interaction" value="give-candle"/>
+    <property name="interaction" value="test-table"/>
+   </properties>
+  </object>
+  <object id="15" gid="15" x="1792" y="1152" width="128" height="128">
+   <properties>
+    <property name="after-interaction" value="give-pills"/>
+    <property name="interaction" value="test-table"/>
+   </properties>
+  </object>
+  <object id="16" gid="15" x="1792" y="896" width="128" height="128">
+   <properties>
+    <property name="after-interaction" value="give-pills"/>
+    <property name="interaction" value="test-table"/>
+   </properties>
+  </object>
+  <object id="17" gid="15" x="1792" y="1024" width="128" height="128">
+   <properties>
+    <property name="after-interaction" value="give-pills"/>
     <property name="interaction" value="test-table"/>
    </properties>
   </object>

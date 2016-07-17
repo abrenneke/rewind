@@ -15,6 +15,10 @@ namespace Assets._Scripts
     {
         public event Action<GameState> GameStateChanged;
 
+        public static bool InGame { get { return Instance.CurrentState == GameState.InGame; } }
+
+        public static bool NoSimulate {get { return Instance.CurrentState != GameState.InGame; } }
+
         public static GameStateController Instance { get; private set; }
 
         public GameState CurrentState { get; private set; }

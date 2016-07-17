@@ -25,6 +25,12 @@ namespace Assets._Scripts
         }
 
         [UnityMessage]
+        public void OnDestroy()
+        {
+            HideCanInteract();
+        }
+
+        [UnityMessage]
         public void Start()
         {
             overlayChild = new GameObject("Overlay");
