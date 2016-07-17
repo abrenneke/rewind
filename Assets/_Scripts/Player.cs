@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Linq;
 using UnityEngine;
 using FMOD.Studio;
 using FMODUnity;
@@ -71,6 +70,9 @@ namespace Assets._Scripts
 
         private Vector2 lastMovement;
 
+        public bool HasBroom;
+        public bool IsAttacking;
+
         [AssignedInUnity]
         public GAFMovieClip SideWalk;
 
@@ -79,6 +81,27 @@ namespace Assets._Scripts
 
         [AssignedInUnity]
         public GAFMovieClip BackWalk;
+
+
+        [AssignedInUnity]
+        public GAFMovieClip SideBroomWalk;
+
+        [AssignedInUnity]
+        public GAFMovieClip FrontBroomWalk;
+
+        [AssignedInUnity]
+        public GAFMovieClip BackBroomWalk;
+
+
+        [AssignedInUnity]
+        public GAFMovieClip SideBroomAttack;
+
+        [AssignedInUnity]
+        public GAFMovieClip FrontBroomAttack;
+
+        [AssignedInUnity]
+        public GAFMovieClip BackBroomAttack;
+
 
         [AssignedInUnity]
         public Collider2D BroomSweepCollider;
@@ -182,6 +205,10 @@ namespace Assets._Scripts
 
             if (movementDirection > 360)
                 movementDirection -= 360;
+
+            //var all = new[] { SideWalk, SideBroomWalk, SideBroomAttack, FrontWalk, FrontBroomWalk, FrontBroomAttack, BackWalk, BackBroomWalk, BackBroomAttack };
+            //foreach (var gafAnimation in all)
+            //    gafAnimation.enabled = false; //performance?
 
             var sideActive = false;
             var frontActive = false;
@@ -370,6 +397,11 @@ namespace Assets._Scripts
             HealOverlay.Instance.Show();
 
             RuntimeManager.PlayOneShot(Heal);
+        }
+
+        public void SetHasBroom()
+        {
+            HasBroom = true;
         }
     }
 }
