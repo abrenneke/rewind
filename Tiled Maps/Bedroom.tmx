@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="20" height="20" tilewidth="100" tileheight="100" nextobjectid="31">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="20" height="20" tilewidth="100" tileheight="100" nextobjectid="38">
  <tileset firstgid="1" name="floor_sheet" tilewidth="100" tileheight="100" tilecount="225" columns="15">
   <image source="Sprite Sheets/floor_sheet.png" width="1536" height="1536"/>
  </tileset>
@@ -361,45 +361,25 @@
    </objectgroup>
   </tile>
  </tileset>
- <tileset firstgid="695" name="bed" tilewidth="100" tileheight="100" tilecount="4" columns="2">
-  <image source="Sprite Sheets/bed.png" width="200" height="200"/>
- </tileset>
- <tileset firstgid="699" name="dresser-front" tilewidth="100" tileheight="100" tilecount="4" columns="2">
-  <image source="Sprite Sheets/dresser-front.png" width="200" height="200"/>
- </tileset>
- <tileset firstgid="703" name="dresser-back" tilewidth="100" tileheight="100" tilecount="4" columns="2">
-  <image source="Sprite Sheets/dresser-back.png" width="200" height="200"/>
-  <tile id="0">
-   <objectgroup draworder="index">
-    <object id="1" x="35.5" y="88.75" width="64.5" height="11.25"/>
-   </objectgroup>
-  </tile>
-  <tile id="1">
-   <objectgroup draworder="index">
-    <object id="1" x="-0.75" y="89.25" width="78.25" height="10.75"/>
-   </objectgroup>
-  </tile>
-  <tile id="2">
-   <objectgroup draworder="index">
-    <object id="1" x="29" y="0" width="71" height="69.25"/>
-   </objectgroup>
-  </tile>
-  <tile id="3">
-   <objectgroup draworder="index">
-    <object id="1" x="0" y="-0.25" width="81.25" height="68.5"/>
-   </objectgroup>
-  </tile>
- </tileset>
- <tileset firstgid="707" name="broom-standing" tilewidth="100" tileheight="100" tilecount="1" columns="1">
+ <tileset firstgid="695" name="broom-standing" tilewidth="100" tileheight="100" tilecount="1" columns="1">
   <image source="Sprite Sheets/broom-standing.png" width="100" height="100"/>
  </tileset>
- <tileset firstgid="708" name="candle" tilewidth="100" tileheight="100" tilecount="1" columns="1">
+ <tileset firstgid="696" name="candle" tilewidth="100" tileheight="100" tilecount="1" columns="1">
   <image source="Sprite Sheets/candle.png" width="128" height="128"/>
   <tile id="0">
    <objectgroup draworder="index">
     <object id="1" x="17" y="10.25" width="21.5" height="74.25"/>
    </objectgroup>
   </tile>
+ </tileset>
+ <tileset firstgid="697" name="bed" tilewidth="200" tileheight="200" tilecount="1" columns="1">
+  <image source="Sprite Sheets/bed.png" width="200" height="200"/>
+ </tileset>
+ <tileset firstgid="698" name="dresser-front" tilewidth="200" tileheight="200" tilecount="1" columns="1">
+  <image source="Sprite Sheets/dresser-front.png" width="200" height="200"/>
+ </tileset>
+ <tileset firstgid="699" name="dresser-back" tilewidth="200" tileheight="200" tilecount="1" columns="1">
+  <image source="Sprite Sheets/dresser-back.png" width="200" height="200"/>
  </tileset>
  <layer name="Floor" width="20" height="20">
   <data encoding="csv">
@@ -482,10 +462,10 @@
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,699,700,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,701,702,695,696,0,0,0,0,
-0,0,0,0,0,703,704,0,0,0,0,0,0,0,697,698,0,0,0,0,
-0,0,0,0,0,705,706,0,0,0,0,0,0,0,0,0,707,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
@@ -569,6 +549,19 @@
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 </data>
  </layer>
+ <objectgroup name="Furniture">
+  <object id="34" gid="697" x="1460.78" y="974.51" width="200" height="200">
+   <properties>
+    <property name="interaction" value="bed"/>
+   </properties>
+  </object>
+  <object id="35" gid="698" x="1233.33" y="892.157" width="200" height="200">
+   <properties>
+    <property name="interaction" value="dresser"/>
+   </properties>
+  </object>
+  <object id="37" gid="699" x="476.471" y="1100" width="200" height="200"/>
+ </objectgroup>
  <objectgroup name="Entrance_Exits">
   <object id="26" name="ToLivingRoom" gid="694" x="1168" y="1300" width="200" height="200">
    <properties>
@@ -591,10 +584,18 @@
  <objectgroup name="Mice"/>
  <objectgroup name="Trash"/>
  <objectgroup name="Candle">
-  <object id="25" gid="708" x="520" y="1016" width="100" height="100">
+  <object id="25" gid="696" x="520" y="1016" width="100" height="100">
    <properties>
     <property name="after-interaction" value="give-candle"/>
     <property name="interaction" value="candle"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup name="Broom">
+  <object id="31" gid="695" x="1557.84" y="1136.27" width="167.647" height="179.412">
+   <properties>
+    <property name="after-interaction" value="give-broom"/>
+    <property name="interaction" value="broom"/>
    </properties>
   </object>
  </objectgroup>
