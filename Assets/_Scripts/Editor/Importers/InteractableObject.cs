@@ -13,6 +13,11 @@ namespace Assets._Scripts.Editor.Importers
             {
                 var interaction = gameObject.AddComponent<_Scripts.InteractableObject>();
                 interaction.InteractionName = customProperties["interaction"];
+
+                if (customProperties.ContainsKey("after-interaction"))
+                {
+                    interaction.AfterInteraction = customProperties["after-interaction"];
+                }
             }
         }
 

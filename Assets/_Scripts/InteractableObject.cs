@@ -10,6 +10,8 @@ namespace Assets._Scripts
 
         private GameObject overlayChild;
 
+        public string AfterInteraction { get; set; }
+
         public void ShowCanInteract()
         {
             overlayChild.SetActive(true);

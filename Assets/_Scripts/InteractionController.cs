@@ -1,4 +1,4 @@
-﻿using System.Collections;
+﻿using System.Collections.Generic;
 using UnityEngine;
 
 namespace Assets._Scripts
@@ -17,8 +17,11 @@ namespace Assets._Scripts
         public Canvas Canvas;
 
         private InteractionOverlay currentInteraction;
+        private InteractableObject lastInteractionObject;
 
         private bool canClose;
+
+        private IList<string> triggeredAfterInteractions;
 
         [UnityMessage]
         public void Awake()
@@ -26,12 +29,16 @@ namespace Assets._Scripts
             Instance = this;
             CanInteract = true;
             canClose = true;
+
+            triggeredAfterInteractions = new List<string>();
         }
 
         public void InteractWith(InteractableObject obj)
         {
             if (CanInteract == false || GameStateController.Instance.CurrentState != GameState.InGame)
                 return;
+
+            lastInteractionObject = obj;
 
             GameStateController.Instance.SetState(GameState.InInteraction);
 
@@ -47,7 +54,7 @@ namespace Assets._Scripts
             currentInteraction = overlay;
 
             currentInteraction.Show();
-            StartCoroutine(CantCloseForShortTime());
+            Delay.TemporarilySetBool(x => canClose = x, 0.5f, false);
 
             //TODO image
         }
@@ -58,32 +65,26 @@ namespace Assets._Scripts
             if (currentInteraction == null || canClose == false)
                 return;
 
-            if (Input.GetButtonDown("Submit"))
-            {
-                StartCoroutine(HideInteraction());
-                StartCoroutine(CantInteractForShortTime());
-            }
+            if (!Input.GetButtonDown("Submit"))
+                return;
+
+            Delay.TemporarilySetBool(x => CanInteract = x, 0.5f, false);
+            Delay.After(currentInteraction.Hide(), WhenInteractionClosed);
         }
 
-        private IEnumerator HideInteraction()
+        private void WhenInteractionClosed()
         {
-            yield return currentInteraction.Hide();
             currentInteraction = null;
             GameStateController.Instance.SetState(GameState.InGame);
-        }
 
-        private IEnumerator CantInteractForShortTime()
-        {
-            CanInteract = false;
-            yield return new WaitForSeconds(0.5f);
-            CanInteract = true;
-        }
-
-        private IEnumerator CantCloseForShortTime()
-        {
-            canClose = false;
-            yield return new WaitForSeconds(0.5f);
-            canClose = true;
+            if (lastInteractionObject.AfterInteraction != null)
+            {
+                if (triggeredAfterInteractions.Contains(lastInteractionObject.AfterInteraction) == false)
+                {
+                    AfterInteractionDatabase.Trigger(lastInteractionObject.AfterInteraction);
+                    triggeredAfterInteractions.Add(lastInteractionObject.AfterInteraction);
+                }
+            }
         }
     }
 }

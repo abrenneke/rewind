@@ -86,7 +86,14 @@ gaf_v2f_minimal gaf_minimal_vert(appdata_base input)
 
 fixed4 gaf_frag(gaf_v2f_base input)
 {
-	return (tex2D(_MainTex, input.texcoord) * input.color + input.colorOffset) * _CustomColorMultiplier + _CustomColorOffset;
+	fixed4 texcol = tex2D(_MainTex, input.texcoord);
+	texcol = texcol * input.color + input.colorOffset;
+	texcol = texcol * _CustomColorMultiplier + _CustomColorOffset;
+
+	if (texcol.a < 0.1)
+		discard;
+
+	return texcol;
 }
 
 fixed4 gaf_base_frag(gaf_v2f_base input) : SV_Target
@@ -98,11 +105,11 @@ fixed4 gaf_mask_frag(gaf_v2f_minimal input) : SV_Target
 {
 	fixed4 resultColor = tex2D(_MainTex, input.texcoord);
 
-if (resultColor.a < 0.01)
-{
-	discard;
-}
+	if (resultColor.a < 0.01)
+	{
+		discard;
+	}
 
-return resultColor;
+	return resultColor;
 }
 #endif

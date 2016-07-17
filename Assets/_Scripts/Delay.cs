@@ -30,6 +30,11 @@ namespace Assets._Scripts
             return Instance.InternalTemporarilySetBool(setter, time, temporarilySetTo);
         }
 
+        public static Coroutine After(IEnumerator coroutine, Action action)
+        {
+            return Instance.InternalAfter(coroutine, action);
+        }
+
         private Coroutine InternalOf(float time, Action action)
         {
             return StartCoroutine(OfDelay(time, action));
@@ -43,6 +48,11 @@ namespace Assets._Scripts
         private Coroutine InternalTemporarilySetBool(Action<bool> setter, float time, bool temporarilySetTo)
         {
             return StartCoroutine(Temporarily(() => setter(temporarilySetTo), () => setter(!temporarilySetTo), time));
+        }
+
+        private Coroutine InternalAfter(IEnumerator coroutine, Action action)
+        {
+            return StartCoroutine(AfterCoroutine(coroutine, action));
         }
 
         private IEnumerator Temporarily(Action before, Action after, float delay)
@@ -61,6 +71,12 @@ namespace Assets._Scripts
         private IEnumerator DelayFrame(Action action)
         {
             yield return null;
+            action();
+        }
+
+        private IEnumerator AfterCoroutine(IEnumerator inner, Action action)
+        {
+            yield return inner;
             action();
         }
     }

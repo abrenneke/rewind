@@ -14,13 +14,16 @@ Shader "GAF/GAFObjectsGroup"
 		{ 
 			"Queue"="Transparent"
 			"IgnoreProjector"="True"
-			"RenderType"="Transparent"
+			"RenderType"="TransparentCutout"
+			"PreviewType" = "Plane"
 		}
 
-		Blend SrcAlpha OneMinusSrcAlpha
 		Cull Off
-		Zwrite Off
 		Lighting Off
+		ZWrite On
+		ZTest LEqual
+		Fog{ Mode Off }
+		Blend SrcAlpha OneMinusSrcAlpha
 		
 		Stencil
 		{
