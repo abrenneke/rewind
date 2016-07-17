@@ -363,6 +363,13 @@
  </tileset>
  <tileset firstgid="695" name="broom-standing" tilewidth="100" tileheight="100" tilecount="1" columns="1">
   <image source="Sprite Sheets/broom-standing.png" width="100" height="100"/>
+  <tile id="0">
+   <objectgroup draworder="index">
+    <object id="3" x="71" y="6">
+     <polygon points="0,0 -53,60 -37,73 10,2"/>
+    </object>
+   </objectgroup>
+  </tile>
  </tileset>
  <tileset firstgid="696" name="candle" tilewidth="100" tileheight="100" tilecount="1" columns="1">
   <image source="Sprite Sheets/candle.png" width="128" height="128"/>
@@ -374,9 +381,19 @@
  </tileset>
  <tileset firstgid="697" name="bed" tilewidth="200" tileheight="200" tilecount="1" columns="1">
   <image source="Sprite Sheets/bed.png" width="200" height="200"/>
+  <tile id="0">
+   <objectgroup draworder="index">
+    <object id="1" x="-1" y="4" width="204" height="196"/>
+   </objectgroup>
+  </tile>
  </tileset>
  <tileset firstgid="698" name="dresser-front" tilewidth="200" tileheight="200" tilecount="1" columns="1">
   <image source="Sprite Sheets/dresser-front.png" width="200" height="200"/>
+  <tile id="0">
+   <objectgroup draworder="index">
+    <object id="2" x="33" y="109" width="148" height="19"/>
+   </objectgroup>
+  </tile>
  </tileset>
  <tileset firstgid="699" name="dresser-back" tilewidth="200" tileheight="200" tilecount="1" columns="1">
   <image source="Sprite Sheets/dresser-back.png" width="200" height="200"/>
@@ -478,20 +495,20 @@
 </data>
  </layer>
  <objectgroup name="Furniture">
-  <object id="34" gid="697" x="1520.78" y="896.51" width="100" height="100">
+  <object id="34" gid="697" x="1429.87" y="987.419" width="222" height="222">
    <properties>
     <property name="interaction" value="bed"/>
    </properties>
   </object>
-  <object id="35" gid="698" x="1391.33" y="832.157" width="100" height="100">
+  <object id="35" gid="698" x="1267.09" y="871.551" width="200" height="200">
    <properties>
     <property name="interaction" value="dresser"/>
    </properties>
   </object>
-  <object id="37" gid="699" x="524.471" y="1064" width="100" height="100"/>
+  <object id="37" gid="699" x="506.289" y="1115.52" width="200" height="200"/>
  </objectgroup>
  <objectgroup name="Entrance_Exits">
-  <object id="26" name="ToLivingRoom" gid="694" x="1218" y="1222" width="100" height="100">
+  <object id="26" name="ToLivingRoom" gid="694" x="1169.52" y="1312.91" width="200" height="200">
    <properties>
     <property name="interaction" value="door"/>
     <property name="to" value="living:tobedroom"/>
@@ -520,7 +537,7 @@
   </object>
  </objectgroup>
  <objectgroup name="Broom">
-  <object id="31" gid="695" x="1583.84" y="1114.27" width="100" height="100">
+  <object id="31" gid="695" x="1583.84" y="1114.27" width="150" height="150">
    <properties>
     <property name="after-interaction" value="give-broom"/>
     <property name="interaction" value="broom"/>
