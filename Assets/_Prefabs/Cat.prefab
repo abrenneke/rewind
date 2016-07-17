@@ -148,8 +148,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28ae773ebd3e243448f0aab58423242c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DetectionRadius: 2
-  MaxPounceDistance: 3
+  DetectionRadius: 4
+  MaxPounceDistance: 4
   PounceSpeed: 3
   ReturnSpeed: 1
   DamageDealt: 1
@@ -182,8 +182,8 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 1b769aaca0b8ad24f9b82ce3c87b5294, type: 3}
-  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_Sprite: {fileID: 21300000, guid: a20534fa4a3e9e6418bf3b84c51a2711, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
 --- !u!1001 &100100000
