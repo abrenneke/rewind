@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using Assets._Scripts.AI.Cat;
 using JetBrains.Annotations;
 using Tiled2Unity;
 using UnityEngine;
@@ -39,11 +40,14 @@ namespace Assets._Scripts
 
         private IList<string> cleanedMaps;
 
+        private IList<GameObject> thingsToCleanInCurrentRoom;
+
         [UnityMessage]
         public void Awake()
         {
             destinations = new Dictionary<string, TransitionDestination>();
             cleanedMaps = new List<string>();
+            thingsToCleanInCurrentRoom = new List<GameObject>();
             Instance = this;
         }
 
@@ -94,6 +98,8 @@ namespace Assets._Scripts
             CurrentMap = mapInstance;
 
             Player.Instance.GetComponentInChildren<SpriteDepthInMap>().AttachedMap = CurrentMap.GetComponent<TiledMap>();
+
+            thingsToCleanInCurrentRoom.Clear();
         }
 
         private void UnloadMap()
@@ -111,6 +117,21 @@ namespace Assets._Scripts
             ChangeMap(lastMap.Name);
 
             //TODO spawn location
+        }
+
+        public void RegisterThingToClean(GameObject thing)
+        {
+            thingsToCleanInCurrentRoom.Add(thing);
+        }
+
+        public void ThingCleaned(GameObject thing)
+        {
+            thingsToCleanInCurrentRoom.Remove(thing);
+
+            if (thingsToCleanInCurrentRoom.Count == 0)
+            {
+                SetCleaned();
+            }
         }
     }
 }

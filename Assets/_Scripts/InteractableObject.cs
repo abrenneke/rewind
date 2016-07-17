@@ -15,6 +15,9 @@ namespace Assets._Scripts
 
         public void ShowCanInteract()
         {
+            if (overlayChild == null)
+                return;
+
             overlayChild.SetActive(true);
             InteractionsDisplay.Instance.SetHighlightInteract(true);
         }
@@ -22,7 +25,7 @@ namespace Assets._Scripts
         public void HideCanInteract()
         {
             if (overlayChild == null)
-                throw new InvalidOperationException("No overlay");
+                return;
 
             overlayChild.SetActive(false);
             InteractionsDisplay.Instance.SetHighlightInteract(false);
@@ -51,6 +54,13 @@ namespace Assets._Scripts
             }
 
             HideCanInteract();
+
+            AfterStart();
+        }
+
+        protected virtual void AfterStart()
+        {
+            
         }
 
         private void SetUpSpriteRendererOverlay()

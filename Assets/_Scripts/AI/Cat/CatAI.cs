@@ -35,6 +35,8 @@ namespace Assets._Scripts.AI.Cat
         [UnityMessage]
         public void Start()
         {
+            MapController.Instance.RegisterThingToClean(gameObject);
+
             SetState<Idle>();
         }
 
@@ -60,9 +62,18 @@ namespace Assets._Scripts.AI.Cat
 
         public void IsHitWithBroom()
         {
+            MapController.Instance.ThingCleaned(gameObject);
+
             RuntimeManager.PlayOneShot(CatDying);
 
             Destroy(gameObject);
+        }
+
+        [UnityMessage]
+        public void OnTriggerEnter2D(Collider2D other)
+        {
+            if (other.GetComponent<BroomCollision>() != null)
+                IsHitWithBroom();
         }
     }
 }

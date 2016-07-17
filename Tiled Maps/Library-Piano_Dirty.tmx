@@ -528,13 +528,13 @@
   <object id="22" name="ToFoyer" gid="694" x="1690.38" y="1092.69" width="200" height="200">
    <properties>
     <property name="interaction" value="door"/>
-    <property name="to" value="dining:topianolibrary"/>
+    <property name="to" value="foyer:topianolibrary"/>
    </properties>
   </object>
   <object id="23" name="ToDining" gid="694" x="866.098" y="301.64" width="200" height="200">
    <properties>
     <property name="interaction" value="door"/>
-    <property name="to" value="foyer:topianolibrary"/>
+    <property name="to" value="dining:topianolibrary"/>
    </properties>
   </object>
   <object id="25" gid="692" x="1560" y="1046" width="100" height="100">

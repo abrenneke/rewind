@@ -43,7 +43,9 @@ namespace Assets._Scripts
             {
                 try
                 {
-                    var reader = new StringReader(resource.text);
+                    var text = resource.text.Replace('\t', ' ');
+
+                    var reader = new StringReader(text);
                     var yaml = new YamlStream();
                     yaml.Load(reader);
 

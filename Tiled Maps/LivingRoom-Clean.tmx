@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <map version="1.0" orientation="orthogonal" renderorder="right-down" width="20" height="20" tilewidth="100" tileheight="100" nextobjectid="71">
  <tileset firstgid="1" name="floor_sheet" tilewidth="100" tileheight="100" tilecount="225" columns="15">
-  <image source="../Sprite Sheets/floor_sheet.png" width="1536" height="1536"/>
+  <image source="Sprite Sheets/floor_sheet.png" width="1536" height="1536"/>
  </tileset>
  <tileset firstgid="226" name="closed_door_sheet" tilewidth="100" tileheight="100" tilecount="225" columns="15">
-  <image source="../Sprite Sheets/closed_door_sheet.png" width="1536" height="1536"/>
+  <image source="Sprite Sheets/closed_door_sheet.png" width="1536" height="1536"/>
   <tile id="37">
    <objectgroup draworder="index">
     <object id="1" x="0" y="0" width="100" height="100"/>
@@ -48,7 +48,7 @@
   </tile>
  </tileset>
  <tileset firstgid="451" name="piano_wall_sheet" tilewidth="100" tileheight="100" tilecount="225" columns="15">
-  <image source="../Sprite Sheets/piano_wall_sheet.png" width="1536" height="1536"/>
+  <image source="Sprite Sheets/piano_wall_sheet.png" width="1536" height="1536"/>
   <tile id="31">
    <objectgroup draworder="index">
     <object id="1" x="-47" y="-33" width="157" height="121"/>
@@ -285,7 +285,7 @@
   </tile>
  </tileset>
  <tileset firstgid="676" name="bookshelf_sheet" tilewidth="128" tileheight="128" tilecount="8" columns="4">
-  <image source="../Sprite Sheets/bookshelf_sheet.png" width="512" height="256"/>
+  <image source="Sprite Sheets/bookshelf_sheet.png" width="512" height="256"/>
   <tile id="0">
    <objectgroup draworder="index">
     <object id="1" x="22" y="30" width="105" height="101"/>
@@ -328,13 +328,13 @@
   </tile>
  </tileset>
  <tileset firstgid="684" name="piano" tilewidth="128" tileheight="128" tilecount="4" columns="2">
-  <image source="../Sprite Sheets/piano.png" width="256" height="256"/>
+  <image source="Sprite Sheets/piano.png" width="256" height="256"/>
  </tileset>
  <tileset firstgid="688" name="enemy_sheet_100x100tiles" tilewidth="100" tileheight="100" tilecount="4" columns="2">
-  <image source="../Sprite Sheets/enemy_sheet_100x100tiles.png" width="200" height="200"/>
+  <image source="Sprite Sheets/enemy_sheet_100x100tiles.png" width="200" height="200"/>
  </tileset>
  <tileset firstgid="692" name="Enter_Exit" tilewidth="100" tileheight="100" tilecount="2" columns="2">
-  <image source="../Sprite Sheets/Enter_Exit.png" width="200" height="100"/>
+  <image source="Sprite Sheets/Enter_Exit.png" width="200" height="100"/>
   <tile id="0">
    <objectgroup draworder="index">
     <object id="1" x="-3" y="-6" width="104" height="104">
@@ -354,7 +354,7 @@
   </tile>
  </tileset>
  <tileset firstgid="694" name="ExitObject" tilewidth="200" tileheight="200" tilecount="1" columns="1">
-  <image source="../Sprite Sheets/ExitObject.png" width="200" height="200"/>
+  <image source="Sprite Sheets/ExitObject.png" width="200" height="200"/>
   <tile id="0">
    <objectgroup draworder="index">
     <object id="1" x="1" y="-1" width="200" height="200"/>
@@ -457,97 +457,25 @@
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 </data>
  </layer>
- <layer name="Cats" width="20" height="20">
-  <data encoding="csv">
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-</data>
- </layer>
- <layer name="Mice" width="20" height="20">
-  <data encoding="csv">
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-</data>
- </layer>
- <layer name="Trash" width="20" height="20">
-  <data encoding="csv">
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-</data>
- </layer>
  <objectgroup name="Entrance_Exits">
-  <object id="23" name="ToBedroom" gid="694" x="866.098" y="301.64" width="200" height="200">
+  <object id="23" name="ToBedroom" gid="694" x="918.098" y="289.64" width="100" height="100">
    <properties>
     <property name="interaction" value="door"/>
     <property name="to" value="bedroom:toliving"/>
    </properties>
   </object>
-  <object id="25" name="ToFoyer" gid="694" x="48" y="1276" width="200" height="200">
+  <object id="25" name="ToFoyer" gid="694" x="100" y="1220" width="100" height="100">
    <properties>
     <property name="interaction" value="door"/>
     <property name="to" value="foyer:toliving"/>
    </properties>
   </object>
-  <object id="69" gid="0" x="920" y="422" width="100" height="100">
+  <object id="69" x="924" y="330" width="100" height="100">
    <properties>
     <property name="from" value="tobedroom"/>
    </properties>
   </object>
-  <object id="70" gid="0" x="284" y="1226" width="100" height="100">
+  <object id="70" x="260" y="1134" width="100" height="100">
    <properties>
     <property name="from" value="tofoyer"/>
    </properties>
