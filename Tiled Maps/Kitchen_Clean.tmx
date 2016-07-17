@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="20" height="20" tilewidth="100" tileheight="100" nextobjectid="45">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="20" height="20" tilewidth="100" tileheight="100" nextobjectid="71">
  <tileset firstgid="1" name="floor_sheet" tilewidth="100" tileheight="100" tilecount="225" columns="15">
-  <image source="../Documents/GitKraken Projects/rewind/Tiled Maps/Sprite Sheets/floor_sheet.png" width="1536" height="1536"/>
+  <image source="Sprite Sheets/floor_sheet.png" width="1536" height="1536"/>
  </tileset>
  <tileset firstgid="226" name="closed_door_sheet" tilewidth="100" tileheight="100" tilecount="225" columns="15">
-  <image source="../Documents/GitKraken Projects/rewind/Tiled Maps/Sprite Sheets/closed_door_sheet.png" width="1536" height="1536"/>
+  <image source="Sprite Sheets/closed_door_sheet.png" width="1536" height="1536"/>
   <tile id="37">
    <objectgroup draworder="index">
     <object id="1" x="0" y="0" width="100" height="100"/>
@@ -48,7 +48,7 @@
   </tile>
  </tileset>
  <tileset firstgid="451" name="piano_wall_sheet" tilewidth="100" tileheight="100" tilecount="225" columns="15">
-  <image source="../Documents/GitKraken Projects/rewind/Tiled Maps/Sprite Sheets/piano_wall_sheet.png" width="1536" height="1536"/>
+  <image source="Sprite Sheets/piano_wall_sheet.png" width="1536" height="1536"/>
   <tile id="31">
    <objectgroup draworder="index">
     <object id="1" x="-47" y="-33" width="157" height="121"/>
@@ -285,7 +285,7 @@
   </tile>
  </tileset>
  <tileset firstgid="676" name="bookshelf_sheet" tilewidth="128" tileheight="128" tilecount="8" columns="4">
-  <image source="../Documents/GitKraken Projects/rewind/Tiled Maps/Sprite Sheets/bookshelf_sheet.png" width="512" height="256"/>
+  <image source="Sprite Sheets/bookshelf_sheet.png" width="512" height="256"/>
   <tile id="0">
    <objectgroup draworder="index">
     <object id="1" x="22" y="30" width="105" height="101"/>
@@ -328,14 +328,17 @@
   </tile>
  </tileset>
  <tileset firstgid="684" name="piano" tilewidth="128" tileheight="128" tilecount="4" columns="2">
-  <image source="../Documents/GitKraken Projects/rewind/Tiled Maps/Sprite Sheets/piano.png" width="256" height="256"/>
+  <image source="Sprite Sheets/piano.png" width="256" height="256"/>
  </tileset>
  <tileset firstgid="688" name="enemy_sheet_100x100tiles" tilewidth="100" tileheight="100" tilecount="4" columns="2">
-  <image source="../Documents/GitKraken Projects/rewind/Tiled Maps/Sprite Sheets/enemy_sheet_100x100tiles.png" width="200" height="200"/>
+  <image source="Sprite Sheets/enemy_sheet_100x100tiles.png" width="200" height="200"/>
  </tileset>
  <tileset firstgid="692" name="Enter_Exit" tilewidth="100" tileheight="100" tilecount="2" columns="2">
-  <image source="../Documents/GitKraken Projects/rewind/Tiled Maps/Sprite Sheets/Enter_Exit.png" width="200" height="100"/>
+  <image source="Sprite Sheets/Enter_Exit.png" width="200" height="100"/>
   <tile id="0">
+   <properties>
+    <property name="from" value="tobathroom"/>
+   </properties>
    <objectgroup draworder="index">
     <object id="1" x="-3" y="-6" width="104" height="104">
      <properties>
@@ -354,19 +357,34 @@
   </tile>
  </tileset>
  <tileset firstgid="694" name="ExitObject" tilewidth="200" tileheight="200" tilecount="1" columns="1">
-  <image source="../Documents/GitKraken Projects/rewind/Tiled Maps/Sprite Sheets/ExitObject.png" width="200" height="200"/>
+  <image source="Sprite Sheets/ExitObject.png" width="200" height="200"/>
  </tileset>
  <tileset firstgid="695" name="sink128" tilewidth="128" tileheight="128" tilecount="1" columns="1">
-  <image source="../Documents/sink128.png" width="128" height="128"/>
+  <image source="Sprite Sheets/sink128.png" width="128" height="128"/>
  </tileset>
  <tileset firstgid="696" name="kitchen_tile" tilewidth="100" tileheight="100" tilecount="1" columns="1">
-  <image source="../Documents/kitchen_tile.png" width="100" height="100"/>
+  <image source="Sprite Sheets/kitchen_tile.png" width="100" height="100"/>
  </tileset>
  <tileset firstgid="697" name="kitchenwalls2" tilewidth="100" tileheight="100" tilecount="225" columns="15">
-  <image source="../Downloads/kitchenwalls2.png" width="1536" height="1536"/>
+  <image source="Sprite Sheets/kitchenwalls2.png" width="1536" height="1536"/>
  </tileset>
- <tileset firstgid="922" name="fridge" tilewidth="100" tileheight="100" tilecount="4" columns="2">
-  <image source="../Documents/fridge.png" width="200" height="200"/>
+ <tileset firstgid="922" name="fridge" tilewidth="128" tileheight="128" tilecount="1" columns="1">
+  <image source="Sprite Sheets/fridge.png" width="128" height="128"/>
+ </tileset>
+ <tileset firstgid="923" name="sink" tilewidth="100" tileheight="100" tilecount="1" columns="1">
+  <image source="Sprite Sheets/sink.png" width="100" height="100"/>
+ </tileset>
+ <tileset firstgid="924" name="stove" tilewidth="100" tileheight="100" tilecount="1" columns="1">
+  <image source="Sprite Sheets/stove.png" width="100" height="100"/>
+ </tileset>
+ <tileset firstgid="925" name="kitchen-trash" tilewidth="100" tileheight="100" tilecount="1" columns="1">
+  <image source="Sprite Sheets/kitchen-trash.png" width="100" height="100"/>
+ </tileset>
+ <tileset firstgid="926" name="kitchencounter" tilewidth="100" tileheight="100" tilecount="1" columns="1">
+  <image source="Sprite Sheets/kitchencounter.png" width="100" height="100"/>
+ </tileset>
+ <tileset firstgid="927" name="kitchenphone" tilewidth="100" tileheight="100" tilecount="1" columns="1">
+  <image source="Sprite Sheets/kitchenphone.png" width="100" height="100"/>
  </tileset>
  <layer name="Floor" width="20" height="20">
   <data encoding="csv">
@@ -444,8 +462,8 @@
   <data encoding="csv">
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,922,923,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,695,924,925,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
@@ -537,11 +555,56 @@
 </data>
  </layer>
  <objectgroup name="Entrance_Exits">
-  <object id="22" name="ToBathroom" gid="694" x="1726.38" y="784.69" width="200" height="200" visible="0"/>
-  <object id="23" name="ToDining" gid="694" x="256" y="1160" width="216" height="156" visible="0"/>
-  <object id="25" name="Backyard" gid="694" x="256" y="390" width="216" height="156" visible="0"/>
+  <object id="22" name="ToBathroom" gid="694" x="1726.38" y="784.69" width="200" height="200">
+   <properties>
+    <property name="interaction" value="door"/>
+    <property name="to" value="bathroom:tokitchen"/>
+   </properties>
+  </object>
+  <object id="23" name="ToDining" gid="694" x="256" y="1160" width="216" height="156">
+   <properties>
+    <property name="interaction" value="door"/>
+    <property name="to" value="dining:tokitchen"/>
+   </properties>
+  </object>
+  <object id="25" name="Backyard" gid="694" x="256" y="390" width="216" height="156">
+   <properties>
+    <property name="interaction" value="backDoor"/>
+   </properties>
+  </object>
+  <object id="45" gid="692" x="1634" y="746" width="100" height="100">
+   <properties>
+    <property name="from" value="tokitchen"/>
+   </properties>
+  </object>
+  <object id="46" gid="692" x="318" y="966" width="100" height="100">
+   <properties>
+    <property name="from" value="ToDining"/>
+   </properties>
+  </object>
  </objectgroup>
  <objectgroup name="Cats"/>
  <objectgroup name="Mice"/>
  <objectgroup name="Trash"/>
+ <objectgroup name="Furniture">
+  <object id="50" gid="922" x="1160" y="476" width="212" height="232"/>
+  <object id="64" gid="923" x="962" y="484" width="230" height="230">
+   <properties>
+    <property name="interaction" value="kitchenSink"/>
+   </properties>
+  </object>
+  <object id="66" gid="924" x="1336" y="476" width="272" height="208">
+   <properties>
+    <property name="interaction" value="stove"/>
+   </properties>
+  </object>
+  <object id="67" gid="925" x="1540" y="492" width="272" height="216"/>
+  <object id="68" gid="926" x="732" y="480" width="232" height="224"/>
+  <object id="69" gid="926" x="504" y="492" width="232" height="240"/>
+  <object id="70" gid="927" x="94.6667" y="763.636" width="223.515" height="229.333">
+   <properties>
+    <property name="interaction" value="phone"/>
+   </properties>
+  </object>
+ </objectgroup>
 </map>
