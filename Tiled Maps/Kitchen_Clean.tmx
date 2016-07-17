@@ -483,20 +483,21 @@
 </data>
  </layer>
  <objectgroup name="Entrance_Exits">
-  <object id="22" name="ToBathroom" gid="694" x="1726.38" y="784.69" width="200" height="200">
+  <object id="22" name="ToBathroom" gid="694" x="1729.38" y="729.69" width="100" height="100">
    <properties>
     <property name="interaction" value="door"/>
-    <property name="to" value="kitchen:tobathroom"/>
+    <property name="to" value="bathroom:tokitchen"/>
    </properties>
   </object>
-  <object id="23" name="ToDining" gid="694" x="256" y="1160" width="216" height="156">
+  <object id="23" name="ToDining" gid="694" x="326" y="1126" width="100" height="100">
    <properties>
     <property name="interaction" value="door"/>
     <property name="to" value="dining:tokitchen"/>
    </properties>
   </object>
-  <object id="25" name="Backyard" gid="694" x="256" y="390" width="216" height="156">
+  <object id="25" name="Backyard" gid="694" x="317" y="384" width="100" height="100">
    <properties>
+    <property name="hideSprite" value=""/>
     <property name="interaction" value="backDoor"/>
    </properties>
   </object>
