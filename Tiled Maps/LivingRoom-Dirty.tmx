@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="20" height="20" tilewidth="100" tileheight="100" nextobjectid="72">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="20" height="20" tilewidth="100" tileheight="100" nextobjectid="99">
  <tileset firstgid="1" name="floor_sheet" tilewidth="100" tileheight="100" tilecount="225" columns="15">
-  <image source="../Sprite Sheets/floor_sheet.png" width="1536" height="1536"/>
+  <image source="Sprite Sheets/floor_sheet.png" width="1536" height="1536"/>
  </tileset>
  <tileset firstgid="226" name="closed_door_sheet" tilewidth="100" tileheight="100" tilecount="225" columns="15">
-  <image source="../Sprite Sheets/closed_door_sheet.png" width="1536" height="1536"/>
+  <image source="Sprite Sheets/closed_door_sheet.png" width="1536" height="1536"/>
   <tile id="37">
    <objectgroup draworder="index">
     <object id="1" x="0" y="0" width="100" height="100"/>
@@ -48,7 +48,7 @@
   </tile>
  </tileset>
  <tileset firstgid="451" name="piano_wall_sheet" tilewidth="100" tileheight="100" tilecount="225" columns="15">
-  <image source="../Sprite Sheets/piano_wall_sheet.png" width="1536" height="1536"/>
+  <image source="Sprite Sheets/piano_wall_sheet.png" width="1536" height="1536"/>
   <tile id="31">
    <objectgroup draworder="index">
     <object id="1" x="-47" y="-33" width="157" height="121"/>
@@ -285,7 +285,7 @@
   </tile>
  </tileset>
  <tileset firstgid="676" name="bookshelf_sheet" tilewidth="128" tileheight="128" tilecount="8" columns="4">
-  <image source="../Sprite Sheets/bookshelf_sheet.png" width="512" height="256"/>
+  <image source="Sprite Sheets/bookshelf_sheet.png" width="512" height="256"/>
   <tile id="0">
    <objectgroup draworder="index">
     <object id="1" x="22" y="30" width="105" height="101"/>
@@ -328,13 +328,13 @@
   </tile>
  </tileset>
  <tileset firstgid="684" name="piano" tilewidth="128" tileheight="128" tilecount="4" columns="2">
-  <image source="../Sprite Sheets/piano.png" width="256" height="256"/>
+  <image source="Sprite Sheets/piano.png" width="256" height="256"/>
  </tileset>
  <tileset firstgid="688" name="enemy_sheet_100x100tiles" tilewidth="100" tileheight="100" tilecount="4" columns="2">
-  <image source="../Sprite Sheets/enemy_sheet_100x100tiles.png" width="200" height="200"/>
+  <image source="Sprite Sheets/enemy_sheet_100x100tiles.png" width="200" height="200"/>
  </tileset>
  <tileset firstgid="692" name="Enter_Exit" tilewidth="100" tileheight="100" tilecount="2" columns="2">
-  <image source="../Sprite Sheets/Enter_Exit.png" width="200" height="100"/>
+  <image source="Sprite Sheets/Enter_Exit.png" width="200" height="100"/>
   <tile id="0">
    <objectgroup draworder="index">
     <object id="1" x="-3" y="-6" width="104" height="104">
@@ -354,10 +354,41 @@
   </tile>
  </tileset>
  <tileset firstgid="694" name="ExitObject" tilewidth="200" tileheight="200" tilecount="1" columns="1">
-  <image source="../Sprite Sheets/ExitObject.png" width="200" height="200"/>
+  <image source="Sprite Sheets/ExitObject.png" width="200" height="200"/>
   <tile id="0">
    <objectgroup draworder="index">
-    <object id="1" x="-1" y="1" width="200" height="200"/>
+    <object id="1" x="1" y="-1" width="200" height="200"/>
+   </objectgroup>
+  </tile>
+ </tileset>
+ <tileset firstgid="695" name="couch_sheet" tilewidth="256" tileheight="128" tilecount="1" columns="1">
+  <image source="Sprite Sheets/couch_sheet.png" width="256" height="128"/>
+  <tile id="0">
+   <objectgroup draworder="index">
+    <object id="2" x="44" y="16">
+     <polygon points="0,0 175,0 184,96 -12,94 -13,70 -27,66 -4,43 0,1"/>
+    </object>
+   </objectgroup>
+  </tile>
+ </tileset>
+ <tileset firstgid="696" name="TV" tilewidth="128" tileheight="128" tilecount="1" columns="1">
+  <image source="Sprite Sheets/TV.png" width="128" height="128"/>
+  <tile id="0">
+   <objectgroup draworder="index">
+    <object id="1" x="33" y="51" width="60" height="49"/>
+   </objectgroup>
+  </tile>
+ </tileset>
+ <tileset firstgid="697" name="dresser-back" tilewidth="200" tileheight="200" tilecount="1" columns="1">
+  <image source="Sprite Sheets/dresser-back.png" width="200" height="200"/>
+ </tileset>
+ <tileset firstgid="698" name="chair" tilewidth="128" tileheight="128" tilecount="1" columns="1">
+  <image source="Sprite Sheets/chair.png" width="128" height="128"/>
+  <tile id="0">
+   <objectgroup draworder="index">
+    <object id="1" x="32" y="21">
+     <polygon points="0,0 -2,45 -17,60 -7,71 -1,97 66,105 73,69 80,61 77,52 66,38 69,-1"/>
+    </object>
    </objectgroup>
   </tile>
  </tileset>
@@ -365,47 +396,47 @@
   <data encoding="csv">
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,64,65,66,67,68,69,70,71,72,65,66,67,68,69,70,71,72,0,0,
-0,79,80,81,82,83,84,85,86,87,80,81,82,83,84,85,86,87,0,0,
-0,94,95,96,97,98,99,100,101,102,95,96,97,98,99,100,101,102,0,0,
-0,109,110,111,112,113,114,115,116,117,110,111,112,113,114,115,116,117,0,0,
-0,124,125,126,127,128,129,130,131,132,125,126,127,128,129,130,131,132,0,0,
-0,139,140,141,142,143,144,145,146,147,140,141,142,143,144,145,146,147,0,0,
-0,154,155,156,157,158,159,160,161,162,155,156,157,158,159,160,161,162,0,0,
-0,169,170,171,172,173,174,175,176,177,170,171,172,173,174,175,176,177,0,0,
-0,64,65,66,67,68,69,70,71,64,65,66,67,68,69,70,71,72,0,0,
-0,79,80,81,82,83,84,85,86,79,80,81,82,83,84,85,86,87,0,0,
-0,94,95,96,97,98,99,100,101,94,95,96,97,98,99,100,101,102,0,0,
-0,109,110,111,112,113,114,115,116,109,110,111,112,113,114,115,116,117,0,0,
-0,124,125,126,127,128,129,130,131,124,125,126,127,128,129,130,131,132,0,0,
-0,139,140,141,142,143,144,145,146,139,140,141,142,143,144,145,146,147,0,0,
-0,154,155,156,157,158,159,160,161,154,155,156,157,158,159,160,161,162,0,0,
-0,169,170,171,172,173,174,175,176,169,170,171,172,173,174,175,176,177,0,0,
+0,64,65,66,67,68,69,70,71,72,65,66,67,68,0,0,0,0,0,0,
+0,79,80,81,82,83,84,85,86,87,80,81,82,83,0,0,0,0,0,0,
+0,94,95,96,97,98,99,100,101,102,95,96,97,98,0,0,0,0,0,0,
+0,109,110,111,112,113,114,115,116,117,110,111,112,113,0,0,0,0,0,0,
+0,124,125,126,127,128,129,130,131,132,125,126,127,128,0,0,0,0,0,0,
+0,139,140,141,142,143,144,145,146,147,140,141,142,143,0,0,0,0,0,0,
+0,154,155,156,157,158,159,160,161,162,155,156,157,158,0,0,0,0,0,0,
+0,169,170,171,172,173,174,175,176,177,170,171,172,173,0,0,0,0,0,0,
+0,64,65,66,67,68,69,70,71,64,65,66,67,68,0,0,0,0,0,0,
+0,79,80,81,82,83,84,85,86,79,80,81,82,83,0,0,0,0,0,0,
+0,94,95,96,97,98,99,100,101,94,95,96,97,98,0,0,0,0,0,0,
+0,109,110,111,112,113,114,115,116,109,110,111,112,113,0,0,0,0,0,0,
+0,124,125,126,127,128,129,130,131,124,125,126,127,128,0,0,0,0,0,0,
+0,139,140,141,142,143,144,145,146,139,140,141,142,143,0,0,0,0,0,0,
+0,154,155,156,157,158,159,160,161,154,155,156,157,158,0,0,0,0,0,0,
+0,169,170,171,172,173,174,175,176,169,170,171,172,173,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 </data>
  </layer>
  <layer name="Walls" width="20" height="20">
   <data encoding="csv">
-451,452,453,454,455,456,453,454,455,456,457,458,459,460,461,462,463,464,465,0,
-466,467,468,469,470,471,468,469,470,471,472,473,474,475,476,477,478,479,480,0,
-481,482,483,484,485,486,483,484,485,486,487,488,489,490,491,492,493,494,495,0,
-496,497,0,0,0,0,0,0,0,0,0,0,0,0,0,0,508,509,510,0,
-511,512,0,0,0,0,0,0,0,0,0,0,0,0,0,0,523,524,525,0,
-526,527,0,0,0,0,0,0,0,0,0,0,0,0,0,0,538,539,540,0,
-541,542,0,0,0,0,0,0,0,0,0,0,0,0,0,0,553,554,555,0,
-496,497,0,0,0,0,0,0,0,0,0,0,0,0,0,0,508,509,510,0,
-511,512,0,0,0,0,0,0,0,0,0,0,0,0,0,0,523,524,525,0,
-526,527,0,0,0,0,0,0,0,0,0,0,0,0,0,0,538,539,540,0,
-541,542,0,0,0,0,0,0,0,0,0,0,0,0,0,0,553,554,555,0,
-556,557,0,0,0,0,0,0,0,0,0,0,0,0,0,0,568,569,570,0,
-571,572,0,0,0,0,0,0,0,0,0,0,0,0,0,0,583,584,585,0,
-586,587,0,0,0,0,0,0,0,0,0,0,0,0,0,0,598,599,600,0,
-601,602,0,0,0,0,0,0,0,0,0,0,0,0,0,0,613,614,615,0,
-616,617,0,0,0,0,0,0,0,0,0,0,0,0,0,0,628,629,630,0,
-631,632,0,0,0,0,0,0,0,0,0,0,0,0,0,0,643,644,645,0,
-646,647,648,649,650,651,652,653,654,655,656,657,654,655,656,657,658,659,660,0,
-661,662,663,664,665,666,667,668,669,670,671,672,669,670,671,672,673,674,675,0,
+451,452,453,454,455,456,453,454,455,456,457,462,463,464,465,0,0,0,0,0,
+466,467,468,469,470,471,468,469,470,471,472,477,478,479,480,0,0,0,0,0,
+481,482,483,484,485,486,483,484,485,486,487,492,493,494,495,0,0,0,0,0,
+496,497,0,0,0,0,0,0,0,0,0,0,508,509,510,0,0,0,0,0,
+511,512,0,0,0,0,0,0,0,0,0,0,523,524,525,0,0,0,0,0,
+526,527,0,0,0,0,0,0,0,0,0,0,538,539,540,0,0,0,0,0,
+541,542,0,0,0,0,0,0,0,0,0,0,553,554,555,0,0,0,0,0,
+496,497,0,0,0,0,0,0,0,0,0,0,508,509,510,0,0,0,0,0,
+511,512,0,0,0,0,0,0,0,0,0,0,523,524,525,0,0,0,0,0,
+526,527,0,0,0,0,0,0,0,0,0,0,538,539,540,0,0,0,0,0,
+541,542,0,0,0,0,0,0,0,0,0,0,553,554,555,0,0,0,0,0,
+556,557,0,0,0,0,0,0,0,0,0,0,568,569,570,0,0,0,0,0,
+571,572,0,0,0,0,0,0,0,0,0,0,583,584,585,0,0,0,0,0,
+586,587,0,0,0,0,0,0,0,0,0,0,598,599,600,0,0,0,0,0,
+601,602,0,0,0,0,0,0,0,0,0,0,613,614,615,0,0,0,0,0,
+616,617,0,0,0,0,0,0,0,0,0,0,628,629,630,0,0,0,0,0,
+631,632,0,0,0,0,0,0,0,0,0,0,643,644,645,0,0,0,0,0,
+646,647,648,649,650,651,652,653,654,655,656,657,658,659,660,0,0,0,0,0,
+661,662,663,664,665,666,667,668,669,670,671,672,673,674,675,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 </data>
  </layer>
@@ -458,64 +489,52 @@
 </data>
  </layer>
  <objectgroup name="Entrance_Exits">
-  <object id="23" name="ToBedroom" gid="694" x="866.098" y="301.64" width="200" height="200">
+  <object id="23" name="ToBedroom" gid="694" x="870.098" y="309.64" width="200" height="200">
    <properties>
     <property name="interaction" value="door"/>
     <property name="to" value="bedroom:toliving"/>
    </properties>
   </object>
-  <object id="25" name="ToFoyer" gid="694" x="48" y="1276" width="200" height="200">
+  <object id="25" name="ToFoyer" gid="694" x="12" y="1264" width="200" height="200">
    <properties>
     <property name="interaction" value="door"/>
     <property name="to" value="foyer:toliving"/>
    </properties>
   </object>
-  <object id="69" gid="692" x="926" y="414" width="100" height="100">
+  <object id="69" x="924" y="330" width="100" height="100">
    <properties>
     <property name="from" value="tobedroom"/>
    </properties>
   </object>
-  <object id="71" gid="692" x="259.333" y="1226" width="100" height="100">
+  <object id="70" x="260" y="1134" width="100" height="100">
    <properties>
     <property name="from" value="tofoyer"/>
    </properties>
   </object>
  </objectgroup>
- <objectgroup name="Cats">
-  <object id="26" gid="689" x="390" y="546" width="100" height="100"/>
- </objectgroup>
+ <objectgroup name="Cats"/>
  <objectgroup name="Mice">
-  <object id="39" gid="688" x="578" y="470" width="100" height="100"/>
-  <object id="40" gid="688" x="550" y="670" width="100" height="100"/>
-  <object id="41" gid="688" x="334" y="758" width="100" height="100"/>
-  <object id="42" gid="688" x="522" y="774" width="100" height="100"/>
-  <object id="43" gid="688" x="1138" y="1354" width="100" height="100"/>
-  <object id="44" gid="688" x="658" y="1634" width="100" height="100"/>
-  <object id="45" gid="688" x="1546" y="1034" width="100" height="100"/>
-  <object id="46" gid="688" x="1298" y="646" width="100" height="100"/>
-  <object id="47" gid="688" x="422" y="1234" width="100" height="100"/>
-  <object id="48" gid="688" x="338" y="1018" width="100" height="100"/>
-  <object id="49" gid="688" x="362" y="1422" width="100" height="100"/>
+  <object id="78" gid="688" x="453.03" y="653.03" width="100" height="100"/>
+  <object id="79" gid="688" x="1186.36" y="862.121" width="100" height="100"/>
+  <object id="80" gid="688" x="265.152" y="1350" width="100" height="100"/>
+  <object id="81" gid="688" x="256.061" y="1119.7" width="100" height="100"/>
  </objectgroup>
  <objectgroup name="Trash">
-  <object id="50" gid="691" x="1566" y="1502" width="100" height="100"/>
-  <object id="51" gid="691" x="1510" y="1626" width="100" height="100"/>
-  <object id="52" gid="691" x="286" y="1526" width="100" height="100"/>
-  <object id="53" gid="691" x="806" y="534" width="100" height="100"/>
-  <object id="54" gid="691" x="910" y="590" width="100" height="100"/>
-  <object id="55" gid="691" x="994" y="646" width="100" height="100"/>
-  <object id="56" gid="691" x="1342" y="842" width="100" height="100"/>
-  <object id="57" gid="691" x="1286" y="918" width="100" height="100"/>
-  <object id="58" gid="691" x="1214" y="994" width="100" height="100"/>
-  <object id="59" gid="691" x="646" y="942" width="100" height="100"/>
-  <object id="60" gid="691" x="714" y="998" width="100" height="100"/>
-  <object id="61" gid="691" x="778" y="1062" width="100" height="100"/>
-  <object id="62" gid="691" x="886" y="1374" width="100" height="100"/>
-  <object id="63" gid="691" x="938" y="1418" width="100" height="100"/>
-  <object id="64" gid="691" x="1018" y="1478" width="100" height="100"/>
-  <object id="65" gid="690" x="762" y="414" width="100" height="100"/>
-  <object id="66" gid="690" x="710" y="714" width="100" height="100"/>
-  <object id="67" gid="690" x="526" y="1042" width="100" height="100"/>
-  <object id="68" gid="690" x="562" y="1414" width="100" height="100"/>
+  <object id="88" gid="691" x="234.848" y="998.485" width="100" height="100"/>
+  <object id="89" gid="691" x="1062.12" y="910.606" width="100" height="100"/>
+  <object id="90" gid="691" x="1225.76" y="953.03" width="100" height="100"/>
+  <object id="91" gid="691" x="1231.82" y="1553.03" width="100" height="100"/>
+  <object id="92" gid="691" x="992.424" y="1707.58" width="100" height="100"/>
+  <object id="93" gid="691" x="531.818" y="1550" width="100" height="100"/>
+  <object id="95" gid="691" x="207.576" y="495.455" width="100" height="100"/>
+  <object id="96" gid="691" x="198.485" y="377.273" width="100" height="100"/>
+  <object id="97" gid="691" x="353.03" y="380.303" width="100" height="100"/>
+  <object id="98" gid="691" x="1256.06" y="456.061" width="100" height="100"/>
+ </objectgroup>
+ <objectgroup name="Furniture">
+  <object id="72" gid="695" x="811.394" y="1182.18" width="512" height="256"/>
+  <object id="74" gid="696" x="932.97" y="1542.79" width="300" height="300"/>
+  <object id="76" gid="697" x="972.727" y="1587.88" width="200" height="200"/>
+  <object id="77" gid="698" x="575.394" y="1515.52" width="300" height="300"/>
  </objectgroup>
 </map>
