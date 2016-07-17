@@ -1,0 +1,376 @@
+﻿---
+
+# Level 1 interaction texts
+
+
+
+# Bedroom
+
+dresser_1:
+	interaction-text: >
+		I can’t believe I have this still! So silky, so French... 
+		Those first couple years when John couldn’t keep his hands off 
+		me... Gracious! 
+		
+dresser_2:
+	interaction-text: >
+		Maybe he was just bored of this get-up? There was that 
+		red thing in the catalogue… but so pricey!
+
+dresser_3:
+	interaction-text: >
+		From the way people yammer on about it, you’d think it’d 
+		be better?
+
+bedroomDoor_1:
+	interaction-text: >
+		I locked the door? But where did I put that key? So forgetful! 
+
+bedroomDoor_2:
+	interaction-text: >
+		I hope a mouse didn’t run off with it! Or that damned cat, Darwin.
+
+bedroomDoor_3:
+	interaction-text: >
+		Hello? John Jr? Hello? I’m stuck!
+
+bedroomKey_1:
+	interaction-text: >
+		How clumsy of me, right underfoot!
+
+bed_1:
+	interaction-text: >
+		Getting up is just harder and harder. But the Lord 
+		never gives us more than we can handle…
+
+bed_2:
+	interaction-text: >
+		What a beautiful dream I had last night.
+
+bed_3:
+	interaction-text: >
+		Oh I can’t sleep all day… can I?
+
+
+
+
+
+# Library
+
+bookshelf1_1:
+	interaction-text: >
+		The Accidental Savior. John always did love his pulp. 
+		This was the book he was reaching for when he 
+		collapsed the first time...
+
+bookshelf1_2:
+	interaction-text: >
+		Oh, who has time to read? There’s enough to be 
+		done in a house like this to keep any responsible lady busy. 
+		And anyways, all these stories, such nonsense.
+
+bookshelf1_3:
+	interaction-text: >
+		Words, words, words.
+
+bookshelf2_1:
+	interaction-text: >
+		Most of these were mom’s. I don’t know why she bought 
+		them. To help with her crosswords?
+
+bookshelf2_2:
+	interaction-text: >
+		I think she just didn’t know what to do after he was shot down, 
+		and with grandma and grandpa so recently passed.
+
+bookshelf2_3:
+	interaction-text: >
+		““Murray’s Hand-Book on the Islands of the Caribbean””
+
+bookshelf3_1:
+	interaction-text: >
+		All my cookbooks! Only Mary was an adventurous eater. 
+		That time I made curry and everyone flat-out refused to eat it, 
+		everyone except her!
+
+bookshelf3_2:
+	interaction-text: >
+		I guess after all that time my cooking still couldn’t match John’s mother’s.
+
+bookshelf3_3:
+	interaction-text: >
+		Fish every Friday, steak on Saturday, a bird on Sunday...
+
+piano_1:
+	interaction-text: >
+		What was that song Mary was always playing? I can hum it, 
+		but what was the name?
+
+piano_2:
+	interaction-text: >
+		I hope Mary’s doing well, though it’s probably too late to 
+		hope for grandchildren from her.
+
+piano_3:
+	interaction-text: >
+		Why didn’t I ever learn to play?
+
+
+
+
+# Bathroom
+
+toilet_1:
+	interaction-text: >
+		““A wife’s only as good as her toilet is clean!”...oh, mom.”
+
+toilet_2:
+	interaction-text: >
+		“Mom was so proud to “live in the first house 
+		in the county to have been built with a bathroom.””
+
+toilet_3:
+	interaction-text: >
+		I hope I didn’t somehow flush the front door key!
+
+mirror_1:
+	interaction-text: >
+		Oh, Sandy’s son’s wedding--Jason? Yes, little 
+		Jason’s wedding. When she told me I was too old to dance! 
+		I sure showed her!
+
+mirror_2:
+	interaction-text: >
+		Sandy always was John’s little princess.
+
+mirror_3:
+	interaction-text: >
+		Wrinkles! You ugly old thing.
+
+bathtub_1:
+	interaction-text: >
+		The trouble with baths is you never feel fully clean afterwards.
+
+bathtub_2:
+	interaction-text: >
+		I hate those rings but scrubbing is just too hard on my knees. 
+
+bathtub_3:
+	interaction-text: >
+		I’ll clean it first thing tomorrow morning.
+
+heartpills_1:
+	interaction-text: >
+		Thank goodness for my pills! What would I do if I ran out?
+
+
+
+
+# Kitchen
+
+oven_1:
+	interaction-text: >
+		“I really should have them all over for a ham; they all 
+		like that so much. Like when John Jr was learning to 
+		talk that Christmas and called everything “hom! hom!” all day!”
+
+oven_2:
+	interaction-text: >
+		I can still smell all those delicious meals!
+
+oven_3: 
+	interaction-text: >
+		With all that grease in there, it’d be sure to catch fire.
+
+phone_1:
+	interaction-text: >
+		It’s so nice that John Jr takes care of the finances 
+		since John’s passed, and so sad the economy is doing so 
+		poorly! If only the country could get better, maybe he could 
+		get the phone turned back on.
+
+phone_2:
+	interaction-text: >
+		When John was alive we were so comfortable.
+
+phone_3:
+	interaction-text: >
+		What a world, where you have to call someone to fix your phone!
+
+kitchenSink_1:
+	interaction-text: >
+		Well, at least I’m done with dishes.
+
+kitchenSink_2:
+	interaction-text: >
+		If Sandy inherits the house she better save up for a 
+		dishwasher. I don’t think that girl has ever so much as gotten 
+		her hands wet!
+
+kitchenSink_3:
+	interaction-text: >
+		I should be better about saving water. John Jr says 
+		the bills keep skyrocketing!
+
+backDoor_1:
+	interaction-text: >
+		If only Darwin was an outdoor cat. That beast, I hate it I really do.
+
+backDoor_2:
+	interaction-text: >
+		Go into the backyard! Out into the night! To think!
+
+backDoor_3:
+	interaction-text: >
+		I’d get lost in the grass it’s grown so long!
+
+refrigerator_1:
+	interaction-text: >
+		Next time I go to the store I’ve got to remember to 
+		get more beer for when John Jr visits. A beer always 
+		puts him in a better mood.
+
+refrigerator_2:
+	interaction-text: >
+		If those mice ever figure out how to get in here!
+
+refrigerator_3:
+	interaction-text: >
+		I just don’t have much of an appetite these days.
+
+
+
+# Front Hall
+
+stairs_1:
+	interaction-text: >
+		Of course I could make it up the stairs, but after that 
+		last tumble John Jr was so angry, bless his heart. 
+		I should talk to him about bringing those photo boxes 
+		down, next time he visits.
+
+stairs_2:
+	interaction-text: >
+		Of course you can’t expect them to live here all their lives! 
+		Not in these modern times. Everyone’s a jet-setter! Mary’s 
+		even in London of all places. I’d love to see London, 
+		maybe meet the queen!
+
+stairs_3:
+	interaction-text: >
+		I do wish I could spend some time in my childhood 
+		room, if just an afternoon.
+
+coatRack_1:
+	interaction-text: >
+		AH! Why are you in my hou--oh, just the coat rack!
+
+coatRack_2:
+	interaction-text: >
+		If some scoundrel tried to force his way in here I 
+		could tip this over onto him.
+
+coatRack_3:
+	interaction-text: >
+		Wasn’t my fur hanging there? 
+
+frontDoor_1:
+	interaction-text: >
+		And not even enough time to get milk from the 
+		store. If John doesn’t smell the steak cooking when he 
+		walks in the door… and it’s not going to cook itself. Oh, 
+		silly Elle.
+
+frontDoor_2:
+	interaction-text: >
+		Truth is, I haven’t wanted to go out much since John’s funeral. 
+		It is nice when John Jr drives me to church, but I hardly know 
+		anyone there anymore. Even Father O’… Father 
+		O’-What’s-His-Name! Ha!
+
+frontDoor_3:
+	interaction-text: >
+		I should get going. But where I’d leave the house keys?
+
+
+
+# Living Room
+
+wallpaper_1:
+	interaction-text: >
+		I was so excited to put that wallpaper in but nobody 
+		really said anything about it, except mom of course, 
+		who got so mean near the end there.
+
+wallpaper_2:
+	interaction-text: >
+		I’ll have to find the glue and tamp down these peeling edges. 
+
+wallpaper_3:
+	interaction-text: >
+		How many mice can be in there?
+
+sofa_1:
+	interaction-text: >
+		I used to tease John he should just call this 
+		his bed he was always falling asleep here. Every 
+		morning, snoring up a storm, his scotch glass 
+		balanced on his belly, what a sight!
+
+sofa_2:
+	interaction-text: >
+		His indentation is right where he left it.
+
+sofa_3:
+	interaction-text: >
+		Oh, it’s too dusty to sit on now. 
+
+tv_1:
+	interaction-text: >
+		That blasted thing. How many screaming fights did 
+		John Jr and Sandy have over those silly shows they 
+		wanted to watch?
+
+tv_2:
+	interaction-text: >
+		Every time I took sides the other one would start screaming at me!
+
+tv_3:
+	interaction-text: >
+		I suppose it is nice hearing the news about the stars though.
+
+comfyChair_1:
+	interaction-text: >
+		The best place in the house for remembering the good times. 
+		But I don’t have time for that now, I have something to do, don’t I?
+
+comfyChair_2:
+	interaction-text: >
+		I was going to go to something? I’m sure I’ll remember on 
+		the way to the car.
+
+comfyChair_3:
+	interaction-text: >
+		If I sit down now I’ll just nap all day.
+
+
+
+# Dining Room
+
+diningTable_1:
+	interaction-text: >
+		I’d love to have the family all together again but it’d 
+		just be too much to cook a meal big enough for all of them.
+
+diningTable_2:
+	interaction-text: >
+		I loved watching John carve a bird. When he’d 
+		concentrate like that he looked just like a little boy!
+
+diningTable_3:
+	interaction-text: >
+		I bet the trees that were used to make the table and the 
+		trees that were used to make the walls were neighbors.
+
+
+...
