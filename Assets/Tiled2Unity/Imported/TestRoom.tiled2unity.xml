@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <!--Tiled2Unity generated xml data-->
 <!--Do not modify by hand-->
-<!--Last exported: 7/17/2016 3:36:12 AM-->
+<!--Last exported: 7/17/2016 3:50:48 AM-->
 <Tiled2Unity version="1.0.7.5">
   <AssignMaterial mesh="mesh_0001" material="testtilemap" />
   <AssignMaterial mesh="mesh_0002" material="furnituremap" />
