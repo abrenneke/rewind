@@ -4,7 +4,7 @@
   <image source="../../../Slow Jam 2 Visual Assets/Sprite Sheets/floor_sheet.png" width="1536" height="1536"/>
  </tileset>
  <tileset firstgid="226" name="closed_door_sheet" tilewidth="100" tileheight="100" tilecount="225" columns="15">
-  <image source="../../../Slow Jam 2 Visual Assets/Sprite Sheets/closed_door_sheet.png" width="1536" height="1536"/>
+  <image source="Sprite Sheets/closed_door_sheet.png" width="1536" height="1536"/>
   <tile id="37">
    <objectgroup draworder="index">
     <object id="1" x="0" y="0" width="100" height="100"/>
@@ -48,7 +48,7 @@
   </tile>
  </tileset>
  <tileset firstgid="451" name="piano_wall_sheet" tilewidth="100" tileheight="100" tilecount="225" columns="15">
-  <image source="../../../Slow Jam 2 Visual Assets/Sprite Sheets/bathroom_wall_sheet.png" width="1536" height="1536"/>
+  <image source="Sprite Sheets/bathroom_wall_sheet.png" width="1536" height="1536"/>
   <tile id="31">
    <objectgroup draworder="index">
     <object id="1" x="-47" y="-33" width="157" height="121"/>
@@ -331,10 +331,10 @@
   <image source="../../../Slow Jam 2 Visual Assets/Sprite Sheets/piano.png" width="256" height="256"/>
  </tileset>
  <tileset firstgid="688" name="enemy_sheet_100x100tiles" tilewidth="100" tileheight="100" tilecount="4" columns="2">
-  <image source="../../../Slow Jam 2 Visual Assets/Sprite Sheets/enemy_sheet_100x100tiles.png" width="200" height="200"/>
+  <image source="Sprite Sheets/enemy_sheet_100x100tiles.png" width="200" height="200"/>
  </tileset>
  <tileset firstgid="692" name="bathroom_trashcan" tilewidth="100" tileheight="100" tilecount="1" columns="1">
-  <image source="Sprite Sheets/floor_kitchen_sheet.png" width="100" height="100"/>
+  <image source="Sprite Sheets/bathroom_trashcan.png" width="128" height="128"/>
   <tile id="0">
    <objectgroup draworder="index">
     <object id="1" x="42" y="32" width="51" height="71"/>
@@ -440,7 +440,55 @@
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 </data>
  </layer>
- <layer name="Enemies" width="20" height="20">
+ <layer name="Cats" width="20" height="20">
+  <data encoding="csv">
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+</data>
+ </layer>
+ <layer name="Mice" width="20" height="20">
+  <data encoding="csv">
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+</data>
+ </layer>
+ <layer name="Trash" width="20" height="20">
   <data encoding="csv">
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,

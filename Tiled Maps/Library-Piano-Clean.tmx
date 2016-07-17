@@ -331,7 +331,7 @@
   <image source="Sprite Sheets/piano.png" width="256" height="256"/>
  </tileset>
  <tileset firstgid="688" name="enemy_sheet_100x100tiles" tilewidth="100" tileheight="100" tilecount="4" columns="2">
-  <image source="../../../Slow Jam 2 Visual Assets/Sprite Sheets/enemy_sheet_100x100tiles.png" width="200" height="200"/>
+  <image source="Sprite Sheets/enemy_sheet_100x100tiles.png" width="200" height="200"/>
  </tileset>
  <layer name="Floor" width="20" height="20">
   <data encoding="csv">
