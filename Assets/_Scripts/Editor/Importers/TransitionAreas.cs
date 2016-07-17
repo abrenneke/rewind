@@ -30,6 +30,9 @@ namespace Assets._Scripts.Editor.Importers
                 {
                     var to = customProperties["to"].Split(':');
 
+                    if (to.Length != 2)
+                        return;
+
                     var toMap = to[0];
                     var toName = to[1];
 

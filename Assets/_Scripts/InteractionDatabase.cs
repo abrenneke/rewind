@@ -107,6 +107,9 @@ namespace Assets._Scripts
                 };
             }
 
+            if (interactionCounts.ContainsKey(interactionName) == false)
+                ResetInteractionCount(interactionName);
+
             if (allInteractions.ContainsKey(interactionCounts[interactionName]) == false)
             {
                 // Reached end

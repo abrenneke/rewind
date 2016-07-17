@@ -39,7 +39,7 @@ namespace Assets._Scripts
 
         public static void Trigger(InteractableObject interactableObject)
         {
-            if (interactableObject.AfterInteraction == null)
+            if (String.IsNullOrEmpty(interactableObject.AfterInteraction))
                 return;
 
             if (Instance.triggeredAfterInteractions.Contains(interactableObject.AfterInteraction))

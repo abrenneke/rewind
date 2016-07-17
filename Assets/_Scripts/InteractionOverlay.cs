@@ -33,7 +33,7 @@ namespace Assets._Scripts
 
         public void Show()
         {
-            Backdrop.color = destinationColor.WithAlpha(0);;
+            Backdrop.color = destinationColor.WithAlpha(0);
 
             Backdrop.DOColor(destinationColor, TimeToShowBackdrop);
         }
@@ -45,7 +45,9 @@ namespace Assets._Scripts
             Backdrop.DOColor(destinationColor.WithAlpha(0), TimeToShowBackdrop);
             yield return new WaitForSeconds(TimeToShowBackdrop);
 
-            Destroy(gameObject);
+            // Not actually sure where this is getting destroyed
+            if(this != null)
+                Destroy(gameObject);
         }
     }
 }
