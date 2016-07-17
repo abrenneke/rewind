@@ -3,6 +3,7 @@ using System.Linq;
 using UnityEngine;
 using FMOD.Studio;
 using FMODUnity;
+using GAF.Core;
 using JetBrains.Annotations;
 
 namespace Assets._Scripts
@@ -69,6 +70,15 @@ namespace Assets._Scripts
         private bool canAttack = true;
 
         private Vector2 lastMovement;
+
+        [AssignedInUnity]
+        public GAFMovieClip SideWalk;
+
+        [AssignedInUnity]
+        public GAFMovieClip FrontWalk;
+
+        [AssignedInUnity]
+        public GAFMovieClip BackWalk;
 
         [UnityMessage]
         public void Awake()
@@ -181,6 +191,85 @@ namespace Assets._Scripts
                 rawMovement.Normalize();
 
             desiredMovement = rawMovement * MoveSpeed;
+
+            CheckSpriteDirection();
+        }
+
+        private void CheckSpriteDirection()
+        {
+            var movementDirection = new Vector3().DirectionToDegrees(lastMovement);
+
+            if (movementDirection < 0)
+                movementDirection += 360;
+
+            if (movementDirection > 360)
+                movementDirection -= 360;
+
+            var sideActive = false;
+            var frontActive = false;
+            var backActive = false;
+            bool? flipSide = null;
+
+            if (movementDirection >= 315 || movementDirection < 45)
+            {
+                // Right
+                sideActive = true;
+                flipSide = false;
+            }
+            else if (movementDirection >= 45 && movementDirection < 135)
+            {
+                // Up
+                backActive = true;
+            }
+            else if (movementDirection >= 135 && movementDirection < 225)
+            {
+                // Left
+                sideActive = true;
+                flipSide = true;
+            }
+            else if (movementDirection >= 225 && movementDirection < 315)
+            {
+                // Down
+                frontActive = true;
+            }
+
+            if (SideWalk.gameObject.activeSelf != sideActive)
+                SideWalk.gameObject.SetActive(sideActive);
+
+            if (FrontWalk.gameObject.activeSelf != frontActive)
+                FrontWalk.gameObject.SetActive(frontActive);
+
+            if (BackWalk.gameObject.activeSelf != backActive)
+                BackWalk.gameObject.SetActive(backActive);
+
+            if (flipSide.HasValue)
+            {
+                var scale = SideWalk.transform.localScale;
+                if (flipSide.Value && SideWalk.transform.localScale.x > 0)
+                {
+                    SideWalk.transform.localScale = new Vector3(-scale.x, scale.y, scale.z);
+                }
+                else if(!flipSide.Value && SideWalk.transform.localScale.x < 0)
+                {
+                    SideWalk.transform.localScale = new Vector3(-scale.x, scale.y, scale.z);
+                }
+            }
+
+            if (desiredMovement.IsZero())
+            {
+                SideWalk.stop();
+                FrontWalk.stop();
+                BackWalk.stop();
+            }
+            else
+            {
+                if (SideWalk.isPlaying() == false)
+                    SideWalk.play();
+                if (FrontWalk.isPlaying() == false)
+                    FrontWalk.play();
+                if (BackWalk.isPlaying() == false)
+                    BackWalk.play();
+            }
         }
 
         private void CheckAudio()

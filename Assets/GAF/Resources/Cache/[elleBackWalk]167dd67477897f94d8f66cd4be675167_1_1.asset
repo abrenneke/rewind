@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59f0b625614a406468ee087f147489e7, type: 3}
+  m_Name: '[elleBackWalk]167dd67477897f94d8f66cd4be675167_1_1'
+  m_EditorClassIdentifier: 
+  m_Asset: {fileID: 11400000, guid: 167dd67477897f94d8f66cd4be675167, type: 2}
+  m_Scale: 1
+  m_CSF: 1
+  m_CurrentDataPath: Assets/_Sprites/SWF/
+  m_Data:
+  - m_SearchName: elleBackWalk
+    m_SharedTexture: {fileID: 2800000, guid: 390d2d54023fc1349915e29c896e0ea2, type: 3}
+    m_SharedMaterial: {fileID: 2100000, guid: a41a262a81ea7a54087a41521f91dddc, type: 2}
