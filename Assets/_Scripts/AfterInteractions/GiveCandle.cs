@@ -1,10 +1,12 @@
-﻿namespace Assets._Scripts.AfterInteractions
+﻿using UnityEngine;
+
+namespace Assets._Scripts.AfterInteractions
 {
     public class GiveCandle : AfterInteraction
     {
         public override void Trigger()
         {
-            throw new System.NotImplementedException();
+            Camera.main.GetComponent<Lighting>().TurnOffLighting();
         }
     }
 }

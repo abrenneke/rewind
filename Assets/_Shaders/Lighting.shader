@@ -4,6 +4,7 @@
 	{
 		_MainTex ("Texture", 2D) = "white" {}
 		_LightingTex ("Texture", 2D) = "white" {}
+		_Factor ("Factor", float) = 1
 	}
 	SubShader
 	{
@@ -49,6 +50,8 @@
 			sampler2D _MainTex;
 			sampler2D _LightingTex;
 
+			float _Factor;
+
 			fixed4 frag (v2f i) : SV_Target
 			{
 				fixed4 col = tex2D(_MainTex, i.uv);
@@ -59,8 +62,9 @@
 				
 				fixed4 minLighting = clamp(lighting, 0.1, 1);
 
-				//return col * lighting;
-				return lerp(greyscale, col, pow(lighting.a, 2)) * minLighting;
+				fixed4 lighted = lerp(greyscale, col, pow(lighting.a, 2)) * minLighting;
+
+				return lerp(col, lighted, _Factor);
 			}
 			ENDCG
 		}

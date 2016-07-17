@@ -1,5 +1,4 @@
-﻿using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace Assets._Scripts
 {
@@ -20,17 +19,13 @@ namespace Assets._Scripts
         private InteractableObject lastInteractionObject;
 
         private bool canClose;
-
-        private IList<string> triggeredAfterInteractions;
-
+        
         [UnityMessage]
         public void Awake()
         {
             Instance = this;
             CanInteract = true;
             canClose = true;
-
-            triggeredAfterInteractions = new List<string>();
         }
 
         public void InteractWith(InteractableObject obj)
@@ -76,15 +71,8 @@ namespace Assets._Scripts
         {
             currentInteraction = null;
             GameStateController.Instance.SetState(GameState.InGame);
-
-            if (lastInteractionObject.AfterInteraction != null)
-            {
-                if (triggeredAfterInteractions.Contains(lastInteractionObject.AfterInteraction) == false)
-                {
-                    AfterInteractionDatabase.Trigger(lastInteractionObject.AfterInteraction);
-                    triggeredAfterInteractions.Add(lastInteractionObject.AfterInteraction);
-                }
-            }
+            
+            AfterInteractionDatabase.Trigger(lastInteractionObject);
         }
     }
 }

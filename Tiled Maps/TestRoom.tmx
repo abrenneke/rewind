@@ -181,6 +181,7 @@
  <objectgroup name="Furniture">
   <object id="8" gid="15" x="1152" y="384" width="128" height="128">
    <properties>
+    <property name="after-interaction" value="give-candle"/>
     <property name="interaction" value="test-table"/>
    </properties>
   </object>

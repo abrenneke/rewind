@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using DG.Tweening;
+using UnityEngine;
 
 namespace Assets._Scripts
 {
@@ -12,10 +13,14 @@ namespace Assets._Scripts
 
         private Texture lastLightingTex;
 
+        private float lastLightingLevel;
+
         [UnityMessage]
         public void Awake()
         {
             lightingMaterial = new Material(Shader.Find("Hidden/Lighting"));
+
+            lastLightingLevel = 1.0f;
         }
 
         [UnityMessage]
@@ -31,7 +36,17 @@ namespace Assets._Scripts
             {
                 lastLightingTex = LightingCamera.targetTexture;
                 lightingMaterial.SetTexture("_LightingTex", lastLightingTex);
+                lightingMaterial.SetFloat("_Factor", lastLightingLevel);
             }
+        }
+
+        public void TurnOffLighting()
+        {
+            DOTween.To(() => lastLightingLevel, x =>
+            {
+                lastLightingLevel = x;
+                lightingMaterial.SetFloat("_Factor", lastLightingLevel);
+            }, 0.0f, 1.0f);
         }
     }
 }

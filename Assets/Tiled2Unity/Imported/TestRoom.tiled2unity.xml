@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <!--Tiled2Unity generated xml data-->
 <!--Do not modify by hand-->
-<!--Last exported: 7/15/2016 7:48:30 PM-->
+<!--Last exported: 7/16/2016 11:43:51 PM-->
 <Tiled2Unity version="1.0.7.5">
   <AssignMaterial mesh="mesh_0001" material="testtilemap" />
   <AssignMaterial mesh="mesh_0002" material="furnituremap" />
@@ -85,6 +85,7 @@
     </GameObject>
     <GameObject name="Furniture" x="0" y="0" z="-0.157894731">
       <GameObject name="TileObject" x="11.5199995" y="-3.84" rotation="0" layer="" z="-0.105263159" scaleX="1" scaleY="1">
+        <Property name="after-interaction" value="give-candle" />
         <Property name="interaction" value="test-table" />
         <GameObject name="TileObject">
           <PolygonCollider2D offsetX="0.09027343" offsetY="1.13105464">

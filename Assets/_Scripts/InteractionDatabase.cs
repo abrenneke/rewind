@@ -100,7 +100,12 @@ namespace Assets._Scripts
         {
             IDictionary<int, InteractionInfo> allInteractions;
             if (!interactions.TryGetValue(interactionName, out allInteractions))
-                throw new InvalidOperationException("Couldn't find interaction " + interactionName);
+            {
+                allInteractions = new Dictionary<int, InteractionInfo>
+                {
+                    { 1, new InteractionInfo { InteractionText = "This object has no text." } }
+                };
+            }
 
             if (allInteractions.ContainsKey(interactionCounts[interactionName]) == false)
             {
