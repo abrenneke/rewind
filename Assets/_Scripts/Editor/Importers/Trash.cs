@@ -7,7 +7,7 @@ using UnityEngine;
 namespace Assets._Scripts.Editor.Importers
 {
     [CustomTiledImporter, UsedImplicitly]
-    public class Cats : ICustomTiledImporter
+    public class Trash : ICustomTiledImporter
     {
         public void HandleCustomProperties(GameObject gameObject, IDictionary<string, string> customProperties)
         {
@@ -16,16 +16,15 @@ namespace Assets._Scripts.Editor.Importers
 
         public void CustomizePrefab(GameObject prefab)
         {
-            var catLayer = prefab.transform.FindChild("Cats");
+            var trashLayer = prefab.transform.FindChild("Trash");
 
-            if (catLayer == null)
+            if (trashLayer == null)
                 return;
 
-            foreach (Transform catObject in catLayer)
+            foreach (Transform trashObject in trashLayer)
             {
-                catObject.gameObject.AddComponent<CatSpawner>();
-
-                catObject.name = "Cat Spawner";
+                trashObject.gameObject.AddComponent<TrashSpawner>();
+                trashObject.name = "Trash Spawner";
             }
         }
     }

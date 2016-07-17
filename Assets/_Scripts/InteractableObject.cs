@@ -37,9 +37,38 @@ namespace Assets._Scripts
 
             overlayChild.transform.localPosition = new Vector3(0, 0, -1f);
 
+            if (GetComponentInChildren<MeshRenderer>() != null)
+            {
+                SetUpMeshRendererOverlay();
+            }
+            else
+            {
+                SetUpSpriteRendererOverlay();
+            }
+
+            HideCanInteract();
+        }
+
+        private void SetUpSpriteRendererOverlay()
+        {
+            var spriteRenderer = GetComponentInChildren<SpriteRenderer>();
+
+            overlayChild.transform.SetParent(spriteRenderer.gameObject.transform, false);
+
+            var newSpriteRenderer = overlayChild.AddComponent<SpriteRenderer>();
+
+            newSpriteRenderer.sprite = spriteRenderer.sprite;
+            newSpriteRenderer.sortingLayerName = spriteRenderer.sortingLayerName;
+            newSpriteRenderer.sortingOrder = spriteRenderer.sortingOrder;
+
+            newSpriteRenderer.material = DynamicMaterialDatabase.Instance.GetMaterialForTexture(spriteRenderer.sprite.texture);
+        }
+
+        private void SetUpMeshRendererOverlay()
+        {
             var meshRenderer = GetComponentInChildren<MeshRenderer>();
             var meshFilter = GetComponentInChildren<MeshFilter>();
-            
+
             overlayChild.transform.SetParent(meshRenderer.gameObject.transform, false);
 
             var newMeshFilder = overlayChild.AddComponent<MeshFilter>();
@@ -50,8 +79,6 @@ namespace Assets._Scripts
             newMeshRenderer.sortingOrder = meshRenderer.sortingOrder;
 
             newMeshRenderer.material = DynamicMaterialDatabase.Instance.GetMaterialForTexture(meshRenderer.material.mainTexture);
-
-            HideCanInteract();
         }
     }
 }

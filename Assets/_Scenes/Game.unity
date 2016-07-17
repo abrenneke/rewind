@@ -1053,8 +1053,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   AllMaps:
-  - MapPrefab: {fileID: 151560, guid: 3d8f5690f0bbadc4c924712b98101e6b, type: 2}
-  - MapPrefab: {fileID: 176506, guid: eea705d7b06d72740bcf9d592c3a931d, type: 2}
+  - Name: TestRoom
+    DirtyMapPrefab: {fileID: 151560, guid: 3d8f5690f0bbadc4c924712b98101e6b, type: 2}
+    CleanMapPrefab: {fileID: 0}
   StartingMapName: TestRoom
 --- !u!4 &2143708285
 Transform:
@@ -1093,6 +1094,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ae733dedf5a87e4790102a33e0612a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  TrashPrefab: {fileID: 157488, guid: a986fa87fd7173e468d9f4e64eab75bf, type: 2}
   CatPrefab: {fileID: 115816, guid: 3cb6e2ee7ea99bd428bb1d1b595e7b6b, type: 2}
   MousePrefab: {fileID: 152220, guid: 6155fe28e452b2d458edf2dd67473b48, type: 2}
 --- !u!114 &2143708288

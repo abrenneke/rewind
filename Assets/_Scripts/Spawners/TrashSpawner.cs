@@ -4,12 +4,12 @@ using UnityEngine;
 namespace Assets._Scripts.Spawners
 {
     [UnityComponent]
-    public class MouseSpawner : MonoBehaviour
+    public class TrashSpawner : MonoBehaviour
     {
         [UnityMessage]
         public void Start()
         {
-            var instance = (GameObject)Instantiate(InGameObjectPrefabReference.Instance.MousePrefab, transform.position, Quaternion.identity);
+            var instance = (GameObject)Instantiate(InGameObjectPrefabReference.Instance.TrashPrefab, transform.position, Quaternion.identity);
 
             instance.transform.SetParent(transform.parent);
 
