@@ -56,6 +56,9 @@ broom_1:
 		I really should clean this house out. The mice
 		are starting to think they own the place!
 
+cande_1:
+	interaction-text: >
+		Oh! Here's my candle.
 
 
 
