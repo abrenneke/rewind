@@ -10,5 +10,8 @@ namespace Assets._Scripts
 
         [AssignedInUnity]
         public string ToName;
+
+        [AssignedInUnity]
+        public bool IsDoor;
     }
 }

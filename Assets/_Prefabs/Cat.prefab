@@ -148,8 +148,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28ae773ebd3e243448f0aab58423242c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DetectionRadius: 5
-  MaxPounceDistance: 5
+  DetectionRadius: 2
+  MaxPounceDistance: 3
   PounceSpeed: 3
   ReturnSpeed: 1
   DamageDealt: 1

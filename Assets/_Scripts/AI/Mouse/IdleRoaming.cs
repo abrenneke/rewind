@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -9,6 +10,8 @@ namespace Assets._Scripts.AI.Mouse
         private MouseAI MouseAI {get { return (MouseAI)AIBase; } }
 
         private Vector2? targetPosition;
+
+        private Coroutine newPositionCoroutine;
 
         public override void Update()
         {
@@ -39,6 +42,12 @@ namespace Assets._Scripts.AI.Mouse
             }
         }
 
+        private IEnumerator GetNewPositionAfter3Seconds()
+        {
+            yield return new WaitForSeconds(3);
+            targetPosition = null;
+        }
+
         private void GetNewIdleTargetPosition()
         {
             var angle = Random.Range(0, 360);
@@ -47,6 +56,12 @@ namespace Assets._Scripts.AI.Mouse
             var vector = new Vector2(Mathf.Cos(angle), Mathf.Sin(angle)) * distance;
 
             targetPosition = MouseAI.StartPosition + vector;
+
+            if (newPositionCoroutine != null)
+                MouseAI.StopCoroutine(newPositionCoroutine);
+
+            // To prevent getting stuck.
+            newPositionCoroutine = MouseAI.StartCoroutine(GetNewPositionAfter3Seconds());
         }
 
         public override void FixedUpdate()

@@ -33,6 +33,12 @@ namespace Assets._Scripts
             if (CanInteract == false || GameStateController.Instance.CurrentState != GameState.InGame)
                 return;
 
+            if (obj.InteractionName == "door")
+            {
+                Player.Instance.TransitionToNewMap(obj.GetComponent<MapTransition>());
+                return;
+            }
+
             lastInteractionObject = obj;
 
             GameStateController.Instance.SetState(GameState.InInteraction);

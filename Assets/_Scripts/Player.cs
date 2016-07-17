@@ -323,8 +323,16 @@ namespace Assets._Scripts
             if (canTransition == false)
                 return;
 
+            if (collider.gameObject.GetComponentInParent<MapTransition>().IsDoor) // Don't collide with doors
+                return;
+
+            TransitionToNewMap(collider.gameObject.GetComponentInParent<MapTransition>());
+        }
+
+        public void TransitionToNewMap(MapTransition transition)
+        {
             RuntimeManager.PlayOneShot(SoundDoorOpenEventName, transform.position);
-            EnterTransition(collider.gameObject.GetComponentInParent<MapTransition>());
+            EnterTransition(transition);
 
             Delay.TemporarilySetBool(x => canTransition = x, 1, false);
         }
