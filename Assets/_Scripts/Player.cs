@@ -80,6 +80,9 @@ namespace Assets._Scripts
         [AssignedInUnity]
         public GAFMovieClip BackWalk;
 
+        [AssignedInUnity]
+        public Collider2D BroomSweepCollider;
+
         [UnityMessage]
         public void Awake()
         {
@@ -87,6 +90,8 @@ namespace Assets._Scripts
             rigidbody = GetComponent<Rigidbody2D>();
 
             walkSound = RuntimeManager.CreateInstance(SoundWalkEventName);
+
+            BroomSweepCollider.enabled = true;
         }
 
         [UnityMessage]
@@ -141,34 +146,7 @@ namespace Assets._Scripts
 
         private void SweepAttack()
         {
-            const float degrees = 90;
-            const int count = 10;
-            const float increment = degrees / count;
-
-            var facingDirection = transform.position.DirectionToDegrees(lastMovement);
-
-            var angle = -(degrees / 2.0f);
-            for(var i = 0; i < count; angle += increment, i++)
-            {
-                var raycastAngle = facingDirection + angle;
-                var raycastVector = new Vector2(Mathf.Cos(raycastAngle), Mathf.Sin(raycastAngle));
-
-                var raycastResults = Physics2D.RaycastAll(transform.position, raycastVector.normalized, AttackRange);
-
-                raycastResults = raycastResults.Where(x => x.collider.gameObject != gameObject && x.collider.GetComponentInParent<Player>() == null).ToArray();
-                
-                if (raycastResults.Any())
-                {
-                    var result = raycastResults.First();
-                    var canBeHit = result.collider.gameObject.GetInterfaceComponent<ICanBeHitWithBroom>();
-                    if (canBeHit != null)
-                    {
-                        canBeHit.IsHitWithBroom();
-                        break;
-                    }
-                }
-            }
-        }
+            Delay.TemporarilySetBool(x => BroomSweepCollider.enabled = x, 0.1f);        }
 
         private bool IsPaused {get { return GameStateController.Instance.CurrentState != GameState.InGame; } }
 
@@ -312,10 +290,6 @@ namespace Assets._Scripts
         [UnityMessage]
         public void OnTriggerEnter2D(Collider2D collider)
         {
-            if (collider.gameObject.CompareTag("Transition"))
-            {
-                TransitionToAnotherMap(collider);
-            }
         }
 
         private void TransitionToAnotherMap(Collider2D collider)

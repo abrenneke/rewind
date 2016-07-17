@@ -38,6 +38,7 @@ namespace Assets._Scripts.AI.Mouse
         [UnityMessage]
         public void Start()
         {
+            MapController.Instance.RegisterThingToClean(gameObject);
             StartPosition = transform.position;
             SetState<IdleRoaming>();
         }
@@ -67,6 +68,8 @@ namespace Assets._Scripts.AI.Mouse
 
         public void IsHitWithBroom()
         {
+            MapController.Instance.ThingCleaned(gameObject);
+
             Destroy(gameObject);
         }
 
@@ -145,6 +148,13 @@ namespace Assets._Scripts.AI.Mouse
                 if (Up.isPlaying() == false)
                     Up.play();
             }
+        }
+
+        [UnityMessage]
+        public void OnTriggerEnter2D(Collider2D other)
+        {
+            if (other.GetComponent<BroomCollision>() != null)
+                IsHitWithBroom();
         }
     }
 }
