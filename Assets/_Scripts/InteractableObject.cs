@@ -1,4 +1,5 @@
-﻿using Tiled2Unity;
+﻿using System;
+using Tiled2Unity;
 using UnityEngine;
 
 namespace Assets._Scripts
@@ -20,6 +21,9 @@ namespace Assets._Scripts
 
         public void HideCanInteract()
         {
+            if (overlayChild == null)
+                throw new InvalidOperationException("No overlay");
+
             overlayChild.SetActive(false);
             InteractionsDisplay.Instance.SetHighlightInteract(false);
         }

@@ -13,8 +13,15 @@ namespace Assets._Scripts.Editor.Importers
         {
             if (customProperties.ContainsKey("from") || customProperties.ContainsKey("to"))
             {
-                gameObject.GetComponentInChildren<MeshRenderer>().enabled = false;
-                gameObject.GetComponentInChildren<PolygonCollider2D>().isTrigger = true;
+                var renderer = gameObject.GetComponentInChildren<MeshRenderer>();
+                if (renderer != null)
+                    renderer.enabled = false;
+                else Debug.LogWarning(gameObject.name + " is missing a mesh renderer.");
+
+                var polygonCollider = gameObject.GetComponentInChildren<PolygonCollider2D>();
+                if (polygonCollider != null)
+                    polygonCollider.isTrigger = true;
+                else Debug.LogWarning(gameObject.name + " is missing a collision box.");
 
                 if (customProperties.ContainsKey("from"))
                 {
@@ -39,6 +46,9 @@ namespace Assets._Scripts.Editor.Importers
                     var mapTransition = gameObject.AddComponent<MapTransition>();
                     mapTransition.ToMap = toMap;
                     mapTransition.ToName = toName;
+
+                    if (customProperties.ContainsKey("interaction") && customProperties["interaction"] == "door")
+                        mapTransition.IsDoor = true;
 
                     gameObject.name = "Transition to " + customProperties["to"];
                     

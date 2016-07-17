@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="20" height="20" tilewidth="100" tileheight="100" nextobjectid="91">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="20" height="20" tilewidth="100" tileheight="100" nextobjectid="102">
  <tileset firstgid="1" name="floor_sheet" tilewidth="100" tileheight="100" tilecount="225" columns="15">
   <image source="Sprite Sheets/floor_sheet.png" width="1536" height="1536"/>
  </tileset>
@@ -483,36 +483,53 @@
 </data>
  </layer>
  <objectgroup name="Entrance_Exits">
-  <object id="86" name="ToLivingRoom" gid="694" x="1719.19" y="1489.32" width="200" height="200" visible="0">
+  <object id="86" name="ToLivingRoom" gid="694" x="1719.19" y="1489.32" width="200" height="200">
    <properties>
-    <property name="To" value="LivingRoom"/>
+    <property name="interaction" value="door"/>
+    <property name="to" value="living:tofoyer"/>
    </properties>
   </object>
-  <object id="87" name="ToLvl2" gid="694" x="868.314" y="1932.48" width="200" height="200" visible="0">
+  <object id="87" name="ToLvl2" gid="694" x="868.314" y="1932.48" width="200" height="200">
    <properties>
-    <property name="To" value="Lvl2"/>
+    <property name="interaction" value="exitdoor"/>
+    <property name="to" value="lvl2"/>
    </properties>
   </object>
-  <object id="88" name="ToPianoLibrary" gid="694" x="17.4385" y="1478.24" width="200" height="200" visible="0">
+  <object id="88" name="ToPianoLibrary" gid="694" x="17.4385" y="1478.24" width="200" height="200">
    <properties>
-    <property name="To" value="PianoLibrary"/>
+    <property name="interaction" value="door"/>
+    <property name="to" value="pianolibrary:tofoyer"/>
    </properties>
   </object>
-  <object id="89" name="ToDining" gid="694" x="4.14359" y="671.682" width="200" height="200" visible="0">
+  <object id="89" name="ToDining" gid="694" x="4.14359" y="671.682" width="200" height="200">
    <properties>
-    <property name="To" value="Dining"/>
+    <property name="interaction" value="door"/>
+    <property name="to" value="dining:tofoyer"/>
+   </properties>
+  </object>
+  <object id="91" gid="692" x="1600" y="1446" width="100" height="100">
+   <properties>
+    <property name="from" value="toliving"/>
+   </properties>
+  </object>
+  <object id="92" gid="692" x="920" y="1708" width="100" height="100">
+   <properties>
+    <property name="from" value="tolvl2"/>
+   </properties>
+  </object>
+  <object id="93" gid="692" x="240" y="1432" width="100" height="100">
+   <properties>
+    <property name="from" value="topianolibrary"/>
+   </properties>
+  </object>
+  <object id="94" gid="692" x="232" y="620" width="100" height="100">
+   <properties>
+    <property name="from" value="todining"/>
    </properties>
   </object>
  </objectgroup>
  <objectgroup name="Cats">
   <object id="78" gid="689" x="891.724" y="1098.08" width="100" height="100"/>
-  <object id="79" gid="691" x="661.279" y="1049.34" width="100" height="100"/>
-  <object id="80" gid="691" x="1148.76" y="1355.12" width="100" height="100"/>
-  <object id="81" gid="691" x="747.696" y="1357.33" width="100" height="100"/>
-  <object id="82" gid="691" x="1241.82" y="945.192" width="100" height="100"/>
-  <object id="83" gid="691" x="1461.19" y="479.869" width="100" height="100"/>
-  <object id="84" gid="691" x="346.632" y="1448.18" width="100" height="100"/>
-  <object id="85" gid="691" x="342.2" y="641.624" width="100" height="100"/>
  </objectgroup>
  <objectgroup name="Mice">
   <object id="26" gid="688" x="1465.62" y="643.84" width="100" height="100"/>
@@ -521,6 +538,13 @@
  </objectgroup>
  <objectgroup name="Trash">
   <object id="29" gid="691" x="339.984" y="473.222" width="100" height="100"/>
+  <object id="95" gid="691" x="338" y="646" width="100" height="100"/>
+  <object id="96" gid="691" x="1458" y="476" width="100" height="100"/>
+  <object id="97" gid="691" x="1240" y="944" width="100" height="100"/>
+  <object id="98" gid="691" x="1152" y="1360" width="100" height="100"/>
+  <object id="99" gid="691" x="748" y="1352" width="100" height="100"/>
+  <object id="100" gid="691" x="348" y="1450" width="100" height="100"/>
+  <object id="101" gid="691" x="668" y="1054" width="100" height="100"/>
  </objectgroup>
  <objectgroup name="SqueakBoard">
   <object id="30" gid="690" x="599.236" y="796.732" width="100" height="100"/>

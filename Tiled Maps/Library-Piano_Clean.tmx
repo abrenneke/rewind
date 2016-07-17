@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="20" height="20" tilewidth="100" tileheight="100" nextobjectid="1">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="20" height="20" tilewidth="100" tileheight="100" nextobjectid="7">
  <tileset firstgid="1" name="floor_sheet" tilewidth="100" tileheight="100" tilecount="225" columns="15">
   <image source="Sprite Sheets/floor_sheet.png" width="1536" height="1536"/>
  </tileset>
@@ -453,4 +453,28 @@
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 </data>
  </layer>
+ <objectgroup name="Entrance Exit">
+  <object id="2" gid="469" x="1730" y="1032" width="100" height="100">
+   <properties>
+    <property name="interaction" value="door"/>
+    <property name="to" value="foyer:topianolibrary"/>
+   </properties>
+  </object>
+  <object id="4" gid="467" x="912.667" y="294" width="100" height="100">
+   <properties>
+    <property name="interaction" value="door"/>
+    <property name="to" value="dining:tofoyer"/>
+   </properties>
+  </object>
+  <object id="5" gid="688" x="918" y="426" width="100" height="100">
+   <properties>
+    <property name="from" value="todining"/>
+   </properties>
+  </object>
+  <object id="6" gid="688" x="1592.67" y="1032.67" width="100" height="100">
+   <properties>
+    <property name="from" value="tofoyer"/>
+   </properties>
+  </object>
+ </objectgroup>
 </map>
