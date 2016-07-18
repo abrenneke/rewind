@@ -6,8 +6,8 @@ Material:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: bathroom_trashcan
-  m_Shader: {fileID: 4800000, guid: 99fd33029232b8444a60a01e27b081ee, type: 3}
+  m_Name: Tiled2Unity/Depth
+  m_Shader: {fileID: 4800000, guid: a27eb994ddf5ad04d97a5b481b4c3e6c, type: 3}
   m_ShaderKeywords: PIXELSNAP_ON
   m_LightmapFlags: 5
   m_CustomRenderQueue: -1
@@ -19,7 +19,7 @@ Material:
         first:
           name: _MainTex
         second:
-          m_Texture: {fileID: 0}
+          m_Texture: {fileID: 2800000, guid: d3c0246fefe6f144db91b463b7e94813, type: 3}
           m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
     m_Floats:
@@ -27,6 +27,10 @@ Material:
         first:
           name: PixelSnap
         second: 1
+      data:
+        first:
+          name: _CutOff
+        second: 0.1
     m_Colors:
       data:
         first:

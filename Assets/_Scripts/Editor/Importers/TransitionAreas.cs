@@ -18,7 +18,7 @@ namespace Assets._Scripts.Editor.Importers
                     renderer.enabled = false;
                 else Debug.LogWarning(gameObject.name + " is missing a mesh renderer.");
 
-                var polygonCollider = gameObject.GetComponentInChildren<PolygonCollider2D>();
+                var polygonCollider = gameObject.GetComponentInChildren<Collider2D>();
                 if (polygonCollider != null)
                     polygonCollider.isTrigger = true;
                 else Debug.LogWarning(gameObject.name + " is missing a collision box.");
