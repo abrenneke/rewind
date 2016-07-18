@@ -547,9 +547,10 @@
  <objectgroup name="Trash"/>
  <objectgroup name="SqueakBoard"/>
  <objectgroup name="Furniture">
-  <object id="97" gid="1141" x="1010" y="1694" width="300" height="300">
+  <object id="97" gid="1141" x="1010" y="1694" width="128" height="128">
    <properties>
     <property name="interaction" value="coatRack"/>
+    <property name="scale" value="2.5"/>
    </properties>
   </object>
   <object id="99" gid="1142" x="208" y="1300" width="1536" height="1536">

@@ -495,9 +495,10 @@
 </data>
  </layer>
  <objectgroup name="Furniture">
-  <object id="34" gid="697" x="1429.87" y="987.419" width="222" height="222">
+  <object id="34" gid="697" x="1429.87" y="987.419" width="100" height="100">
    <properties>
     <property name="interaction" value="bed"/>
+    <property name="scale" value="2.2"/>
    </properties>
   </object>
   <object id="35" gid="698" x="1267.09" y="871.551" width="200" height="200">
@@ -537,10 +538,11 @@
   </object>
  </objectgroup>
  <objectgroup name="Broom">
-  <object id="31" gid="695" x="1583.84" y="1114.27" width="150" height="150">
+  <object id="31" gid="695" x="1583.84" y="1114.27" width="100" height="100">
    <properties>
     <property name="after-interaction" value="give-broom"/>
     <property name="interaction" value="broom"/>
+    <property name="scale" value="1.5"/>
    </properties>
   </object>
  </objectgroup>

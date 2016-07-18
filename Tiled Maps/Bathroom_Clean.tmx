@@ -413,23 +413,33 @@
 </data>
  </layer>
  <objectgroup name="Furniture">
-  <object id="1" gid="684" x="629.939" y="1076.12" width="200" height="200">
+  <object id="1" gid="684" x="629.939" y="1076.12" width="128" height="128">
    <properties>
     <property name="interaction" value="mirror"/>
+    <property name="scale" value="2"/>
    </properties>
   </object>
-  <object id="3" gid="683" x="1175.39" y="1185.21" width="200" height="200">
+  <object id="3" gid="683" x="1175.39" y="1185.21" width="128" height="128">
    <properties>
     <property name="interaction" value="toilet"/>
+    <property name="scale" value="2"/>
    </properties>
   </object>
-  <object id="4" gid="682" x="742.061" y="1167.03" width="200" height="200"/>
+  <object id="4" gid="682" x="742.061" y="1167.03" width="128" height="128">
+   <properties>
+    <property name="scale" value="2"/>
+   </properties>
+  </object>
   <object id="5" gid="685" x="1042.22" y="1530.72" width="200" height="400" rotation="-270.119">
    <properties>
     <property name="interaction" value="bathtub"/>
    </properties>
   </object>
-  <object id="6" gid="680" x="828.788" y="1159.09" width="150" height="150"/>
+  <object id="6" gid="680" x="828.788" y="1159.09" width="128" height="128">
+   <properties>
+    <property name="scale" value="1.5"/>
+   </properties>
+  </object>
  </objectgroup>
  <objectgroup name="Cats"/>
  <objectgroup name="Mice"/>

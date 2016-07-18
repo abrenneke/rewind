@@ -516,23 +516,42 @@
  <objectgroup name="Mice"/>
  <objectgroup name="Trash"/>
  <objectgroup name="Furniture">
-  <object id="50" gid="922" x="1494" y="430" width="100" height="100"/>
-  <object id="64" gid="923" x="1044" y="432" width="100" height="100">
+  <object id="50" gid="922" x="1403.09" y="430" width="100" height="100">
+   <properties>
+    <property name="scale" value="2.5"/>
+   </properties>
+  </object>
+  <object id="64" gid="923" x="598.545" y="425.939" width="100" height="100">
    <properties>
     <property name="interaction" value="kitchenSink"/>
+    <property name="scale" value="2"/>
    </properties>
   </object>
-  <object id="66" gid="924" x="1344" y="428" width="100" height="100">
+  <object id="66" gid="924" x="1201.58" y="421.939" width="100" height="100">
    <properties>
     <property name="interaction" value="stove"/>
+    <property name="scale" value="2"/>
    </properties>
   </object>
-  <object id="67" gid="925" x="1422" y="444" width="100" height="100"/>
-  <object id="68" gid="926" x="1244" y="432" width="100" height="100"/>
-  <object id="69" gid="926" x="1142" y="432" width="100" height="100"/>
+  <object id="67" gid="925" x="1655.33" y="483.394" width="100" height="100">
+   <properties>
+    <property name="scale" value="2"/>
+   </properties>
+  </object>
+  <object id="68" gid="926" x="1004.61" y="425.939" width="100" height="100">
+   <properties>
+    <property name="scale" value="2"/>
+   </properties>
+  </object>
+  <object id="69" gid="926" x="802.606" y="422.909" width="100" height="100">
+   <properties>
+    <property name="scale" value="2"/>
+   </properties>
+  </object>
   <object id="70" gid="927" x="126.667" y="719.636" width="100" height="100">
    <properties>
     <property name="interaction" value="phone"/>
+    <property name="scale" value="2"/>
    </properties>
   </object>
  </objectgroup>
