@@ -327,13 +327,13 @@
    </objectgroup>
   </tile>
  </tileset>
- <tileset firstgid="684" name="piano" tilewidth="256" tileheight="256" tilecount="4" columns="1">
+ <tileset firstgid="684" name="piano" tilewidth="256" tileheight="256" tilecount="1" columns="1">
   <image source="Sprite Sheets/piano.png" width="256" height="256"/>
  </tileset>
- <tileset firstgid="688" name="enemy_sheet_100x100tiles" tilewidth="100" tileheight="100" tilecount="4" columns="2">
+ <tileset firstgid="685" name="enemy_sheet_100x100tiles" tilewidth="100" tileheight="100" tilecount="4" columns="2">
   <image source="Sprite Sheets/enemy_sheet_100x100tiles.png" width="200" height="200"/>
  </tileset>
- <tileset firstgid="692" name="Enter_Exit" tilewidth="100" tileheight="100" tilecount="2" columns="2">
+ <tileset firstgid="689" name="Enter_Exit" tilewidth="100" tileheight="100" tilecount="2" columns="2">
   <image source="Sprite Sheets/Enter_Exit.png" width="200" height="100"/>
   <tile id="0">
    <objectgroup draworder="index">
@@ -353,7 +353,7 @@
    </objectgroup>
   </tile>
  </tileset>
- <tileset firstgid="694" name="ExitObject" tilewidth="200" tileheight="200" tilecount="1" columns="1">
+ <tileset firstgid="691" name="ExitObject" tilewidth="200" tileheight="200" tilecount="1" columns="1">
   <image source="Sprite Sheets/ExitObject.png" width="200" height="200"/>
   <tile id="0">
    <objectgroup draworder="index">
@@ -361,7 +361,7 @@
    </objectgroup>
   </tile>
  </tileset>
- <tileset firstgid="695" name="couch_sheet" tilewidth="256" tileheight="128" tilecount="1" columns="1">
+ <tileset firstgid="692" name="couch_sheet" tilewidth="256" tileheight="128" tilecount="1" columns="1">
   <image source="Sprite Sheets/couch_sheet.png" width="256" height="128"/>
   <tile id="0">
    <objectgroup draworder="index">
@@ -371,7 +371,7 @@
    </objectgroup>
   </tile>
  </tileset>
- <tileset firstgid="696" name="TV" tilewidth="128" tileheight="128" tilecount="1" columns="1">
+ <tileset firstgid="693" name="TV" tilewidth="128" tileheight="128" tilecount="1" columns="1">
   <image source="Sprite Sheets/TV.png" width="128" height="128"/>
   <tile id="0">
    <objectgroup draworder="index">
@@ -379,10 +379,10 @@
    </objectgroup>
   </tile>
  </tileset>
- <tileset firstgid="697" name="dresser-back" tilewidth="200" tileheight="200" tilecount="1" columns="1">
+ <tileset firstgid="694" name="dresser-back" tilewidth="200" tileheight="200" tilecount="1" columns="1">
   <image source="Sprite Sheets/dresser-back.png" width="200" height="200"/>
  </tileset>
- <tileset firstgid="698" name="chair" tilewidth="128" tileheight="128" tilecount="1" columns="1">
+ <tileset firstgid="695" name="chair" tilewidth="128" tileheight="128" tilecount="1" columns="1">
   <image source="Sprite Sheets/chair.png" width="128" height="128"/>
   <tile id="0">
    <objectgroup draworder="index">
@@ -489,13 +489,13 @@
 </data>
  </layer>
  <objectgroup name="Entrance_Exits">
-  <object id="23" name="ToBedroom" gid="694" x="870.098" y="309.64" width="200" height="200">
+  <object id="23" name="ToBedroom" gid="691" x="870.098" y="309.64" width="200" height="200">
    <properties>
     <property name="interaction" value="door"/>
     <property name="to" value="dining:tolibrary"/>
    </properties>
   </object>
-  <object id="25" name="ToFoyer" gid="694" x="1772.36" y="1586.49" width="200" height="200">
+  <object id="25" name="ToFoyer" gid="691" x="1772.36" y="1586.49" width="200" height="200">
    <properties>
     <property name="interaction" value="door"/>
     <property name="to" value="library:tofoyer"/>
@@ -513,23 +513,23 @@
   </object>
  </objectgroup>
  <objectgroup name="Cats">
-  <object id="136" gid="689" x="541.906" y="1618.91" width="100" height="100"/>
+  <object id="136" gid="686" x="541.906" y="1618.91" width="100" height="100"/>
  </objectgroup>
  <objectgroup name="Mice">
-  <object id="130" gid="688" x="265.564" y="932.51" width="100" height="100"/>
-  <object id="131" gid="688" x="707.711" y="1107.23" width="100" height="100"/>
-  <object id="132" gid="688" x="1486.82" y="1044.83" width="100" height="100"/>
-  <object id="133" gid="688" x="729.105" y="476.101" width="100" height="100"/>
-  <object id="134" gid="688" x="652.443" y="526.021" width="100" height="100"/>
-  <object id="135" gid="688" x="1668.67" y="488.581" width="100" height="100"/>
+  <object id="130" gid="685" x="265.564" y="932.51" width="100" height="100"/>
+  <object id="131" gid="685" x="707.711" y="1107.23" width="100" height="100"/>
+  <object id="132" gid="685" x="1486.82" y="1044.83" width="100" height="100"/>
+  <object id="133" gid="685" x="729.105" y="476.101" width="100" height="100"/>
+  <object id="134" gid="685" x="652.443" y="526.021" width="100" height="100"/>
+  <object id="135" gid="685" x="1668.67" y="488.581" width="100" height="100"/>
  </objectgroup>
  <objectgroup name="Trash">
-  <object id="98" gid="691" x="1256.06" y="456.061" width="100" height="100"/>
-  <object id="120" gid="691" x="1154.14" y="1050" width="100" height="100"/>
-  <object id="121" gid="691" x="506.213" y="1526.33" width="100" height="100"/>
-  <object id="122" gid="691" x="701.479" y="1721.6" width="100" height="100"/>
-  <object id="123" gid="691" x="245.858" y="473.077" width="100" height="100"/>
-  <object id="124" gid="691" x="1674.85" y="978.994" width="100" height="100"/>
+  <object id="98" gid="688" x="1256.06" y="456.061" width="100" height="100"/>
+  <object id="120" gid="688" x="1154.14" y="1050" width="100" height="100"/>
+  <object id="121" gid="688" x="506.213" y="1526.33" width="100" height="100"/>
+  <object id="122" gid="688" x="701.479" y="1721.6" width="100" height="100"/>
+  <object id="123" gid="688" x="245.858" y="473.077" width="100" height="100"/>
+  <object id="124" gid="688" x="1674.85" y="978.994" width="100" height="100"/>
  </objectgroup>
  <objectgroup name="Furniture">
   <object id="100" name="Bookshelf" gid="677" x="1593.89" y="400.189" width="256" height="256"/>

@@ -18,7 +18,7 @@ namespace Assets._Scripts
         [UnityMessage]
         public void Awake()
         {
-            lightingMaterial = new Material(Shader.Find("Hidden/Lighting"));
+            lightingMaterial = new Material(Shader.Find("Andy/Lighting"));
 
             lastLightingLevel = 1.0f;
         }

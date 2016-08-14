@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <!--Tiled2Unity generated xml data-->
 <!--Do not modify by hand-->
-<!--Last exported: 7/17/2016 5:51:28 PM-->
+<!--Last exported: 7/17/2016 6:49:24 PM-->
 <Tiled2Unity version="1.0.7.5">
   <AssignMaterial mesh="mesh_0001" material="floor_sheet" />
   <AssignMaterial mesh="mesh_0002" material="piano_wall_sheet" />
@@ -68,19 +68,21 @@
     <GameObject name="Mice" x="0" y="0" z="-0.3" />
     <GameObject name="Trash" x="0" y="0" z="-0.35" />
     <GameObject name="Furniture" x="0" y="0" z="-0.4">
-      <GameObject name="TileObject" x="8.113939" y="-11.8218" rotation="0" layer="" z="-0.54109" scaleX="2" scaleY="2">
+      <GameObject name="TileObject" x="8.113939" y="-11.8218" rotation="0" layer="" z="-0.54109" scaleX="1" scaleY="1">
         <Property name="interaction" value="sofa" />
+        <Property name="scale" value="2" />
         <GameObject name="TileObject">
-          <PolygonCollider2D offsetX="0.44" offsetY="2.39999986">
+          <PolygonCollider2D offsetX="0.44" offsetY="1.12">
             <Path>0,0 1.75,0 1.84,-0.96 -0.12,-0.94 -0.13,-0.7 -0.27,-0.66 -0.04,-0.43 0,-0.01</Path>
           </PolygonCollider2D>
           <GameObject name="tile_obj" copy="mesh_tile_0695" sortingLayerName="" sortingOrder="8" x="0" y="1.28" />
         </GameObject>
       </GameObject>
-      <GameObject name="TileObject" x="9.32969952" y="-15.4279" rotation="0" layer="" z="-0.721395" scaleX="2.34375" scaleY="2.34375">
+      <GameObject name="TileObject" x="9.32969952" y="-15.4279" rotation="0" layer="" z="-0.721395" scaleX="1" scaleY="1">
         <Property name="interaction" value="tv" />
+        <Property name="scale" value="2.5" />
         <GameObject name="TileObject">
-          <PolygonCollider2D offsetX="0.329999983" offsetY="2.49">
+          <PolygonCollider2D offsetX="0.329999983" offsetY="0.77">
             <Path>0,0 0.6,0 0.6,-0.49 0,-0.49</Path>
           </PolygonCollider2D>
           <GameObject name="tile_obj" copy="mesh_tile_0696" sortingLayerName="" sortingOrder="8" x="0" y="1.28" />
@@ -91,10 +93,11 @@
           <GameObject name="tile_obj" copy="mesh_tile_0697" sortingLayerName="" sortingOrder="8" x="0" y="2" />
         </GameObject>
       </GameObject>
-      <GameObject name="TileObject" x="5.75393963" y="-15.1552" rotation="0" layer="" z="-0.707760036" scaleX="2.34375" scaleY="2.34375">
+      <GameObject name="TileObject" x="5.75393963" y="-15.1552" rotation="0" layer="" z="-0.707760036" scaleX="1" scaleY="1">
         <Property name="interaction" value="comfyChair" />
+        <Property name="scale" value="2.5" />
         <GameObject name="TileObject">
-          <PolygonCollider2D offsetX="0.32" offsetY="2.79">
+          <PolygonCollider2D offsetX="0.32" offsetY="1.06999993">
             <Path>0.69,0.01 0.66,-0.38 0.77,-0.52 0.8,-0.61 0.73,-0.69 0.66,-1.05 -0.01,-0.97 -0.07,-0.71 -0.17,-0.6 -0.02,-0.45 0,0</Path>
           </PolygonCollider2D>
           <GameObject name="tile_obj" copy="mesh_tile_0698" sortingLayerName="" sortingOrder="8" x="0" y="1.28" />

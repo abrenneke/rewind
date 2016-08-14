@@ -1,5 +1,6 @@
 ﻿using System;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace Assets._Scripts
 {
@@ -42,6 +43,13 @@ namespace Assets._Scripts
 
             if (GameStateChanged != null)
                 GameStateChanged(CurrentState);
+        }
+
+        [UnityMessage]
+        public void Update()
+        {
+            if (Input.GetKeyDown(KeyCode.Escape))
+                SceneManager.LoadScene(0);
         }
     }
 }

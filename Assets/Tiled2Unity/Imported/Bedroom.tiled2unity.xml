@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <!--Tiled2Unity generated xml data-->
 <!--Do not modify by hand-->
-<!--Last exported: 7/17/2016 5:50:51 PM-->
+<!--Last exported: 7/17/2016 6:48:50 PM-->
 <Tiled2Unity version="1.0.7.5">
   <AssignMaterial mesh="mesh_0001" material="floor_sheet" />
   <AssignMaterial mesh="mesh_0002" material="floor_sheet" />
@@ -30,10 +30,11 @@
     </GameObject>
     <GameObject name="Decor" x="0" y="0" z="-0.15" />
     <GameObject name="Furniture" x="0" y="0" z="-0.2">
-      <GameObject name="TileObject" x="14.2986994" y="-9.874189" rotation="0" layer="" z="-0.443709463" scaleX="1.11" scaleY="1.11">
+      <GameObject name="TileObject" x="14.2986994" y="-9.874189" rotation="0" layer="" z="-0.443709463" scaleX="0.5" scaleY="0.5">
         <Property name="interaction" value="bed" />
+        <Property name="scale" value="2.2" />
         <GameObject name="TileObject">
-          <PolygonCollider2D offsetX="-0.01" offsetY="2.18">
+          <PolygonCollider2D offsetX="-0.01" offsetY="0.96">
             <Path>0,0 2.04,0 2.04,-1.96 0,-1.96</Path>
           </PolygonCollider2D>
           <GameObject name="tile_obj" copy="mesh_tile_0697" sortingLayerName="" sortingOrder="4" x="0" y="2" />
@@ -100,11 +101,12 @@
       </GameObject>
     </GameObject>
     <GameObject name="Broom" x="0" y="0" z="-0.5">
-      <GameObject name="TileObject" x="15.8383989" y="-11.1427" rotation="0" layer="" z="-0.507135034" scaleX="1.5" scaleY="1.5">
+      <GameObject name="TileObject" x="15.8383989" y="-11.1427" rotation="0" layer="" z="-0.507135034" scaleX="1" scaleY="1">
         <Property name="after-interaction" value="give-broom" />
         <Property name="interaction" value="broom" />
+        <Property name="scale" value="1.5" />
         <GameObject name="TileObject">
-          <PolygonCollider2D offsetX="0.71" offsetY="1.43999994">
+          <PolygonCollider2D offsetX="0.71" offsetY="0.94">
             <Path>0.09999999,-0.02 -0.37,-0.73 -0.53,-0.6 0,0</Path>
           </PolygonCollider2D>
           <GameObject name="tile_obj" copy="mesh_tile_0695" sortingLayerName="" sortingOrder="10" x="0" y="1" />

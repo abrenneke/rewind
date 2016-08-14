@@ -14,7 +14,7 @@ namespace Assets._Scripts.Editor.Importers
             {
                 var scale = Convert.ToSingle(customProperties["scale"]);
 
-                gameObject.transform.localScale = new Vector3(scale, scale, scale);
+                gameObject.transform.GetChild(0).gameObject.transform.localScale = new Vector3(scale, scale, scale);
             }
         }
 

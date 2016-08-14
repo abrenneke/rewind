@@ -1,4 +1,4 @@
-﻿Shader "Hidden/Lighting"
+﻿Shader "Andy/Lighting"
 {
 	Properties
 	{
